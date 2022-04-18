@@ -29,7 +29,7 @@
                     $user = $_POST["user"];
                     $pass = $_POST['pass'];
                     if (finduser($user) != NULL) {
-                        $pass_hash = getPassHash($user)['pass'];
+                        // $pass_hash = getPassHash($user)['pass'];
                         if (password_verify($pass, $pass_hash)) {
                             $user1 = finduser($user);
                             $_SESSION['id'] = $user1['MaTaiKhoan'];
