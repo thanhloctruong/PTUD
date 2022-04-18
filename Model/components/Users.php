@@ -1,6 +1,6 @@
 <?php
     function checkuser($user,$pass){
-        $sql="select * from taikhoan where user='".$user."' and pass='".$pass."'";
+        $sql="select * from taikhoan where TenDangNhap='".$user."' and MatKhau='".$pass."'";
         return getone($sql);
     }
 
@@ -10,17 +10,17 @@
     }
 
     function updatepass($user,$pass){
-        $sql="UPDATE taikhoan set pass='".$pass."' where user='".$user."'";
+        $sql="UPDATE taikhoan set MatKhau='".$pass."' where TenDangNhap='".$user."'";
         return execsql($sql,0);
     }
     
     function finduser($user){
-        $sql="select * from taikhoan where user='".$user."'";
+        $sql="select * from taikhoan where TenDangNhap='".$user."'";
         return getone($sql);
     }
 
     function getPassHash($user){
-        $sql="select pass from taikhoan where user='".$user."'";
+        $sql="select MatKhau from taikhoan where TenDangNhap='".$user."'";
         return getone($sql);
     }
 
