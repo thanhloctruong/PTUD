@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
 <link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
 <link rel="stylesheet" href="../view/Assets/css/theme.css">
+<link rel="stylesheet" href="../view/Assets/css/index.css">
 </head>
 <body>
 <div class="back-to-top"></div>
