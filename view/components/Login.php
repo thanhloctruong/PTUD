@@ -1,7 +1,6 @@
 <div class="page-section">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Login</h1>
-      Welcome <?php echo $user; ?><br>
       <form class="contact-form mt-5" action="index.php?act=login" method="post">
         <div class="row mb-3">
           <div class="col-12 py-2 wow fadeInUp">
@@ -13,7 +12,7 @@
             <input type="pass"  name='pass' class="form-control" placeholder="Enter password." required>
           </div>
         </div>
-        <button type="submit" name="login" class="btn btn-primary wow zoomIn">Login</button>
+        <input class="btn btn-primary wow zoomIn" type="submit" name="login" value="Đăng Nhập">
       </form>
       <?php
           if(isset($txt_err_lg)&&($txt_err_lg!="")){

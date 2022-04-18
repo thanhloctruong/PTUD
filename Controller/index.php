@@ -29,17 +29,27 @@
                     $user = $_POST["user"];
                     $pass = $_POST['pass'];
                     if (finduser($user) != NULL) {
-                        // $pass_hash = getPassHash($user)['pass'];
-                        if (password_verify($pass, $pass_hash)) {
+                        $pass_hash = getPassHash($user)['MatKhau'];
+                        if (md5($pass)==$pass_hash) {
                             $user1 = finduser($user);
                             $_SESSION['id'] = $user1['MaTaiKhoan'];
                             $_SESSION['user'] = $user1['TentaiKhoan'];
+                            //Role 1 quản lí bệnh viện
                             if ($user1['Role'] == 1){
                                 $_SESSION['hospitalAdmin'] = $user;
                                 header('location: ../Screen/HospitalAdmin/index.php');
+                            //Role 2 quản lí hệ thống
                             }else if ($user1['Role'] == 2){
                                 $_SESSION['systemAdmin'] = $user;
                                 header('location: ../Screen/SystemAdmin/index.php');
+                                //Role 3 nhân viên bệnh viện
+                            }else if ($user1['Role'] == 3){
+                                $_SESSION['HospitalEmployee'] = $user;
+                                header('location: ../Screen/HospitalEmployee/index.php');
+                                //Role 4 
+                            }else if ($user1['Role'] == 4){
+                                $_SESSION['HospitalWardEmployee'] = $user;
+                                header('location: ../Screen/HospitalWardEmployee/index.php');
                             }
                             else{
                                 setcookie('user', $_SESSION['user'], time() + (86400 * 10), '/');
@@ -47,9 +57,9 @@
                                 header('location: index.php');
                             }
                         }
-                        else $txt_err_lg = "sai mat khau";
+                        else $txt_err_lg = "Sai mật khẩu rồi ba!!!!!!";
                     }
-                    else $txt_err_lg = "tai khoan khong ton tai";
+                    else $txt_err_lg = "đéo có tài khoản trong database!";
                 }
                 include "../view/components/Login.php";
                 break;
