@@ -102,31 +102,31 @@
             //     }
             //     include "../view/edit_user.php";
             //     break;
-            // case 'logout':
-            //     if(isset($_SESSION['id'])) unset($_SESSION['id']);
-            //     if(isset($_SESSION['user'])) unset($_SESSION['user']);
-            //     setcookie('user', '', time() - 1, '/');
-            //     setcookie('id', '', time() - 1, '/');
-            //     header('location: index.php');
-            //     break;
-            // case 'register':
-            //     if (isset($_POST['submit']) && ($_POST['submit'])) {
-            //         $user = $_POST['user'];
-            //         $pass = $_POST['pass'];
-            //         if (finduser($user) == NULL) {
-            //             $pass_hash = password_hash($pass, PASSWORD_BCRYPT);
-            //             $role = 0;
-            //             $name = $_POST['name'];
-            //             $email = $_POST['email'];
-            //             $id = adduser($user, $pass_hash, $role, $name, $email);
-            //             header('location: index.php?act=login');
-            //         } else {
-            //             $txt_err_user = "tai khoan da ton tai";
-            //             include_once "../view/register.php";
-            //         }
-            //     }
-            //     include_once "../view/register.php";
-            //     break;
+            case 'logout':
+                if(isset($_SESSION['id'])) unset($_SESSION['id']);
+                if(isset($_SESSION['user'])) unset($_SESSION['user']);
+                setcookie('user', '', time() - 1, '/');
+                setcookie('id', '', time() - 1, '/');
+                header('location: index.php');
+                break;
+            case 'register':
+                if (isset($_POST['submit']) && ($_POST['submit'])) {
+                    $user = $_POST['user'];
+                    $pass = $_POST['pass'];
+                    if (finduser($user) == NULL) {
+                        $pass_hash = md5($pass);
+                        $role = 1;
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $id = adduser($user, $pass_hash, $role, $name, $email);
+                        header('location: index.php?act=login');
+                    } else {
+                        $txt_err_user = "tai khoan da ton tai";
+                        include_once "../view/components/Register.php";
+                    }
+                }
+                include_once "../view/register.php";
+                break;
             default:
                 include "../view/components/Home.php";
         }

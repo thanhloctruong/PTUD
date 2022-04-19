@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,8 +72,19 @@
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=contact">Contact</a>
           </li>
+          <?php 
           <li class="nav-item">
+            if(isset($_SESSION['id'])&&($_SESSION['id']>0)){
+              echo '
+                <a class="btn btn-primary ml-lg-3" href="index.php?act=user">'.$_SESSION['user'].'</a>
+                <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
+              ';
+            }else{
+              
             <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login / Register</a>
+          
+                
+                ?>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->
