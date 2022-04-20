@@ -67,18 +67,18 @@
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=tuvan">Tư vấn cho bệnh nhân</a> <!--Counseling-->
+            <a class="nav-link" href="index.php?act=">Cập nhật tình trạng</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=quanly">Quản lý thông tin bệnh nhân</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=tracuu">Tìm kiếm bệnh nhân</a> <!--ManagePatientInformation--> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=">Quản lý thông tin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=">Yêu cầu chuyển viện</a>
           </li>
           <!-- <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li> -->
           <li class="nav-item">
