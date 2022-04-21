@@ -11,15 +11,6 @@
             <li><a href="#">Protection</a></li>
           </ul>
         </div>
-        <!-- <div class="col-sm-6 col-lg-3 py-3">
-          <h5>More</h5>
-          <ul class="footer-menu">
-            <li><a href="#">Terms & Condition</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Join as Doctors</a></li>
-          </ul>
-        </div> -->
         <div class="col-sm-8 col-lg-4 py-4">
           <h5>Các thành viên nhóm 6868: </h5>
           <ul class="footer-menu">
@@ -54,15 +45,15 @@
     </div>
   </footer>
 
-<script src="../view/Assets/js/jquery-3.5.1.min.js"></script>
+<script src="../../view/Assets/js/jquery-3.5.1.min.js"></script>
 
-<script src="../view/Assets/js/bootstrap.bundle.min.js"></script>
+<script src="../../view/Assets/js/bootstrap.bundle.min.js"></script>
 
-<script src="../view/Assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="../../view/Assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
 
-<script src="../view/Assets/vendor/wow/wow.min.js"></script>
+<script src="../../view/Assets/vendor/wow/wow.min.js"></script>
 
-<script src="../view/Assets/js/theme.js"></script>
+<script src="../../view/Assets/js/theme.js"></script>
   
 </body>
 </html>

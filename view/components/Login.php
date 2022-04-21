@@ -19,5 +19,6 @@
               echo "<h3 style='color:red;'>".$txt_err_lg."</h3>";
           }
       ?>
+      <a href="index.php?act=register">Đăng ký</a>
     </div>
   </div>
