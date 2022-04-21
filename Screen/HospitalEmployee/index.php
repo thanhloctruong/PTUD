@@ -1,8 +1,8 @@
 <!-- <div> nhân viên y tế bệnh viện</div> -->
 <?php
     session_start();
-    include "../../Model/index.php";
-    include "../HospitalEmployee/Header.php";
+    include "./Model/index.php";
+    include "../HospitalEmployee/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act'])) {
         # code...
@@ -11,8 +11,9 @@
             case 'tracuu':
                 
                 if (isset($_POST['search']) && ($_POST['search'])) {
-                    $search = Search($_post['txtTimKiem']);
-                    include 'Search.php';
+                    $search = Search($_POST['txtTimKiem']);
+                    include './View/Search.php';
+                    
                     // $search = $_POST['txtTimKiem'];
                     // $row = Search($search) -> fetchColumn();
                     // if ($search == 0 ) {
@@ -20,15 +21,16 @@
                     //     $txt_err_lg = "Không tìm thấy mã hồ sơ !!!!!!";
                     // } else{
                     // }
+                } else{
+                    include './View/Search.php';
                 }
-                include 'Search.php';
                 break;
             default:
-                include "Home.php";
+                include "./View/Home.php";
         }
     } else{
-        include "Home.php";
+        include "./View/Home.php";
     }
 
-    include "../HospitalEmployee/Footer.php";
+    include "../HospitalEmployee/View/Footer.php";
 ?>

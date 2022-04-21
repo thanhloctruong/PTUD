@@ -9,11 +9,16 @@
         $act = $_GET['act'];
         switch($act){
             case 'tuvan':
+                $result = get_all_request();
+                include 'Counseling.php';
+                break;
                 // if (isset($_POST['tuvan']) && ($_POST['tuvan'])) {
                 //     # code...
                 // }
-                // $result  = get_all_request();
-                include 'Counseling.php';
+            case 'traloi':
+                // $idRequest = ['MaYeuCau'];
+                // $result = request($idRequest);
+                include "ReplyCounseling.php";
                 break;
             case 'quanly':
                 include "ManagePatientInformation.php";
