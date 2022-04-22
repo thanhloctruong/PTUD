@@ -18,6 +18,9 @@
             case 'about': 
                 include '../view/components/About.php';
                 break;
+            case 'new':
+                include '../view/components/News.php';
+                break;
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);
@@ -133,6 +136,7 @@
                             $name = $_POST['name'];
                             $email = $_POST['email'];
                             $id = adduser($user, $pass_hash, $role, $sdt, $name, $email);
+                            echo '<script>alert("Đăng ký tài khoản thành công");</script>';
                             header('location: index.php?act=login');
                     }
                     // if (finduser($user) == NULL) {

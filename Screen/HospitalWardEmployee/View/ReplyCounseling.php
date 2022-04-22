@@ -18,17 +18,18 @@
         <div class="col-12 py-2 wow fadeInUp">
             <label for="message">Câu hỏi:</label>
             <?php
-            // if(isset($result) && $result !=0){
-            //     echo $result[];
+            // echo "trar lowif";
+            if(isset($result) && $result !=0){
+                echo $result["CauHoi"];
 
-            // }
+            }
             ?>
         </div>
         <div class="col-12 py-2 wow fadeInUp">
             <label for="message">Nhập câu trả lời</label>
-            <textarea id="message" class="form-control" rows="8" placeholder="Enter Message.."></textarea>
+            <textarea id="message" class="form-control" rows="8" name="mess" placeholder="Enter Message.."></textarea>
         </div>
     </div>
     <!-- <button type="submit" class="btn btn-primary wow zoomIn">Send Message</button> -->
-    <input type="submit" value="Send Mesage" name="search" class="btn btn-primary wow zoomIn">
+    <input type="submit" value="Send Mesage" name="send" class="btn btn-primary wow zoomIn">
 </form>
