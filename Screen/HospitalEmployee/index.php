@@ -13,7 +13,7 @@
                 if (isset($_POST['search']) && ($_POST['search'])) {
                     $search = Search($_POST['txtTimKiem']);
                     include './View/Search.php';
-                    
+                    break;
                     // $search = $_POST['txtTimKiem'];
                     // $row = Search($search) -> fetchColumn();
                     // if ($search == 0 ) {
@@ -23,10 +23,11 @@
                     // }
                 } else{
                     include './View/Search.php';
+                    break;
                 }
-                break;
             default:
                 include "./View/Home.php";
+                break;
         }
     } else{
         include "./View/Home.php";
