@@ -45,14 +45,14 @@
     <div class="container">
       <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
 
-      <form action="index.php?act=search" method="post">
+      <!-- <form action="index.php?act=search" method="post">
         <div class="input-group input-navbar">
           <div class="input-group-prepend">
             <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
           </div>
           <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
         </div>
-      </form>
+      </form> -->
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,25 +67,22 @@
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=tiepnhan">Tiếp nhận bệnh nhân</a> <!--Counseling-->
+            <a class="nav-link" href="index.php?act=">Cập nhật tình trạng</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=dkdieutri">Đăng ký điều trị tại cơ sở y tế</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=tracuu">Tìm kiếm bệnh nhân</a> <!--ManagePatientInformation--> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=yeucau">Yêu cầu chuyển viện</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=">Quản lý thông tin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=">Yêu cầu chuyển viện</a>
           </li>
           <!-- <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li> -->
           <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Logout</a>
+            <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->

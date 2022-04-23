@@ -4,8 +4,8 @@
         return getone($sql);
     }
 
-    function adduser($user, $pass, $role, $sdt, $email){
-        $sql="INSERT INTO taikhoan (TenDangNhap, MatKhau, Role, SDT, Email) VALUES ('$user', '$pass', '$role', '$sdt', '$email')";
+    function adduser($user, $pass, $role, $phone, $name, $email){
+        $sql="INSERT INTO taikhoan (TenDangNhap, MatKhau, Role, SDT, HoTen, Email) VALUES ('$user', '$pass', '$role', '$phone','$name', '$email')";
         return addsql($sql);
     }
 

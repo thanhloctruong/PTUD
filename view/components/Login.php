@@ -4,8 +4,8 @@
       <form class="contact-form mt-5" action="index.php?act=login" method="post">
         <div class="row mb-3">
           <div class="col-12 py-2 wow fadeInUp">
-            <label for="user">email</label>
-            <input type="text"  name='user' class="form-control" placeholder="Enter email" required>
+            <label for="user">Username</label>
+            <input type="text"  name='user' class="form-control" placeholder="Enter username" required>
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="pass">Password</label>
