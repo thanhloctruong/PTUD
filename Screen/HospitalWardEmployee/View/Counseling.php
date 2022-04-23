@@ -37,7 +37,7 @@
                 // echo "<td scope='row'><input class='btn btn-primary wow zoomIn' type='submit' name='traloi' value='Trả lời'></td>";
                 echo "<td scope='row'>
                   <div class='nav-item'>
-                    <a class='btn btn-primary wow zoomIn ml-lg-3' href='index.php?reply=".$abc['MaYeuCau']."'>Trả lời</a>
+                    <a class='btn btn-primary wow zoomIn ml-lg-3' href='index.php?act=reply&id=".$abc['MaYeuCau']."'>Trả lời</a>
                   </div>
                 </td>";
                 echo "<td scope='row'><i>Chưa trả lời</i></td>";

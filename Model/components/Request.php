@@ -6,12 +6,13 @@
         return getlist($sql);
     }
     function request($idRequest){
-        $sql = "SELECT CauHoi FROM yeucau WHERE MaYeuCau = $idRequest";
+        $sql = "SELECT * FROM yeucau WHERE MaYeuCau='".$idRequest."'";
         return getone($sql);
     }
     function update_request($reply, $idRequest){
-        $sql = "UPDATE yeucau SET CauTraLoi = '$reply' WHERE yeucau.MaYeuCau = $idRequest;";
-        return getlist($sql);
+        $sql = "UPDATE yeucau SET CauTraLoi = '".$reply."' WHERE MaYeuCau ='".$idRequest."'";
+        execsql($sql, 1);
+        return true;
     }
 
 ?>

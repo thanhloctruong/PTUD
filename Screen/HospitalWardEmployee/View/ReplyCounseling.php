@@ -13,12 +13,12 @@
     </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->
 
-<form class="contact-form mt-5" action="'index.php?act=traloi'" method="POST">
+<form class="contact-form mt-5" action="index.php?act=send" method="POST">
 <div class="row mb-3">
         <div class="col-12 py-2 wow fadeInUp">
             <label for="message">Câu hỏi:</label>
             <?php
-            // echo "trar lowif";
+            // echo $idRequest;
             if(isset($result) && $result !=0){
                 echo $result["CauHoi"];
 
@@ -27,7 +27,7 @@
         </div>
         <div class="col-12 py-2 wow fadeInUp">
             <label for="message">Nhập câu trả lời</label>
-            <textarea id="message" class="form-control" rows="8" name="mess" placeholder="Enter Message.."></textarea>
+            <input id="mess" class="form-control" rows="8" name="mess" placeholder="Enter Message.."></input>
         </div>
     </div>
     <!-- <button type="submit" class="btn btn-primary wow zoomIn">Send Message</button> -->
