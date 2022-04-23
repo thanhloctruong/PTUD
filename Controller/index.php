@@ -18,18 +18,12 @@
             case 'about': 
                 include '../view/components/About.php';
                 break;
-<<<<<<< HEAD
             case 'khaibaoyte':
                 include "../view/components/HealthDeclaration.php";
                 break;
             // case 'doctors':
             //     include '../view/components/Doctors.php';
             //     break;
-=======
-            case 'new':
-                include '../view/components/News.php';
-                break;
->>>>>>> 9059631fd0b0b4b26bf01b0395d0c6bc16517252
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);
