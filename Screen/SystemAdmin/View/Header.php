@@ -15,6 +15,10 @@
 <link rel="stylesheet" href="../../view/Assets/vendor/animate/animate.css">
 <link rel="stylesheet" href="../../view/Assets/css/theme.css">
 <link rel="stylesheet" href="../../view/Assets/css/index.css">
+<style>
+ 
+</style>
+
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -62,9 +66,11 @@
             <a class="nav-link" href="index.php?act=phanquyen">Phân Quyền</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống kê số liệu</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống Kê
+              
+
+            </a> <!--ManagePatientInformation--> 
           </li>
-          
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
           </li>
@@ -75,7 +81,7 @@
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li> -->
           <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Logout</a>
+            <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->

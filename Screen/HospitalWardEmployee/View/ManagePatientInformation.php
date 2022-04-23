@@ -1,1 +1,0 @@
-<div>Quản lý thông tin bệnh nhân</div>

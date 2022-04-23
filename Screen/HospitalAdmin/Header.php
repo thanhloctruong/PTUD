@@ -59,12 +59,14 @@
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=phanquyen">Phân Quyền</a> <!--Counseling-->
+            <a class="nav-link" href="index.php?act=tiepnhan">Tiếp nhận bệnh nhân</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống kê số liệu</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=thongke">Thống kê số liệu</a> <!--ManagePatientInformation--> 
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=quanlyttbv">Quản lý thông tin bệnh viện</a> <!--ManagePatientInformation--> 
+          </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
           </li>
