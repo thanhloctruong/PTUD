@@ -26,7 +26,7 @@
           <div class="site-info">
             <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
             <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>thanhloctruong102@@2gmail.com</a>
+            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>manhc3dth@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">
@@ -45,14 +45,6 @@
     <div class="container">
       <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
 
-      <form action="index.php?act=search" method="post">
-        <div class="input-group input-navbar">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
-        </div>
-      </form>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

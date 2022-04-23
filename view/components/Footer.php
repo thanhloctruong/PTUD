@@ -35,7 +35,7 @@
           <h5>Liên hệ</h5>
           <p class="footer-link mt-2">12 Nguyễn Văn Bảo, Phường 4, quận Gò Vấp, TP.HCM</p>
           <a href="#" class="footer-link mt-2">701-573-7582</a></br>
-          <a href="#" class="footer-link mt-2">healthcare@gmail.com</a>
+          <a href="#" class="footer-link mt-2">manhc3dth@gmail.com</a>
 
           <h5 class="mt-3">Social Media</h5>
           <div class="footer-sosmed mt-3">
