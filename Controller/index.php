@@ -18,6 +18,9 @@
             case 'about': 
                 include '../view/components/About.php';
                 break;
+            case 'khaibaoyte':
+                include "../view/components/HealthDeclaration.php";
+                break;
             // case 'doctors':
             //     include '../view/components/Doctors.php';
             //     break;
