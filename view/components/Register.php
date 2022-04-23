@@ -6,22 +6,26 @@
           <div class="col-12 py-2 wow fadeInUp">
             <label for="user">Tên đăng nhập</label>
             <input type="text"  name='user' class="form-control" placeholder="Nhập tên của bạn" required>
-        </div>
-        <div class="col-12 py-2 wow fadeInUp">
-          <label for="pass">Password</label>
-          <input type="password"  name='pass' class="form-control" placeholder="Enter password." required>
-        </div>
-        <div class="col-12 py-2 wow fadeInUp">
-          <label for="rpass">Nhập lại Password</label>
-          <input type="password"  name='rpass' class="form-control" placeholder="Nhập lại password." required>
-        </div>
+          </div>
+          <div class="col-12 py-2 wow fadeInUp">
+            <label for="pass">Password</label>
+            <input type="password"  name='pass' class="form-control" placeholder="Enter password." required>
+          </div>
+          <div class="col-12 py-2 wow fadeInUp">
+            <label for="rpass">Nhập lại Password</label>
+            <input type="password"  name='rpass' class="form-control" placeholder="Nhập lại password." required>
+          </div>
+          <div class="col-12 py-2 wow fadeInUp">
+            <label for="name">Họ tên</label>
+            <input type="text"  name='name' class="form-control" placeholder="Nhập Họ tên của bạn" required>
+          </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="sdt">SDT</label>
             <input type="text"  name='sdt' class="form-control" placeholder="Nhập số điện thoại" required>
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="email">Email</label>
-            <input type="text"  name='email' class="form-control" placeholder="Nhập email" required>
+            <input type="email"  name='email' class="form-control" placeholder="Nhập email" required>
           </div>
         </div>
         <input class="btn btn-primary wow zoomIn" type="submit" name="register" value="Đăng Ký">

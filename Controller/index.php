@@ -18,9 +18,9 @@
             case 'about': 
                 include '../view/components/About.php';
                 break;
-            // case 'doctors':
-            //     include '../view/components/Doctors.php';
-            //     break;
+            case 'new':
+                include '../view/components/News.php';
+                break;
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);
@@ -60,9 +60,9 @@
                                 header('location: index.php');
                             }
                         }
-                        else $txt_err_lg = "Sai mật khẩu rồi ba!!!!!!";
+                        else $txt_err_lg = "Sai mật khẩu!!!!!!";
                     }
-                    else $txt_err_lg = "đéo có tài khoản trong database!";
+                    else $txt_err_lg = "không có tài khoản trong database!";
                 }
                 include "../view/components/Login.php";
                 break;
@@ -133,8 +133,10 @@
                             $pass_hash = md5($pass);
                             $role = 0;
                             $sdt = $_POST['sdt'];
+                            $name = $_POST['name'];
                             $email = $_POST['email'];
-                            $id = adduser($user, $pass_hash, $role, $sdt, $email);
+                            $id = adduser($user, $pass_hash, $role, $sdt, $name, $email);
+                            echo '<script>alert("Đăng ký tài khoản thành công");</script>';
                             header('location: index.php?act=login');
                     }
                     // if (finduser($user) == NULL) {

@@ -11,15 +11,6 @@
             <li><a href="#">Protection</a></li>
           </ul>
         </div>
-        <!-- <div class="col-sm-6 col-lg-3 py-3">
-          <h5>More</h5>
-          <ul class="footer-menu">
-            <li><a href="#">Terms & Condition</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Join as Doctors</a></li>
-          </ul>
-        </div> -->
         <div class="col-sm-8 col-lg-4 py-4">
           <h5>Các thành viên nhóm 6868: </h5>
           <ul class="footer-menu">
@@ -62,7 +53,12 @@
 
 <script src="../view/Assets/vendor/wow/wow.min.js"></script>
 
+<<<<<<< HEAD:Screen/HospitalWardEmployee/Footer.php
 <script src="../view/Assets/js/theme.js"></script>
+=======
+<script src="../../view/Assets/js/theme.js"></script>
+
+>>>>>>> 9059631fd0b0b4b26bf01b0395d0c6bc16517252:Screen/HospitalEmployee/View/Footer.php
   
 </body>
 </html>
