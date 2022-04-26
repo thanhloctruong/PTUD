@@ -1,7 +1,7 @@
 <!-- <div> nhân viên y tế bệnh viện</div> -->
 <?php
     session_start();
-    include "./Model/index.php";
+    include "../../Model/index.php";
     include "../HospitalEmployee/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act'])) {

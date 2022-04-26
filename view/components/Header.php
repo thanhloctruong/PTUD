@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="MACode ID, https://macodeid.com/">
    
   <title>One Health - Medical Center</title>
 <link rel="stylesheet" href="../view/Assets/css/maicons.css">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
 <link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
 <link rel="stylesheet" href="../view/Assets/css/theme.css">
-<!-- <link rel="stylesheet" href="../view/Assets/css/index.css"> -->
+<link rel="stylesheet" href="../view/Assets/css/index.css">
 </head>
 <body>
 <div class="back-to-top"></div>

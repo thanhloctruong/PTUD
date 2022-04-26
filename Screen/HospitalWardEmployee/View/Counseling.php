@@ -1,5 +1,5 @@
 <!-- <div>Tư vấn</div> -->
-<div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../../view/Assets/img/bg_image_1.jpg);">
     <div class="banner-section">
         <div class="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
@@ -25,8 +25,8 @@
   </thead>
   
 <?php
-  if(isset($result)){
-        foreach($result as $abc){
+  if(isset($aa)){
+        foreach($aa as $abc){
             echo "<tbody style='text-align: center;'>
             <tr>
               <td scope='row'>".$abc['MaYeuCau']."</td>

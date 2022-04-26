@@ -1,4 +1,4 @@
-<div class="page-banner overlay-dark bg-image" style="background-image: url(../Assets/img/bg_image_1.jpg);">
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../view/Assets/img/bg_image_1.jpg);">
     <div class="banner-section">
       <div class="container text-center wow fadeInUp">
         <nav aria-label="Breadcrumb">
@@ -24,7 +24,7 @@
                     <a href="#">Covid19</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/bg_image_1.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_1.jpeg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -32,7 +32,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_1.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_1.jpg" alt="">
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -49,7 +49,7 @@
                     <a href="#">Dental</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_3.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_3.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -57,7 +57,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_4.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_4.jpg" alt="">
                       </div>
                       <span>Wizdom Jack</span>
                     </div>
@@ -74,7 +74,7 @@
                     <a href="#">Covid19</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_3.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_3.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -82,7 +82,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_3.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_3.jpg" alt="">
                       </div>
                       <span>Adams Collier</span>
                     </div>
@@ -98,7 +98,7 @@
                     <a href="#">Neurology</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_4.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_4.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -106,7 +106,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_1.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_1.jpg" alt="">
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -122,7 +122,7 @@
                     <a href="#">Cardiology</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_5.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_5.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -130,7 +130,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_1.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_1.jpg" alt="">
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -146,7 +146,7 @@
                     <a href="#">Patient Services</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_1.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_1.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -154,7 +154,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_1.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_1.jpg" alt="">
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -170,7 +170,7 @@
                     <a href="#">General Health</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_2.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_2.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -178,7 +178,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_1.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_1.jpg" alt="">
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -195,7 +195,7 @@
                     <a href="#">Covid19</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../Assets/img/blog/blog_2.jpg" alt="">
+                    <img src="../view/Assets/img/blog/blog_2.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
@@ -203,7 +203,7 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../Assets/img/person/person_2.jpg" alt="">
+                        <img src="../view/Assets/img/person/person_2.jpg" alt="">
                       </div>
                       <span>Diego Simmons</span>
                     </div>
@@ -260,7 +260,7 @@
               <h3 class="sidebar-title">Recent Blog</h3>
               <div class="blog-item">
                 <a class="post-thumb" href="">
-                  <img src="../Assets/img/blog/blog_1.jpg" alt="">
+                  <img src="../view/Assets/img/blog/blog_1.jpg" alt="">
                 </a>
                 <div class="content">
                   <h5 class="post-title"><a href="#">Even the all-powerful Pointing has no control</a></h5>
@@ -273,7 +273,7 @@
               </div>
               <div class="blog-item">
                 <a class="post-thumb" href="">
-                  <img src="../Assets/img/blog/blog_2.jpg" alt="">
+                  <img src="../view/Assets/img/blog/blog_2.jpg" alt="">
                 </a>
                 <div class="content">
                   <h5 class="post-title"><a href="#">Even the all-powerful Pointing has no control</a></h5>
@@ -286,7 +286,7 @@
               </div>
               <div class="blog-item">
                 <a class="post-thumb" href="">
-                  <img src="../Assets/img/blog/blog_3.jpg" alt="">
+                  <img src="../view/Assets/img/blog/blog_3.jpg" alt="">
                 </a>
                 <div class="content">
                   <h5 class="post-title"><a href="#">Even the all-powerful Pointing has no control</a></h5>
@@ -323,18 +323,18 @@
     </div> <!-- .container -->
   </div> <!-- .page-section -->
 
-  <div class="page-section banner-home bg-image" style="background-image: url(../Assets/img/banner-pattern.svg);">
+  <div class="page-section banner-home bg-image" style="background-image: url(../view/Assets/img/banner-pattern.svg);">
     <div class="container py-5 py-lg-0">
       <div class="row align-items-center">
         <div class="col-lg-4 wow zoomIn">
           <div class="img-banner d-none d-lg-block">
-            <img src="../Assets/img/mobile_app.png" alt="">
+            <img src="../view/Assets/img/mobile_app.png" alt="">
           </div>
         </div>
         <div class="col-lg-8 wow fadeInRight">
           <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
-          <a href="#"><img src="../Assets/img/google_play.svg" alt=""></a>
-          <a href="#" class="ml-2"><img src="../Assets/img/app_store.svg" alt=""></a>
+          <a href="#"><img src="../view/Assets/img/google_play.svg" alt=""></a>
+          <a href="#" class="ml-2"><img src="../view/Assets/img/app_store.svg" alt=""></a>
         </div>
       </div> <!-- .row -->
     </div> <!-- .container -->

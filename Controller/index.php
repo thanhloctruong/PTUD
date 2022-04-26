@@ -36,7 +36,7 @@
                         if (md5($pass)==$pass_hash) {
                             $user1 = finduser($user);
                             $_SESSION['id'] = $user1['MaTaiKhoan'];
-                            $_SESSION['user'] = $user1['TentaiKhoan'];
+                            $_SESSION['user'] = $user1['TenDangNhap'];
                             //Role 1 quản lí bệnh viện
                             if ($user1['Role'] == 1){
                                 $_SESSION['hospitalAdmin'] = $user;
@@ -117,27 +117,33 @@
                     $user = $_POST['user'];
                     $pass = $_POST['pass'];
                     $rpass = $_POST['rpass'];
+                    $sdt = $_POST['sdt'];
                     if ($pass != $rpass ||finduser($user) != NULL) {
                         # code...
                         if (finduser($user) != NULL) {
                             # code...
-                                echo '<script>alert("Tên đăng nhập đã tồn tại vui lòng nhập lại!");</script>';
-                                echo header("refresh:0; url='../Controller/index.php?act=register'");
+                            echo '<script>alert("Tên đăng nhập đã tồn tại vui lòng nhập lại!");</script>';
+                            echo header("refresh:0; url='../Controller/index.php?act=register'");
                         }else {
                             # code...
                             echo '<script>alert("Mật khẩu không trùng khớp!");</script>';
                             echo header("refresh:0; url='../Controller/index.php?act=register'");
                         }
-                    } else {
+                    } 
+                    elseif (!preg_match("/^(0[3|5|7|8|9][0-9]{8})$/", $sdt) ) {
+                        # code...
+                        echo '<script>alert("Số điện thoại không chính xác!!");</script>';
+                        echo header("refresh:0; url='../Controller/index.php?act=register'");
+                    }
+                    else {
                         # code...
                             $pass_hash = md5($pass);
                             $role = 0;
-                            $sdt = $_POST['sdt'];
                             $name = $_POST['name'];
                             $email = $_POST['email'];
                             $id = adduser($user, $pass_hash, $role, $sdt, $name, $email);
                             echo '<script>alert("Đăng ký tài khoản thành công");</script>';
-                            header('location: index.php?act=login');
+                            echo header("refresh:0; url='../Controller/index.php?act=login'");
                     }
                     // if (finduser($user) == NULL) {
                     //     $pass_hash = md5($pass);

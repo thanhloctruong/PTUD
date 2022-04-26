@@ -9,17 +9,18 @@
         $act = $_GET['act'];
         switch($act){
             case 'tuvan':
-                $result = get_all_request();
+                $aa = get_all_request();
                 include './View/Counseling.php';
                 break;
             case 'reply':
                 $idRequest = $_GET['id'];
                 $result = request($idRequest);
-                if(isset($_POST['submit']) && $_POST['submit']){
+                if(isset($_POST['send']) && $_POST['send']){
                     $mess = $_POST['mess'];
                     $kq =  update_request($mess,$idRequest);
                     if($kq){
-                    include './View/Counseling.php';
+                        header('location: index.php?act=tuvan');
+                        break;
                     }
                 }
                 include "./View/ReplyCounseling.php";
@@ -36,6 +37,7 @@
                 break;
             default:
                 include "./View/Home.php";
+                break;
         }
     } 
     // elseif (isset($_GET['reply'])){
