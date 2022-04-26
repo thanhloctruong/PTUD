@@ -40,20 +40,10 @@
         execsql($sql, 1);
         return true;
     }
-    function add ($data,$idbenhnhan)
-    {
-        $name=$data['name'];
-        $idbenhnhan=$data['idbenhnhan'];
-        $address=$data['address'];
-        $phone=$data['phone'];
-        $email=$data['email'];
-        $tinhtrang=$data['tinhtrang'];
-    
-        
-        $sql_pation="INSERT INTO  SET name='$name',address = '$address',phone='$phone',email='$email',tinhtrang='$tinhtrang'
-        where idbenhnhan='$idbenhnhan'";
-         execsql($sql_pation, 1);
-        return true;
+    function add($address, $tinhtrang, $phone, $name, $email){
+        $sql_pation="INSERT INTO benhnhan(name, address, phone, email, tinhtrang)
+         VALUES ('$name', '$address', '$phone','$email', '$tinhtrang')";
+        addsql($sql_pation);
     }
 
 ?>

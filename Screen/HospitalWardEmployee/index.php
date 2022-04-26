@@ -1,7 +1,7 @@
 <!-- <div> nhân viên y tế phường</div> -->
 <?php
     session_start();
-    include "../../Model/index.php";
+    include "./Model/index.php";
     include "../HospitalWardEmployee/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act']))
@@ -36,23 +36,23 @@
             case 'quanly':
                 include "./View/ManagePatientInformation.php";
                 break;
-            case 'add':
-                if (isset($_POST['submit']))
-                {
-                  $name=$_POST['name'];
-                  $idbenhnhan=$_POST['idbenhnhan'];
-                  $address=$_POST['address'];
-                  $phone=$_POST['phone'];
-                  $email=$_POST['email'];
-                  $tinhtrang=$_POST['tinhtrang'];
-              
-               
-                $data = ['name'=>$name, 'address'=>$address, 'phone'=>$phone,'tinhtrang'=>$tinhtrang, 'email'=>$email];
-                    $result = add($data, $idbenhnhan);
 
-                }
+
+
+            case 'add':
+                if (isset($_POST['submitbtn']) && $_POST['submitbtn']){
+                    $name=$_POST['name'];
+                    $address=$_POST['address'];
+                    $phone=$_POST['phone'];
+                    $tinhtrang=$_POST['tinhtrang'];
+                    $email=$_POST['email'];
                 
-                    include './add.php';
+                    $result = add($address,$tinhtrang,$phone,$name,$email);
+                    if( $result){
+                        include './View/add.php';
+                    }
+                }
+                    include './View/add.php';
                     break;
                 
             default:
