@@ -117,7 +117,7 @@
             </div>
             
             <div class="col-lg-10" style="padding:10px 0px 0px 600px;">
-                <input type="submit" value="Thêm">
+                <input type="submit" name="submit" value="Thêm">
                
             
             </div>

@@ -50,7 +50,7 @@
         $tinhtrang=$data['tinhtrang'];
     
         
-        $sql_pation="INSERT INTO  SET name='$name',address = '$address',phone='$phone',email='$email',tinhtrang='$tinhtrang'
+        $sql_pation="INSERT INTO benhnhan  SET name='$name',address = '$address',phone='$phone',email='$email',tinhtrang='$tinhtrang'
         where idbenhnhan='$idbenhnhan'";
          execsql($sql_pation, 1);
         return true;
