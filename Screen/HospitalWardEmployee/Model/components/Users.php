@@ -19,7 +19,7 @@
         return getone($sql);
     }
 
-    function getPassHash($user){
+    function getPassHash($user){;
         $sql="select MatKhau from taikhoan where TenDangNhap='".$user."'";
         return getone($sql);
     }
@@ -40,4 +40,20 @@
         execsql($sql, 1);
         return true;
     }
+    function add ($data,$idbenhnhan)
+    {
+        $name=$data['name'];
+        $idbenhnhan=$data['idbenhnhan'];
+        $address=$data['address'];
+        $phone=$data['phone'];
+        $email=$data['email'];
+        $tinhtrang=$data['tinhtrang'];
+    
+        
+        $sql_pation="INSERT INTO  SET name='$name',address = '$address',phone='$phone',email='$email',tinhtrang='$tinhtrang'
+        where idbenhnhan='$idbenhnhan'";
+         execsql($sql_pation, 1);
+        return true;
+    }
+
 ?>

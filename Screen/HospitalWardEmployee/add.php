@@ -44,7 +44,7 @@
   </div> <!-- .page-banner -->
 <!-- -------------------------------------------//--------------------------------------- -->
 <?php
-
+/* 
   if (isset($_POST['submit']))
   {
     $name=$_POST['name'];
@@ -67,20 +67,14 @@
 
     $stmt->execute();
 
-
-    
-  }
-
-
+  } */
 
 ?>
 
 
-
-
 <div class="container1">
   
-       <form class="form" method="post" action=""> 
+       <form class="form" method="post" action="index.php?act=add"> 
               
           <div class="form-group row">
             <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>

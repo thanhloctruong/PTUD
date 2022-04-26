@@ -36,6 +36,25 @@
             case 'quanly':
                 include "./View/ManagePatientInformation.php";
                 break;
+            case 'add':
+                if (isset($_POST['submit']))
+                {
+                  $name=$_POST['name'];
+                  $idbenhnhan=$_POST['idbenhnhan'];
+                  $address=$_POST['address'];
+                  $phone=$_POST['phone'];
+                  $email=$_POST['email'];
+                  $tinhtrang=$_POST['tinhtrang'];
+              
+               
+                $data = ['name'=>$name, 'address'=>$address, 'phone'=>$phone,'tinhtrang'=>$tinhtrang, 'email'=>$email];
+                    $result = add($data, $idbenhnhan);
+
+                }
+                
+                    include './add.php';
+                    break;
+                
             default:
                 include "../HospitalWardEmployee/View/Home.php";
                 break;
