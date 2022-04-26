@@ -1,7 +1,7 @@
 <!-- <div> nhân viên y tế phường</div> -->
 <?php
     session_start();
-    include "../../Model/index.php";
+    include "./Model/index.php";
     include "../HospitalWardEmployee/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act']))
@@ -37,22 +37,20 @@
                 include "./View/ManagePatientInformation.php";
                 break;
             case 'add':
-                if (isset($_POST['submit']))
+                if (isset($_POST['submitbtn']))
                 {
                   $name=$_POST['name'];
-                  $idbenhnhan=$_POST['idbenhnhan'];
                   $address=$_POST['address'];
                   $phone=$_POST['phone'];
                   $email=$_POST['email'];
                   $tinhtrang=$_POST['tinhtrang'];
               
                
-                $data = ['name'=>$name, 'address'=>$address, 'phone'=>$phone,'tinhtrang'=>$tinhtrang, 'email'=>$email];
-                    $result = add($data, $idbenhnhan);
+                 $result = add($name, $address,$phone,$tinhtrang, $email);
 
                 }
                 
-                    include './add.php';
+                    include './View/add.php';
                     break;
                 
             default:

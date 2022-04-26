@@ -1,31 +1,3 @@
-<?php
- include_once '../../Model/components/Connect.php'
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-  <title>One Health - Medical Center</title>
-<link rel="stylesheet" href="../../view/Assets/css/maicons.css">
-<link rel="stylesheet" href="../../view/Assets/css/bootstrap.css">
-<link rel="stylesheet" href="../../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
-<link rel="stylesheet" href="../../view/Assets/vendor/animate/animate.css">
-<link rel="stylesheet" href="../../view/Assets/css/theme.css">
-<link rel="stylesheet" href="../../view/Assets/css/index.css">
-<style>
-    .form
-    {
-        padding: 50px 300px;
-    }
-    
-</style>
-</head>
-<body>
-<div class="back-to-top"></div>
 
 <!-- ------------------------------------------------------end header--------------------------------------------------- -->
 <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
@@ -74,7 +46,7 @@
 
 <div class="container1">
   
-       <form class="form" method="post" action="index.php?act=add"> 
+       <form class="form" method="POST" action=""> 
               
           <div class="form-group row">
             <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>
@@ -82,12 +54,12 @@
               <input type="text"  class="form-control"  name="name"  placeholder="nhập tên bệnh nhân">
             </div>
           </div>
-          <div class="form-group row">
+          <!-- <div class="form-group row">
             <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh nhân</label>
             <div class="col-sm-10">
               <input type="text" class="form-control"  name="idbenhnhan" placeholder="nhập mã bệnh nhân">
             </div>
-          </div>
+          </div> -->
 
           <div class="form-group row">
             <label for="inputadd" class="col-sm-2 col-form-label">Địa chỉ</label>
@@ -117,7 +89,7 @@
             </div>
             
             <div class="col-lg-10" style="padding:10px 0px 0px 600px;">
-                <input type="submit" name="submit" value="Thêm">
+                <input type="submit" name='submitbtn' value="Thêm">
                
             
             </div>
@@ -125,21 +97,3 @@
         
    
 </div>
-
-
-<?php
-include("../../view/components/Footer.php")
-?>
-
-<script src="../view/Assets/js/jquery-3.5.1.min.js"></script>
-
-<script src="../view/Assets/js/bootstrap.bundle.min.js"></script>
-
-<script src="../view/Assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
-
-<script src="../view/Assets/vendor/wow/wow.min.js"></script>
-
-<script src="../view/Assets/js/theme.js"></script>
-  
-</body>
-</html>
