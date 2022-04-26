@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="../../view/Assets/css/index.css">
 
 <style>
-     .form
+   .form
     {
         padding: 50px 300px;
     }
@@ -25,81 +25,6 @@
 </head>
 <body>
 <div class="back-to-top"></div>
-<header>
-  <div class="topbar">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 text-sm">
-          <div class="site-info">
-            <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
-            <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>thanhloctruong102@@2gmail.com</a>
-          </div>
-        </div>
-        <div class="col-sm-4 text-right text-sm">
-          <div class="social-mini-button">
-            <a href="#"><span class="mai-logo-facebook-f"></span></a>
-            <a href="#"><span class="mai-logo-twitter"></span></a>
-            <a href="#"><span class="mai-logo-dribbble"></span></a>
-            <a href="#"><span class="mai-logo-instagram"></span></a>
-          </div>
-        </div>
-      </div> <!-- .row -->
-    </div> <!-- .container -->
-  </div> <!-- .topbar -->
-
-  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
-
-      <form action="index.php?act=search" method="post">
-        <div class="input-group input-navbar">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
-        </div>
-      </form>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupport">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.php">Trang chủ</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=tuvan">Tư vấn cho bệnh nhân</a> <!--Counseling-->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=quanly">Quản lý thông tin bệnh nhân
-              
-
-
-            </a> <!--ManagePatientInformation--> 
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=new">Tin tức</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Logout</a>
-          </li>
-        </ul>
-      </div> <!-- .navbar-collapse -->
-    </div> <!-- .container -->
-  </nav>
-</header>
 
 
 <!-- --------------------------------------------------------Body---------------------------------------------------------------------- -->
@@ -162,7 +87,7 @@
       <input type="text"  class="form-control" id="inputtinhtrang" >
     </div>
     
-    <div class="col-lg-10" style="padding:10px 0px 0px 650px;">
+    <div class="col-lg-10" style="padding:10px 0px 0px 500px;">
         <input type="submit" value="Cập nhật">
     </div>
 </form>
@@ -172,7 +97,7 @@
 
 <!-- ---------------------------------------------------Footer---------------------------------------------------------- -->
 <?php
-include("./View/Footer.php")
+include '../HospitalAdmin/View/Footer.php'
 ?>
 
 <script src="../view/Assets/js/jquery-3.5.1.min.js"></script>

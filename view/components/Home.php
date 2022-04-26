@@ -81,6 +81,16 @@
     {
         margin-bottom: 20px;
     }  
+  /*   .banner
+    {
+       
+        background-image: url("../view/Assets/img/bg_image_1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        width: 100%;
+    
+    } */
 </style>
 
 <div class="home">

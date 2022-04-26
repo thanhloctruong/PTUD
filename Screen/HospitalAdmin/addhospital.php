@@ -1,5 +1,5 @@
 <?php
- include_once '../../Model/components/Connect.php'
+ require_once '../../Model/components/Connect.php'
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +34,11 @@
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
             <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Quản Lý Thông Tin Bệnh Nhân</li>
-            <li class="breadcrumb-item active" aria-current="page">Thêm Bệnh Nhân</li>
+            <li class="breadcrumb-item active" aria-current="page">Quản Lý Thông Tin Bệnh Viện</li>
+            <li class="breadcrumb-item active" aria-current="page">Thêm Bệnh Viện</li>
           </ol>
         </nav>
-        <h1 class="font-weight-normal">Thêm Bệnh Nhân</h1>
+        <h1 class="font-weight-normal">Thêm Bệnh Viện</h1>
       </div> <!-- .container -->
     </div> <!-- .banner-section -->
   </div> <!-- .page-banner -->
@@ -54,21 +54,18 @@
     $email=$_POST['email'];
     $tinhtrang=$_POST['tinhtrang'];
 
-    $sql_pation="INSERT INTO benhnhan (name,idbenhnhan,address,phone,email,tinhtrang)
+    $sql_pation="INSERT INTO benhnhan(name,idbenhnhan,address,phone,email,tinhtrang)
     VALUES (:name,:idbenhnhan, :address, :phone,:email, :tinhtrang)";
   
     $stmt =$conn->prepare($sql_pation);
-    $stmt->bindParam(':name',$name,PDO::PARAM_STR);
-    $stmt->bindParam(':idbenhnhan',$idbenhnhan,PDO::PARAM_STR);
-    $stmt->bindParam(':address',$address,PDO::PARAM_STR);
-    $stmt->bindParam(':phone',$phone,PDO::PARAM_STR);
-    $stmt->bindParam(':email',$email,PDO::PARAM_STR);
-    $stmt->bindParam(':tinhtrang',$tinhtrang,PDO::PARAM_STR);
-
-    $stmt->execute();
-
-
-    
+    $stmt-> execute(array(
+       ['name']=> $name,
+       ['idbenhnhan']=> $idbenhnhan,
+       ['address']=> $address ,
+       ['phone']=>$phone,
+       ['email']=>$email,
+       ['tinhtrang']=>$tinhtrang
+    )); 
   }
 
 
@@ -80,49 +77,50 @@
 
 <div class="container1">
   
-       <form class="form" method="post" action=""> 
-              
-          <div class="form-group row">
-            <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>
+       <form class="form" method="post" action="xulyadd.php"> 
+           
+         <div class="form-group row">
+            <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh viện</label>
             <div class="col-sm-10">
-              <input type="text"  class="form-control"  name="name"  placeholder="nhập tên bệnh nhân">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh nhân</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control"  name="idbenhnhan" placeholder="nhập mã bệnh nhân">
+              <input type="text" class="form-control"  name="idbenhvien" >
             </div>
           </div>
 
+          <div class="form-group row">
+            <label for="inputname=" class="col-sm-2 col-form-label">Tên bệnh viện</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control"  name="name"  >
+            </div>
+          </div>
+         
           <div class="form-group row">
             <label for="inputadd" class="col-sm-2 col-form-label">Địa chỉ</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control"  name="address" placeholder="nhập địa chỉ">
+              <input type="text" class="form-control"  name="address" >
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputphone" class="col-sm-2 col-form-label">Số điện thoại</label>
+            <label for="inputtang" class="col-sm-2 col-form-label">Tầng </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="phone" placeholder="nhập số điện thoại">
+              <input type="number" class="form-control" name="tang" >
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
+            <label for="inputsocamac" class="col-sm-2 col-form-label">Số Ca Mắc</label>
             <div class="col-sm-10">
-              <input type="text"  class="form-control" name="email" placeholder="email@gmail.com">
+              <input type="text"  class="form-control" name="mac" >
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="inputtinhtrang" class="col-sm-2 col-form-label">Tình trạng</label>
+            <label for="inputsocakhoi" class="col-sm-2 col-form-label">Số Ca Mắc</label>
             <div class="col-sm-10">
-              <input type="text"  class="form-control"  name="tinhtrang" >
+              <input type="text"  class="form-control"  name="khoi" >
             </div>
             
-            <div class="col-lg-10" style="padding:10px 0px 0px 600px;">
+            <div class="col-lg-10" style="padding:10px 0px 0px 500px;">
                 <input type="submit" value="Thêm">
                
             

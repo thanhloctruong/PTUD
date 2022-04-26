@@ -4,10 +4,12 @@
     include "../../Model/index.php";
     include "../HospitalWardEmployee/View/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) {
+    if (isset($_GET['act']))
+     {
         # code...
         $act = $_GET['act'];
-        switch($act){
+        switch($act)
+        {
             case 'tuvan':
                 $result = get_all_request();
                 include './View/Counseling.php';
@@ -35,9 +37,15 @@
                 include "./View/ManagePatientInformation.php";
                 break;
             default:
-                include "./View/Home.php";
+                include "../HospitalWardEmployee/View/Home.php";
+                break;
+                
         }
+        
     } 
+    else{
+        include "./View/Home.php";
+    }
     // elseif (isset($_GET['reply'])){
     //     $reply = $_GET['reply'];
     //     $idRequest = 2;

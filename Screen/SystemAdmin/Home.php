@@ -7,7 +7,7 @@
     }
     .home{
         width: 100%;
-        height: 1400px;
+        height: 1400px;                                             
     }
    
     .tren,.duoi{
@@ -70,7 +70,7 @@
       
     }   
     .contact{
-        background-image: url("https://nhakhoa2.muatheme.com/wp-content/cache/breeze-minification/js/breeze_bff0f65ac460dde2fe76248ebd60a833.js");
+        background-image: url("../../view/Assets/img/bg_image_1.jpg");
         height: 100px;
         width: 100%;
     }

@@ -16,12 +16,12 @@
                 break;
             
             default:
-                include "./Home.php";
+                include "../../view/components/Home.php";
                 break;
         }
     } 
     else{
-        include "./View/Home.php";
+        include "../../view/components/Home.php";
     }
 
     include "../SystemAdmin/View/Footer.php";
