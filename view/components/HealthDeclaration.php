@@ -1,14 +1,14 @@
 <div class="KBYT">
     <div block-bind="content" id="content">
         <div class="container px-1">
-            <div class="card px-1 py-2 p-sm-2 mt-2">
+            <div class="card p-sm-2 mt-2">
                 <div class="row ">
                 <div class="col-12 text-center text-uppercase mt-1">
-                    <span class="text-title">
+                    <span>
                         <span class="text_donvi_ten">Thông tin khai báo y tế</span>
                     </span>
                 </div>
-                    <div class="col-12 d-flex flex-wrap ">
+                    <div class="col-12 d-flex ">
                         <div class="custom-control custom-radio mt-2 mr-2">
                             <input type="radio" id="cuatoi" value="2" name="loai_khaibao" class="custom-control-input" checked="">
                             <label class="custom-control-label" for="cuatoi" >Bệnh nhân/Người nhà</label>
@@ -42,9 +42,15 @@
                             <input type="text" class="form-control text-uppercase" placeholder="Họ và tên" >
                         </div>
                     </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <span class="text_fullname">Lịch sử bệnh nền</span> <span class="text-danger">(*)</span>:
+                            <input type="text" class="form-control" placeholder="nhập lịch sử bệnh nền(viêm phổi, viêm phế quản....)" >
+                        </div>
+                    </div>
                     <div class="col-12 wrap_trieuchung">
                         <div class="form-group">
-                            <span class="text_note_1 text-primary font-weight-bold" >Trong 14 ngày qua, Ông/bà có những triệu chứng nào</span><span class="text-danger"> (*)</span>:
+                            <span class="text_note_1 text-primary font-weight-bold" >Trong 14 ngày qua, Bạn có những triệu chứng nào</span><span class="text-danger"> (*)</span>:
                             <div class="table-responsive mt-1">
                                 <table class="table table-bordered mb-0">
                                     <thead>
@@ -156,7 +162,7 @@
                                             <input type="radio" id="tiepXucGan" name="dichte_tiepXucGan" class="radio-dichte" >
                                         </td>
                                         <td class="text-center td-center">
-                                            <input type="radio" id="tiepXucGan" name="dichte_tiepXucGan" class="radio-dichte"  checked=""></label>
+                                            <input type="radio" id="tiepXucGan" name="dichte_tiepXucGan" class="radio-dichte"  checked="">
                                         </td>
                                     </tr>
                                     

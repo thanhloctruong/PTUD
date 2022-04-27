@@ -63,9 +63,9 @@
                                 header('location: index.php');
                             }
                         }
-                        else $txt_err_lg = "Sai mật khẩu!!!!!!";
+                        else echo '<script>alert("Nhập sai mật khẩu")</script>';
                     }
-                    else $txt_err_lg = "không có tài khoản trong database!";
+                    else echo '<script>alert("Không có tài khoản trong database")</script>';
                 }
                 include "../view/components/Login.php";
                 break;
