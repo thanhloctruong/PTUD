@@ -12,9 +12,9 @@
 <div class=header>
     <div class="navbar">
         <ul class="col-sm-10">
-             <li><a href="#">Danh sách bệnh nhân</a></li>
+             <li><a href="index.php?act=list">Danh sách bệnh nhân</a></li>
             <li><a href="index.php?act=add">Thêm Bệnh Nhân</a></li>
-            <li><a href="update.php">Cập nhật bệnh nhân</a></li>
+            <li><a href="index.php?act=update">Cập nhật bệnh nhân</a></li>
         </ul>
     </div>
 </div>

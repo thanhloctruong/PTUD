@@ -42,6 +42,15 @@
   } */
 
 ?>
+<style>
+  .container1{
+
+    padding: 50px 0px;
+  }
+  .form{
+    padding: 0px 300px;
+  }
+</style>
 
 
 <div class="container1">
@@ -52,7 +61,17 @@
             <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>
             <div class="col-sm-10">
               <input type="text"  class="form-control"  name="name"  placeholder="nhập tên bệnh nhân">
+            
+             <!--  <?php
+                /* if (empty($error['name']['required']))
+                {
+                  echo ' <span style="color:red">'.$error['name']['required'].'</span>';
+                } */
+              
+              ?> -->
+             
             </div>
+           
           </div>
           <!-- <div class="form-group row">
             <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh nhân</label>
@@ -88,7 +107,7 @@
               <input type="text"  class="form-control"  name="tinhtrang" >
             </div>
             
-            <div class="col-lg-10" style="padding:10px 0px 0px 600px;">
+            <div class="col-lg-10" style="padding:30px 0px 30px 500px;">
                 <input type="submit" name='submitbtn' value="Thêm">
                
             
