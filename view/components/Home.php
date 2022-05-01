@@ -5,10 +5,10 @@
         margin: auto;
 
     }
-    .home{
+    .container1{
         width: 100%;
-        height: 1400px;
-        height: 1500px;
+        height: 1600px;
+      
     }
    
     .tren,.duoi{
@@ -93,7 +93,7 @@
     } */
 </style>
 
-<div class="home">
+<div class="container1">
     <div class="banner">
         <img src="http://t5g.org.vn/uploads/images/bannercovid19.png" width="100%" height="200px" alt="">
     </div>

@@ -45,9 +45,8 @@
          VALUES ('$name', '$address', '$phone','$email', '$tinhtrang')";
         addsql($sql_pation);
     }
-    function update($address, $tinhtrang, $phone, $name, $email){
-        $sql_pation_update="UPDATE benhnhan(name, address, phone, email, tinhtrang) where idbenhnhan=$idbenhnhan
-         VALUES ('$name', '$address', '$phone','$email', '$tinhtrang')";
-        updatesql($sql_pation_update);
+    function update($address, $tinhtrang, $phone, $name, $email,$idbenhnhan){
+        $$sql = "UPDATE taikhoan SET name = '$name',address = '$address', phone = '$phone', email = '$email',tinhtrang='$tinhtrang' WHERE idbenhnhan = $idbenhnhan";
+        updatesql($sql);
     }
 ?>
