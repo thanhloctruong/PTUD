@@ -40,6 +40,9 @@
                 break;
         }
     } 
+    else{
+        include "./View/Home.php";
+    }
     // elseif (isset($_GET['reply'])){
     //     $reply = $_GET['reply'];
     //     $idRequest = 2;
@@ -55,9 +58,6 @@
     //             $result = request($idRequest);
     //             include "./View/ReplyCounseling.php";
     //         }
-    // }
-    //  else{
-    //     include "./View/Home.php";
     // }
 
     include "../HospitalWardEmployee/View/Footer.php";

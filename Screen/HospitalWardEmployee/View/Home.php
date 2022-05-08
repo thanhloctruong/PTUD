@@ -1,1 +1,1 @@
-<div>Home</div>
+<div>Đây là trang Home</div>

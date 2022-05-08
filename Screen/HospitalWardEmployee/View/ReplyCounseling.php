@@ -16,7 +16,7 @@
 <form class="contact-form mt-5" action="" method="POST">
 <div class="row mb-3">
         <div class="col-12 py-2 wow fadeInUp">
-            <label for="message">Câu hỏi:</label>
+            <b for="message">Câu hỏi:</b>
             <?php
             // echo $idRequest;
             if(isset($result) && $result !=0){
@@ -26,7 +26,7 @@
             ?>
         </div>
         <div class="col-12 py-2 wow fadeInUp">
-            <label for="message">Nhập câu trả lời</label>
+            <b for="message">Nhập câu trả lời</b>
             <input id="mess" class="form-control" rows="8" name="mess" placeholder="Enter Message.."></input>
         </div>
     </div>
