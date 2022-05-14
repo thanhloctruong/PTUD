@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="MACode ID, https://macodeid.com/">
    
   <title>One Health - Medical Center</title>
 <link rel="stylesheet" href="../view/Assets/css/maicons.css">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
 <link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
 <link rel="stylesheet" href="../view/Assets/css/theme.css">
-<!-- <link rel="stylesheet" href="../view/Assets/css/index.css"> -->
+<link rel="stylesheet" href="../view/Assets/css/index.css">
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -26,7 +27,7 @@
           <div class="site-info">
             <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
             <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>manhc3dth@gmail.com</a>
+            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>nhom6868@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">

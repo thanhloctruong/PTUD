@@ -1,5 +1,5 @@
 <!-- <div>Tư vấn</div> -->
-<div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../../view/Assets/img/bg_image_1.jpg);">
     <div class="banner-section">
         <div class="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
@@ -13,10 +13,10 @@
     </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->
 
-<form class="contact-form mt-5" action="index.php?act=send" method="POST">
+<form class="contact-form mt-5" action="" method="POST">
 <div class="row mb-3">
         <div class="col-12 py-2 wow fadeInUp">
-            <label for="message">Câu hỏi:</label>
+            <b for="message">Câu hỏi:</b>
             <?php
             // echo $idRequest;
             if(isset($result) && $result !=0){
@@ -26,7 +26,7 @@
             ?>
         </div>
         <div class="col-12 py-2 wow fadeInUp">
-            <label for="message">Nhập câu trả lời</label>
+            <b for="message">Nhập câu trả lời</b>
             <input id="mess" class="form-control" rows="8" name="mess" placeholder="Enter Message.."></input>
         </div>
     </div>
