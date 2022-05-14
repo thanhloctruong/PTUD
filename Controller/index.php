@@ -131,10 +131,17 @@
                             echo header("refresh:0; url='../Controller/index.php?act=register'");
                         }
                     } 
+<<<<<<< HEAD
                     elseif (!preg_match("/^(?=.*[a-z])(?=.*\d)[a-zA-Z\d]{8,}$/", $pass)) {
                         # code...
                         echo header("refresh:0; url='../Controller/index.php?act=register'");
                         echo '<script>alert("Mật khẩu tối thiểu 8 ký tự và ít nhất 1 số");</script>';
+=======
+                    elseif (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/", $pass)) {
+                        # code...
+                        echo header("refresh:0; url='../Controller/index.php?act=register'");
+                        echo '<script>alert("Mật khẩu tối thiểu 8 ký tự, ít nhất 1 ký tự in hoa và 1 số");</script>';
+>>>>>>> 554f3c96317afa1a9543070d35ebe6817aacb892
                     }
                     elseif (!preg_match("/^(0[3|5|7|8|9][0-9]{8})$/", $sdt) ) {
                         # code...
