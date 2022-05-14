@@ -18,9 +18,12 @@
             case 'about': 
                 include '../view/components/About.php';
                 break;
-            case 'new':
-                include '../view/components/News.php';
+            case 'khaibaoyte':
+                include "../view/components/HealthDeclaration.php";
                 break;
+            // case 'doctors':
+            //     include '../view/components/Doctors.php';
+            //     break;
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);
@@ -60,9 +63,9 @@
                                 header('location: index.php');
                             }
                         }
-                        else $txt_err_lg = "Sai mật khẩu!!!!!!";
+                        else echo '<script>alert("Nhập sai mật khẩu")</script>';
                     }
-                    else $txt_err_lg = "không có tài khoản trong database!";
+                    else echo '<script>alert("Không có tài khoản trong database")</script>';
                 }
                 include "../view/components/Login.php";
                 break;

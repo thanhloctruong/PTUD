@@ -4,10 +4,12 @@
     include "../../Model/index.php";
     include "../HospitalWardEmployee/View/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) {
+    if (isset($_GET['act']))
+     {
         # code...
         $act = $_GET['act'];
-        switch($act){
+        switch($act)
+        {
             case 'tuvan':
                 $get = get_user_by_id($_SESSION['id']);
                 $ward = $get["Phuong_BVCongTac"];
@@ -41,6 +43,7 @@
                 include "./View/Home.php";
                 break;
         }
+        
     } 
     else{
         include "./View/Home.php";

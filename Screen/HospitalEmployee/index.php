@@ -2,12 +2,24 @@
 <?php
     session_start();
     include "../../Model/index.php";
-    include "../HospitalEmployee/View/Header.php";
+    include "../../Screen/HospitalEmployee/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act'])) {
         # code...
         $act = $_GET['act'];
         switch($act){
+            case 'tiepnhan':
+                include './View/Receivingpatients.php';
+                break;
+            case 'chuyenvien':
+                include "./View/Requestahospitaltransfer.php";
+                break;
+            case 'dkdieutri':
+                include "./View/Registerfortreatment.php";
+                break;
+            case 'yeucau':
+                include "./View/Requestahospitaltransfer.php";
+                break;
             case 'tracuu':
                 
                 if (isset($_POST['search']) && ($_POST['search'])) {

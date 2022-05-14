@@ -26,7 +26,7 @@
           <h5>Liên hệ</h5>
           <p class="footer-link mt-2">12 Nguyễn Văn Bảo, Phường 4, quận Gò Vấp, TP.HCM</p>
           <a href="#" class="footer-link mt-2">701-573-7582</a></br>
-          <a href="#" class="footer-link mt-2">healthcare@gmail.com</a>
+          <a href="#" class="footer-link mt-2">manhc3dth@gmail.com</a>
 
           <h5 class="mt-3">Social Media</h5>
           <div class="footer-sosmed mt-3">
@@ -45,13 +45,13 @@
     </div>
   </footer>
 
-<script src="../../view/Assets/js/jquery-3.5.1.min.js"></script>
+<script src="../view/Assets/js/jquery-3.5.1.min.js"></script>
 
-<script src="../../view/Assets/js/bootstrap.bundle.min.js"></script>
+<script src="../view/Assets/js/bootstrap.bundle.min.js"></script>
 
-<script src="../../view/Assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="../view/Assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
 
-<script src="../../view/Assets/vendor/wow/wow.min.js"></script>
+<script src="../view/Assets/vendor/wow/wow.min.js"></script>
 
 <script src="../../view/Assets/js/theme.js"></script>
 
