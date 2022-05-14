@@ -1,8 +1,8 @@
 <?php
-    function get_all_request(){
+    function get_all_request($ward){
         $sql = "SELECT *
         FROM yeucau JOIN taikhoan 
-        WHERE yeucau.MaTaiKhoan = taikhoan.MaTaiKhoan";
+        WHERE yeucau.MaTaiKhoan = taikhoan.MaTaiKhoan AND yeucau.Phuong = $ward";
         return getlist($sql);
     }
     function request($idRequest){

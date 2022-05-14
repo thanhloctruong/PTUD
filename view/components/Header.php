@@ -27,7 +27,7 @@
           <div class="site-info">
             <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
             <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>thanhloctruong102@@2gmail.com</a>
+            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>nhom6868@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">
@@ -68,17 +68,51 @@
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
+          <?php
+            if(isset($_SESSION['id'])): 
+            ?>
             <a class="nav-link" href="index.php?act=dangkydieutri">Đăng ký điều trị</a> <!--Register for treatment-->
+            <?php 
+            else:
+              echo '<a class="nav-link" href="index.php?act=login">Đăng ký điều trị</a>';
+            endif; 
+            ?>
           </li>
           <li class="nav-item">
+          <?php
+            if(isset($_SESSION['id'])): 
+            ?>
             <a class="nav-link" href="index.php?act=khaibaoyte">Khai báo y tế</a> <!--Health Declaration--> 
+            <?php 
+            else:
+              echo '<a class="nav-link" href="index.php?act=login">Khai báo y tế</a>';
+            endif; 
+            ?>
           </li>
           <li class="nav-item">
+          <?php
+            if(isset($_SESSION['id'])): 
+            ?>
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
+            <?php 
+            else:
+              echo '<a class="nav-link" href="index.php?act=login">In giấy xác nhận</a>';
+            endif; 
+            ?>
           </li>
+
           <li class="nav-item">
+            <?php
+            if(isset($_SESSION['id'])): 
+            ?>
             <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
+            <?php 
+            else:
+              echo '<a class="nav-link" href="index.php?act=login">Yêu cầu tư vấn</a>';
+            endif; 
+            ?>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li>

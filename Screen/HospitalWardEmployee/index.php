@@ -9,7 +9,9 @@
         $act = $_GET['act'];
         switch($act){
             case 'tuvan':
-                $aa = get_all_request();
+                $get = get_user_by_id($_SESSION['id']);
+                $ward = $get["Phuong_BVCongTac"];
+                $aa = get_all_request($ward);
                 include './View/Counseling.php';
                 break;
             case 'reply':
@@ -40,6 +42,9 @@
                 break;
         }
     } 
+    else{
+        include "./View/Home.php";
+    }
     // elseif (isset($_GET['reply'])){
     //     $reply = $_GET['reply'];
     //     $idRequest = 2;
@@ -55,9 +60,6 @@
     //             $result = request($idRequest);
     //             include "./View/ReplyCounseling.php";
     //         }
-    // }
-    //  else{
-    //     include "./View/Home.php";
     // }
 
     include "../HospitalWardEmployee/View/Footer.php";

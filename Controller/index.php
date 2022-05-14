@@ -118,6 +118,7 @@
                     $pass = $_POST['pass'];
                     $rpass = $_POST['rpass'];
                     $sdt = $_POST['sdt'];
+                    $email = $_POST['email'];
                     if ($pass != $rpass ||finduser($user) != NULL) {
                         # code...
                         if (finduser($user) != NULL) {
@@ -130,9 +131,18 @@
                             echo header("refresh:0; url='../Controller/index.php?act=register'");
                         }
                     } 
+                    elseif (!preg_match("/^(?=.*[a-z])(?=.*\d)[a-zA-Z\d]{8,}$/", $pass)) {
+                        # code...
+                        echo header("refresh:0; url='../Controller/index.php?act=register'");
+                        echo '<script>alert("Mật khẩu tối thiểu 8 ký tự và ít nhất 1 số");</script>';
+                    }
                     elseif (!preg_match("/^(0[3|5|7|8|9][0-9]{8})$/", $sdt) ) {
                         # code...
                         echo '<script>alert("Số điện thoại không chính xác!!");</script>';
+                        echo header("refresh:0; url='../Controller/index.php?act=register'");
+                    }
+                    elseif(!preg_match("/^[a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,3}$/", $email)){
+                        echo '<script>alert("Email không hợp lệ");</script>';
                         echo header("refresh:0; url='../Controller/index.php?act=register'");
                     }
                     else {
@@ -140,7 +150,6 @@
                             $pass_hash = md5($pass);
                             $role = 0;
                             $name = $_POST['name'];
-                            $email = $_POST['email'];
                             $id = adduser($user, $pass_hash, $role, $sdt, $name, $email);
                             echo '<script>alert("Đăng ký tài khoản thành công");</script>';
                             echo header("refresh:0; url='../Controller/index.php?act=login'");

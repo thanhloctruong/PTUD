@@ -53,4 +53,9 @@
         }
       }
 ?>
+
 </table>
+
+<?php
+echo $ward;
+?>

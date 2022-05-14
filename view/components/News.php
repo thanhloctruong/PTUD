@@ -46,20 +46,20 @@
               <div class="card-blog">
                 <div class="header">
                   <div class="post-category">
-                    <a href="#">Dental</a>
+                    <a href="#">Chăm sóc F0</a>
                   </div>
                   <a href="blog-details" class="post-thumb">
                     <img src="../view/Assets/img/blog/blog_3.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
-                  <h5 class="post-title"><a href="blog-details.html">What is the impact of eating too much sugar?</a></h5>
+                  <h5 class="post-title"><a href="blog-details.html">Covid-19 kích thích kháng thể chống lại cảm lạnh thông thường</a></h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
                         <img src="../view/Assets/img/person/person_4.jpg" alt="">
                       </div>
-                      <span>Wizdom Jack</span>
+                      <span>An Nhiên</span>
                     </div>
                     <span class="mai-time"></span> 2 weeks ago
                   </div>
