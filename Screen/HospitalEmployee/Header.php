@@ -85,7 +85,7 @@
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li> -->
           <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Logout</a>
+            <a class="btn btn-primary ml-lg-3" href="../../index.php?act=logout">Logout</a>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->

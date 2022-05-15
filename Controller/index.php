@@ -21,9 +21,9 @@
             case 'khaibaoyte':
                 include "../view/components/HealthDeclaration.php";
                 break;
-            // case 'doctors':
-            //     include '../view/components/Doctors.php';
-            //     break;
+            case 'new':
+                include '../view/components/News.php';
+                break;
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);
