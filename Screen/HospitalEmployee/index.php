@@ -2,7 +2,7 @@
 <?php
     session_start();
     include "../../Model/index.php";
-    include "../HospitalEmployee/Header.php";
+    include "../../Screen/HospitalEmployee/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act'])) 
     {
@@ -10,16 +10,16 @@
         $act = $_GET['act'];
         switch($act){
             case 'tiepnhan':
-                include 'Receivingpatients.php';
+                include './View/Receivingpatients.php';
                 break;
             case 'chuyenvien':
-                include "Requestahospitaltransfer.php";
+                include "./View/Requestahospitaltransfer.php";
                 break;
             case 'dkdieutri':
-                include "Registerfortreatment.php";
+                include "./View/Registerfortreatment.php";
                 break;
             case 'yeucau':
-                include "Requestahospitaltransfer.php";
+                include "./View/Requestahospitaltransfer.php";
                 break;
             case 'tracuu':
                 

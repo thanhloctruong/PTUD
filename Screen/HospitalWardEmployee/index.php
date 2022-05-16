@@ -10,18 +10,21 @@
         $act = $_GET['act'];
         switch($act)
         {
-            case 'tuvan':       
-                $result = get_all_request();
+            case 'tuvan':
+                $get = get_user_by_id($_SESSION['id']);
+                $ward = $get["Phuong_BVCongTac"];
+                $aa = get_all_request($ward);
                 include './View/Counseling.php';
                 break;
             case 'reply':
                 $idRequest = $_GET['id'];
                 $result = request($idRequest);
-                if(isset($_POST['submit']) && $_POST['submit']){
+                if(isset($_POST['send']) && $_POST['send']){
                     $mess = $_POST['mess'];
                     $kq =  update_request($mess,$idRequest);
                     if($kq){
-                    include './View/Counseling.php';
+                        header('location: index.php?act=tuvan');
+                        break;
                     }
                 }
                 include "./View/ReplyCounseling.php";
@@ -126,9 +129,8 @@
                 
                 
             default:
-                include "../HospitalWardEmployee/View/Home.php";
+                include "./View/Home.php";
                 break;
-                
         }
         
     } 
@@ -150,9 +152,6 @@
     //             $result = request($idRequest);
     //             include "./View/ReplyCounseling.php";
     //         }
-    // }
-    //  else{
-    //     include "./View/Home.php";
     // }
 
     include "../HospitalWardEmployee/View/Footer.php";

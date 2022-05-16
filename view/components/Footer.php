@@ -65,8 +65,11 @@
 <script src="../view/Assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
 
 <script src="../view/Assets/vendor/wow/wow.min.js"></script>
+<script src="../view/Assets/js/google-maps.js"></script>
 
 <script src="../view/Assets/js/theme.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+ 
   
 </body>
 </html>
