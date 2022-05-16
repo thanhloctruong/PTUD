@@ -25,12 +25,13 @@
 </head>
 <body>
 <div class="back-to-top"></div>
->
+
 
 
 <!-- --------------------------------------------------------Body---------------------------------------------------------------------- -->
 
-<div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+<div class="page-banner overlay-dark bg-image" style="background-image: url('http://benhnhietdoi.vn/Uploads/images/%E1%BA%A2nh%20t%C6%B0%20li%E1%BB%87u/Anh%20BV.jpg');
+background-position: center;background-size: cover;">
     <div class="banner-section">
       <div class="container text-center wow fadeInUp">
         <nav aria-label="Breadcrumb">

@@ -39,5 +39,12 @@
         $sql = "UPDATE taikhoan SET address = '$address', phone = '$phone', name = '$name', date = '$dob', email = '$email' WHERE id = $user_id";
         execsql($sql, 1);
         return true;
+        
     }
+    function add($address, $socamac, $name,$socakhoi,$tang){
+        $sql_pation="INSERT INTO benhvien(name, address, tang, socamac, socakhoi)
+         VALUES ('$name', '$address','$tang' ,'$socamac','$socakhoi')";
+        addsql($sql_pation);
+    }
+    
 ?>

@@ -4,7 +4,8 @@
     include "../../Model/index.php";
     include "../HospitalEmployee/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) {
+    if (isset($_GET['act'])) 
+    {
         # code...
         $act = $_GET['act'];
         switch($act){
@@ -41,7 +42,8 @@
                 include "./View/Home.php";
                 break;
         }
-    } else{
+    }
+     else{
         include "./View/Home.php";
     }
 

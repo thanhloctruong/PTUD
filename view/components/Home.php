@@ -6,9 +6,8 @@
 
     }
     .container1{
-        width: 100%;
-        height: 1600px;
-      
+        padding: 10px 0px;
+        height: 1500px;
     }
    
     .tren,.duoi{

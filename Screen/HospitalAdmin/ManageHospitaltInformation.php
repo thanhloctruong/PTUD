@@ -29,8 +29,8 @@
     <div class="navbar navbar-collapse">
         <ul>
             <li><a href="#">Danh Sách Bệnh Viện</a></li>
-            <li><a href="addhospital.php">Thêm Bệnh Viện</a></li>
-            <li><a href="updatehospital.php">Cập Nhật Bệnh Viện</a></li>
+            <li><a href="index.php?act=add">Thêm Bệnh Viện</a></li>
+            <li><a href="index.php?act=update">Cập Nhật Bệnh Viện</a></li>
         </ul>
     </div>
 
