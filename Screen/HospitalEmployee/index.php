@@ -11,18 +11,38 @@
             case 'tiepnhan':
                 include './View/Receivingpatients.php';
                 break;
-            case 'chuyenvien':
-                include "./View/Requestahospitaltransfer.php";
-                break;
             case 'dkdieutri':
                 include "./View/Registerfortreatment.php";
                 break;
             case 'yeucau':
+                // $ten = join_bang($_GET['mhs']);
+                // $tang= check_mabv($_POST['txttang']);
+                if (isset($_POST['search']) && ($_POST['search'])) 
+                {
+                    $search = join_bang($_POST['txttimkiem']);         
                 include "./View/Requestahospitaltransfer.php";
                 break;
+                }else
+                {
+                    include './View/Requestahospitaltransfer.php';
+                    break;
+                }
+            case 'tiepnhan':
+                include "./View/Receivingpatients.php";
+                break;
+            case 'timkiem':
+                if (isset($_POST['search']) && ($_POST['search']))
+                 {
+                    $search = Search($_POST['txttimkiem']);
+                    include './View/patientrecordsearch.php';
+                    break;
+                } else{
+                    include './View/patientrecordsearch.php';
+                    break;
+                }
             case 'tracuu':
-                
-                if (isset($_POST['search']) && ($_POST['search'])) {
+                if (isset($_POST['search']) && ($_POST['search']))
+                 {
                     $search = Search($_POST['txtTimKiem']);
                     include './View/Search.php';
                     break;

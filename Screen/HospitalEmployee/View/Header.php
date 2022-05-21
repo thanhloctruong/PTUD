@@ -76,7 +76,10 @@
             <a class="nav-link" href="index.php?act=">Quản lý thông tin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">Yêu cầu chuyển viện</a>
+            <a class="nav-link" href="index.php?act=timkiem">Yêu cầu chuyển viện</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=tiepnhan">Tiếp nhận bệnh nhân</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>

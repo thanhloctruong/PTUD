@@ -21,6 +21,14 @@
             case 'khaibaoyte':
                 include "../view/components/HealthDeclaration.php";
                 break;
+            case 'dangkydieutri':
+                $RegisterForTreatment=get_csyt();
+                if(isset($_POST['txtcoso']))
+                {
+                $print=thongtin($_POST['txtcoso']);
+                }
+                include "../view/components/RegisterForTreatment.php";
+                break;
             // case 'doctors':
             //     include '../view/components/Doctors.php';
             //     break;
