@@ -30,7 +30,7 @@
 
 <div class="container1">
   
-       <form class="form" method="post" action=""> 
+       <form class="form" method="post" action="index.php?act=add"> 
            
          <!-- <div class="form-group row">
             <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh viện</label>
@@ -54,7 +54,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputtang" class="col-sm-2 col-form-label">Tầng </label>
+            <label for="inputtang" class="col-sm-2 col-form-label">Tầng Số </label>
             <div class="col-sm-10">
               <input type="number" class="form-control" name="tang" >
             </div>

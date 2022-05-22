@@ -56,7 +56,7 @@ background-position: center;background-size: cover;">
 
 <div class="container1">
   
-       <form class="form" method="POST" action=""> 
+       <form class="form" method="POST" action="index.php?act=add"> 
               
           <div class="form-group row">
             <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>

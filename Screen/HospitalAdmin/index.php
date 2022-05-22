@@ -33,7 +33,7 @@
                         $error=[];
                         //
                         if (empty(trim($_POST['name'])))
-                        {
+                        {   
                             $error ['name']['required']='Tên bệnh viện không được bỏ trống';
                         }
                         //
@@ -92,7 +92,7 @@
                        }
                     }        
                       else{
-                        $result = add($name, $address,$phone,$tinhtrang, $email);
+                        $result = add($name,$address,$tang,$socamac, $socakhoi);
                       }
                 }
                  include './View/addhospital.php';

@@ -48,7 +48,7 @@ background-position: center;background-size: cover;">
 
 <div class="container1">
   
-    <form class="form">
+    <form class="form" action="">
   <div class="form-group row">
     <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>
     <div class="col-sm-10">

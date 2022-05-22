@@ -42,7 +42,7 @@
         
     }
     function add($address, $socamac, $name,$socakhoi,$tang){
-        $sql_pation="INSERT INTO benhvien(name, address, tang, socamac, socakhoi)
+        $sql_pation="INSERT INTO benhvien(TenBenhVien, Diachi, TangSo, SoCaMac, SoCaKhoi)
          VALUES ('$name', '$address','$tang' ,'$socamac','$socakhoi')";
         addsql($sql_pation);
     }
