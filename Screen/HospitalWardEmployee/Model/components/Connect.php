@@ -38,6 +38,7 @@
         $last_id = $conn->lastInsertId();
         return $last_id;
     }
+    
     function updatesql($sql)
     {
         $conn = connect();

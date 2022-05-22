@@ -48,43 +48,43 @@
   
     <form class="form">
   <div class="form-group row">
-    <label for="inputname" class="col-sm-2 col-form-label">Họ và Tên</label>
+    <label for="inputname" class="col-sm-2 col-form-label">Tên Bệnh Viện </label>
     <div class="col-sm-10">
-      <input type="text"  class="form-control" id="name" value="" placeholder="nhập tên bệnh nhân">
+      <input type="text"  class="form-control" name="name" value="" >
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh nhân</label>
+    <label for="inputname" class="col-sm-2 col-form-label">Mã Bệnh Viện </label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputid" placeholder="nhập mã bệnh nhân">
+      <input type="text"  class="form-control" name="id" value="" >
     </div>
   </div>
 
   <div class="form-group row">
     <label for="inputadd" class="col-sm-2 col-form-label">Địa chỉ</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputadd" placeholder="nhập địa chỉ">
+      <input type="text" class="form-control" name="address">
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="inputphone" class="col-sm-2 col-form-label">Số điện thoại</label>
+    <label for="inputphone" class="col-sm-2 col-form-label">Tầng số</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputphone" placeholder="nhập số điện thoại">
+      <input type="number" class="form-control" name="tang" >
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
+    <label for="inputemail" class="col-sm-2 col-form-label">Số Ca Mắc</label>
     <div class="col-sm-10">
-      <input type="text"  class="form-control" id="inputemail" placeholder="email@gmail.com">
+      <input type="text"  class="form-control" name="socamac" >
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="inputtinhtrang" class="col-sm-2 col-form-label">Tình trạng</label>
+    <label for="inputtinhtrang" class="col-sm-2 col-form-label">Số Ca Khỏi </label>
     <div class="col-sm-10">
-      <input type="text"  class="form-control" id="inputtinhtrang" >
+      <input type="text"  class="form-control" name="socakhoi" >
     </div>
     
     <div class="col-lg-10" style="padding:10px 0px 0px 500px;">

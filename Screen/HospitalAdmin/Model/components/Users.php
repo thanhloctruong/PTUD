@@ -42,9 +42,16 @@
         
     }
     function add($address, $socamac, $name,$socakhoi,$tang){
-        $sql_pation="INSERT INTO benhvien(TenBenhVien, Diachi, TangSo, SoCaMac, SoCaKhoi)
+        $sql="INSERT INTO benhvien (TenBenhVien, Diachi, TangSo, SoCaMac, SoCaKhoi)
          VALUES ('$name', '$address','$tang' ,'$socamac','$socakhoi')";
-        addsql($sql_pation);
+        addsql($sql);
+        execsql($sql,1);
+    }
+    function update($address, $socamac, $name,$socakhoi,$tang,$id)
+    {
+        $sql = "UPDATE benhvien SET Tenbenhvien = '$name',Diachi = '$address', socamac = '$socamac', socakhoi = '$socakhoi',tangso='$tang'
+         WHERE Mabenhvien = $id";
+        updatesql($sql);
     }
     
 ?>

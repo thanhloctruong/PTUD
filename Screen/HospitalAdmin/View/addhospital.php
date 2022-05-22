@@ -30,7 +30,7 @@
 
 <div class="container1">
   
-       <form class="form" method="post" action="index.php?act=add"> 
+       <form class="form" method="post" > 
            
          <!-- <div class="form-group row">
             <label for="inputid" class="col-sm-2 col-form-label">Mã bệnh viện</label>
@@ -74,7 +74,7 @@
             </div>
             
             <div class="col-lg-10" style="padding:10px 0px 0px 500px;">
-                <input type="submit"  name = 'submitbtn' value="Thêm">
+                <input type="submit"  name = "submitbtn" value="Thêm">
                
             
             </div>

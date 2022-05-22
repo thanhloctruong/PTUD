@@ -1,5 +1,8 @@
 <!-- <div> nhân viên y tế bệnh viện</div> -->
 <?php
+
+use LDAP\Result;
+
     session_start();
     include "./Model/index.php";
     include "../HospitalAdmin/Header.php";
@@ -97,7 +100,24 @@
                 }
                  include './View/addhospital.php';
                         break;
-           
+
+          case 'update':
+                 if (isset($_POST['submitbtn']))
+                    {
+                        $name=$_POST['name'];
+                        $address=$_POST['address'];
+                        $tang=$_POST['tang'];
+                        $socamac=$_POST['socamac'];
+                       $socakhoi=$_POST['socakhoi'];
+                       $id=$_POST['id'];
+                    }
+                else{
+                        $result = add($name,$address,$tang,$socamac, $socakhoi);
+                      }
+
+                    
+                    include "./View/updatehospital.php";
+                    break;
             default:
                 include "./View/Home.php";
                 break;
