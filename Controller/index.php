@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    ob_start();
+    session_start(); 
+
     // cookies
     // if(count($_COOKIE) > 1) {
     //     setcookie('user', $_COOKIE['user'], time() + (86400 * 10), '/');
@@ -21,9 +23,9 @@
             case 'khaibaoyte':
                 include "../view/components/HealthDeclaration.php";
                 break;
-            // case 'doctors':
-            //     include '../view/components/Doctors.php';
-            //     break;
+            case 'new':
+                include '../view/components/News.php';
+                break;
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);
@@ -108,13 +110,15 @@
             //     }
             //     include "../view/edit_user.php";
             //     break;
-            // case 'logout':
-            //     if(isset($_SESSION['id'])) unset($_SESSION['id']);
-            //     if(isset($_SESSION['user'])) unset($_SESSION['user']);
-            //     setcookie('user', '', time() - 1, '/');
-            //     setcookie('id', '', time() - 1, '/');
-            //     header('location: index.php');
-            //     break;
+            case 'logout':
+                if(isset($_SESSION['id'])) unset($_SESSION['id']);
+                if(isset($_SESSION['user'])) unset($_SESSION['user']);
+                // setcookie('user', '', time() - 1, '/');
+                // setcookie('id', '', time() - 1, '/');
+                // include "../view/components/Home.php";
+                header('location: index.php');
+                // include "../index.php";
+                break;
             case 'register':
                 if (isset($_POST['register']) && ($_POST['register'])) {
                     $user = $_POST['user'];
@@ -126,12 +130,12 @@
                         # code...
                         if (finduser($user) != NULL) {
                             # code...
-                            echo '<script>alert("Tên đăng nhập đã tồn tại vui lòng nhập lại!");</script>';
                             echo header("refresh:0; url='../Controller/index.php?act=register'");
+                            echo '<script>alert("Tên đăng nhập đã tồn tại vui lòng nhập lại!");</script>';
                         }else {
                             # code...
-                            echo '<script>alert("Mật khẩu không trùng khớp!");</script>';
                             echo header("refresh:0; url='../Controller/index.php?act=register'");
+                            echo '<script>alert("Mật khẩu không trùng khớp!");</script>';
                         }
                     } 
                     elseif (!preg_match("/^(?=.*[a-z])(?=.*\d)[a-zA-Z\d]{8,}$/", $pass)) {
@@ -145,8 +149,8 @@
                         echo header("refresh:0; url='../Controller/index.php?act=register'");
                     }
                     elseif(!preg_match("/^[a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,3}$/", $email)){
-                        echo '<script>alert("Email không hợp lệ");</script>';
                         echo header("refresh:0; url='../Controller/index.php?act=register'");
+                        echo '<script>alert("Email không hợp lệ");</script>';
                     }
                     else {
                         # code...
@@ -154,8 +158,8 @@
                             $role = 0;
                             $name = $_POST['name'];
                             $id = adduser($user, $pass_hash, $role, $sdt, $name, $email);
-                            echo '<script>alert("Đăng ký tài khoản thành công");</script>';
                             echo header("refresh:0; url='../Controller/index.php?act=login'");
+                            echo '<script>alert("Đăng ký tài khoản thành công");</script>';
                     }
                     // if (finduser($user) == NULL) {
                     //     $pass_hash = md5($pass);

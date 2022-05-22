@@ -67,7 +67,7 @@
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
-          <li class="nav-item">
+          <li class="nav-item active active">
           <?php
             if(isset($_SESSION['id'])): 
             ?>
@@ -78,7 +78,7 @@
             endif; 
             ?>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
           <?php
             if(isset($_SESSION['id'])): 
             ?>
@@ -89,7 +89,7 @@
             endif; 
             ?>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
           <?php
             if(isset($_SESSION['id'])): 
             ?>
@@ -101,7 +101,7 @@
             ?>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item active">
             <?php
             if(isset($_SESSION['id'])): 
             ?>
@@ -113,11 +113,19 @@
             ?>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login / Register</a>
+            <?php
+            if(isset($_SESSION['id'])): 
+            ?>
+            <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
+            <?php 
+            else:
+              echo '<a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login</a>';
+            endif; 
+            ?>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->
