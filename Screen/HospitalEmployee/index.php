@@ -20,6 +20,9 @@
             case 'yeucau':
                 include "./View/Requestahospitaltransfer.php";
                 break;
+            case 'capnhatttb':
+                include "./View/UpdateHealth.php";
+                break;
             case 'tracuu':
                 
                 if (isset($_POST['search']) && ($_POST['search'])) {

@@ -39,6 +39,13 @@
             case 'quanly':
                 include "./View/ManagePatientInformation.php";
                 break;
+
+            case 'kiemtrattb':
+                include "./View/CheckHealth.php";
+                break;
+
+
+
             default:
                 include "./View/Home.php";
                 break;
