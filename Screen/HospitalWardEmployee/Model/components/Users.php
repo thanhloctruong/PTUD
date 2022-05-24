@@ -40,9 +40,9 @@
         execsql($sql, 1);
         return true;
     }
-    function add($address, $tinhtrang, $phone, $name, $email){
-        $sql_pation="INSERT INTO benhnhan(name, address, phone, email, tinhtrang)
-         VALUES ('$name', '$address', '$phone','$email', '$tinhtrang')";
+    function add($user,$pass,$name,$date, $address,$phone,$cccd,$role, $email,$phuongct){
+        $sql_pation="INSERT INTO taikhoan(TenDangNhap,MatKhau,HoTen,NgaySinh,SDT,Email,CCCD,DiaChi,Role,Phuong_BVCongTac)
+         VALUES ('$user','$pass','$name','$date', '$phone','$email','$cccd','$address','$role', '$phuongct')";
         addsql($sql_pation);
     }
     function update($address, $tinhtrang, $phone, $name, $email,$idbenhnhan)

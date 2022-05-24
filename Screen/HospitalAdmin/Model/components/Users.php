@@ -42,16 +42,22 @@
         
     }
     function add($address, $socamac, $name,$socakhoi,$tang){
-        $sql="INSERT INTO benhvien (TenBenhVien, Diachi, TangSo, SoCaMac, SoCaKhoi)
+        $sql="INSERT INTO benhvien (TenBenhVien, DiaChi, TangSo, SoCaMac, SoCaKhoi)
          VALUES ('$name', '$address','$tang' ,'$socamac','$socakhoi')";
         addsql($sql);
-        execsql($sql,1);
+        
     }
     function update($address, $socamac, $name,$socakhoi,$tang,$id)
     {
-        $sql = "UPDATE benhvien SET Tenbenhvien = '$name',Diachi = '$address', socamac = '$socamac', socakhoi = '$socakhoi',tangso='$tang'
+        $sql = "UPDATE benhvien SET Tenbenhvien = '$name', DiaChi = '$address', socamac = '$socamac', socakhoi = '$socakhoi',tangso='$tang'
          WHERE Mabenhvien = $id";
         updatesql($sql);
     }
+    function hospitallist()
+    {
+        $sql="SELECT * from benhvien";
+        getlist($sql);
+    }
+
     
 ?>

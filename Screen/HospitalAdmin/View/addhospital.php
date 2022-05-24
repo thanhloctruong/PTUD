@@ -56,7 +56,7 @@
           <div class="form-group row">
             <label for="inputtang" class="col-sm-2 col-form-label">Tầng Số </label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" name="tang" >
+              <input type="text" class="form-control" name="tang" >
             </div>
           </div>
 

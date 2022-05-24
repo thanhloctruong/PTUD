@@ -20,6 +20,10 @@ use LDAP\Result;
             case 'thongke':
                 include "StatisticsCase.php";
                 break;
+            case 'list':
+                $list = hospitallist();
+                include './View/list.php';
+                break;
             case 'add':
                 if (isset($_POST['submitbtn']))
                     {
@@ -29,74 +33,56 @@ use LDAP\Result;
                       $tang=$_POST['tang'];
                       $socamac=$_POST['socamac'];
                       $socakhoi=$_POST['socakhoi'];
-    
-                     $error=[];
-                     if($_SERVER['REQUEST_METHOD']=='POST')          
-                    {
-                        $error=[];
-                        //
-                        if (empty(trim($_POST['name'])))
-                        {   
-                            $error ['name']['required']='Tên bệnh viện không được bỏ trống';
-                        }
-                        //
-                        if (empty(trim($_POST['address'])))
-                        {
-                            $error ['address']['required']='Địa chỉ không được bỏ trống';
-                        }
-                        //
-                        if (empty(trim($_POST['socamac'])))
-                        {
-                            $error ['socamac']['required']='Bắt buộc nhập số ca mắc';
-                        }
-                        else
-                        {
-                            if(!filter_var(trim($_POST['socamac']),FILTER_VALIDATE_INT))
-                            
-                            {
-                                $error ['socamac']['invalid']='Không hợp lệ';
-                            }
-                        }
-                        //
-                        if (empty(trim($_POST['tang'])))
-                        {
-                            $error ['socamac']['required']='Bắt buộc nhập tầng';
-                        }
-                        else
-                        {
-                            if(!filter_var(trim($_POST['tang']),FILTER_VALIDATE_INT))
-                            
-                            {
-                                $error ['tang']['invalid']='Không hợp lệ';
-                            }
-                        }
-                        //
-                        if (empty(trim($_POST['socakhoi'])))
-                        {
-                            $error ['socakhoi']['required']='Bắt buộc nhập số ca khỏi';
-                        }
-                        else
-                        {
-                            if(!filter_var(trim($_POST['socakhoi']),FILTER_VALIDATE_INT))
-                            
-                            {
-                                $error ['socakhoi']['invalid']='Không hợp lệ';
-                            }
-                        }
-                       if (empty($error))
-                       {
-                           echo (" <script>alert('Thêm Thành Công')</script>");
-                       }
-                       else
-                       {
-                        echo (" <script>alert('Thêm Không Thành Công')</script>");
-                       print_r($error);
                    
-                       }
-                    }        
-                      else{
-                        $result = add($name,$address,$tang,$socamac, $socakhoi);
-                      }
+
+                        if ($name==null) {
+                            echo '<script>alert("Lỗi !  Bắt buộc nhập");</script>';
+                            echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                        }
+                        elseif ($address==null){
+                            echo '<script>alert("Lỗi ! Bắt buộc nhập địa chỉ ");</script>';
+                            echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                        }
+                        elseif($tang==null)
+                            {
+                                echo '<script>alert("Lỗi ! Bắt buộc nhập số tâng ");</script>';
+                                echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                            }
+                        elseif ( $tang <1 || $tang >5)
+                            {
+                            echo '<script>alert("Lỗi ! Tầng từ 1-5 ");</script>';
+                            echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                            }
+                        
+                        elseif($socamac ==null)
+                            {
+                                echo '<script>alert(" Lỗi ! Bắt buộc nhập số ca mắc ");</script>';
+                                echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                            }
+                        elseif ($socamac < 0 )
+                            {
+                            echo '<script>alert("Lỗi ! Số ca mắc phải lớn hơn hoặc bằng 0 ");</script>';
+                            echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                            }
+                        
+                        elseif ($socakhoi ==null)
+                            {
+                                echo '<script>alert("Lỗi ! Bắt buộc nhập số ca khỏi ");</script>';
+                                echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                            }
+                            elseif ( $socakhoi < 0 )
+                            {
+                            echo '<script>alert("Số ca khỏi phải lớn hơn hoặc bằng 0 ");</script>';
+                            echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+                            }
+                      
+                        else
+                        {
+                            $result = add($name, $address,$tang,$socamac,$socakhoi);
+                            echo '<script>alert("Thêm thành công");</script>';
+                            echo header("refresh:0; url='../HospitalAdmin/index.php?act=add'");
+
+                        }
                 }
                  include './View/addhospital.php';
                         break;
@@ -110,10 +96,11 @@ use LDAP\Result;
                         $socamac=$_POST['socamac'];
                        $socakhoi=$_POST['socakhoi'];
                        $id=$_POST['id'];
+                       $result = update($name,$address,$tang,$socamac, $socakhoi,$id);
                     }
-                else{
-                        $result = add($name,$address,$tang,$socamac, $socakhoi);
-                      }
+                /* else{
+                        $result = update($name,$address,$tang,$socamac, $socakhoi);
+                      } */
 
                     
                     include "./View/updatehospital.php";

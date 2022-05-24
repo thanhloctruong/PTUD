@@ -45,73 +45,76 @@
             case 'add':
                 if (isset($_POST['submitbtn']))
                 {
-                    
-                  $name=$_POST['name'];
+                
+                  $user=$_POST['user'];
+                  $pass=$_POST['pass'];
+                  $date=$_POST['date'];
+                  $name=$_POST['name' ];
                   $address=$_POST['address'];
                   $phone=$_POST['phone'];
                   $email=$_POST['email'];
-                  $tinhtrang=$_POST['tinhtrang'];
+                  $cccd=$_POST['cccd'];
+                  $role=$_POST['role'];
+                  $phuongct=$_POST['phuong'];
+                  
 
-                 $error=[];
-                 if($_SERVER['REQUEST_METHOD']=='POST')          
-                {
-                    $error=[];
-                    //
-                    if (empty(trim($_POST['name'])))
-                    {
-                        $error ['name']['required']='ho ten khong duoc bo trong';
-                    }
-                    //
-                    if (empty(trim($_POST['address'])))
-                    {
-                        $error ['address']['required']='dia chi khong duoc bo trong';
-                    }
-                    //
-                    if (empty(trim($_POST['email'])))
-                    {
-                        $error ['email']['required']='email khong duoc bo trong';
-                    }
-                    else
-                    {
-                        if(!filter_var(trim($_POST['email']),FILTER_VALIDATE_EMAIL))
-                        
-                        {
-                            $error ['email']['invalid']='email khong hop le';
+
+                     if ($user==null) {
+                        echo '<script>alert("Bắt buộc nhập Tên Đăng Nhập");</script>';
+                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
                         }
-                    }
-                    //
-                    if (empty(trim($_POST['phone'])))
-                    {
-                        $error ['phone']['required']='email khong duoc bo trong';
-                    }
-                    else
-                    {
-                        if(!filter_var(trim($_POST['phone']),FILTER_VALIDATE_INT))
-                        
-                        {
-                            $error ['phone']['invalid']='sdt khong hop le';
+                        elseif ($pass==null){
+                            echo '<script>alert("Bắt buộc nhập mật khẩu ");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
                         }
-                    }
-                   if (empty($error))
-                   {
-                       echo (" <script>alert('Thêm Thành Công')</script>");
-                   }
-                   else
-                   {
-                    echo (" <script>alert('Thêm Không Thành Công')</script>");
-                   print_r($error);
-               
-
-
-                   }
-
+                        elseif ($name=="") {
+                        echo '<script>alert("Bắt buộc nhập");</script>';
+                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif ($date==null)
+                        {
+                            echo '<script>alert("Ngày sinh không được bỏ trống");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif (!preg_match("/^(0[3|5|7|8|9][0-9]{8})$/", $phone) ) {
+                            # code...
+                            echo '<script>alert("Số điện thoại không chính xác!!");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif(!preg_match("/^[a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,3}$/", $email)){
+                            echo '<script>alert("Email không hợp lệ");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif (!preg_match("/^([0-9]{12})$/", $cccd) ) {
+                            # code...
+                            echo '<script>alert("Căn cước công dân gồm 12 số !!");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif ($address==null){
+                            echo '<script>alert("Bắt buộc nhập địa chỉ ");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif($role==null || $role<0)
+                        {
+                            echo '<script>alert("Vui lòng phân quyền Role");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        elseif($phuongct==null || $phuongct<0)
+                        {
+                            echo '<script>alert("Bắt buộc nhập Phường công tác");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
+                        else
+                        {
+                            $result = add($user,$pass,$name,$date, $address,$phone,$cccd,$role, $email,$phuongct);
+                            echo '<script>alert("Thêm Thành Công");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        }
                     
-                }        
-                  else{
-                    $result = add($name, $address,$phone,$tinhtrang, $email);
-                  }
+
+                        
                 }
-                    include './View/add.php';
+                    include './View/add1.php';
                     break;
 
             case 'update':
