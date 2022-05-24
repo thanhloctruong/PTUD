@@ -88,7 +88,7 @@
     </div>
     
     <div class="col-lg-10" style="padding:10px 0px 0px 500px;">
-        <input type="submit" value="Cập nhật">
+        <input name = 'submitbtn' type="submit" value="Cập nhật">
     </div>
 </form>
         
