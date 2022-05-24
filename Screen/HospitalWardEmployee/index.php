@@ -119,13 +119,19 @@
 
             case 'update':
                 if (isset($_POST['submitbtn']))
-                {
-                    $name=$_POST['name'];
-                    $address=$_POST['address'];
-                    $phone=$_POST['phone'];
-                    $email=$_POST['email'];
-                    $tinhtrang=$_POST['tinhtrang'];
-                    $idbenhnhan=$_POST['idbenhnhan'];
+                {   
+                  $user=$_POST['user'];
+                  $pass=$_POST['pass'];
+                  $date=$_POST['date'];
+                  $name=$_POST['name' ];
+                  $address=$_POST['address'];
+                  $phone=$_POST['phone'];
+                  $email=$_POST['email'];
+                  $cccd=$_POST['cccd'];
+                  $role=$_POST['role'];
+                  $phuongct=$_POST['phuong']; 
+                  $mataikhoan=$_POST['idbenhnhan'];
+                  $result = update($user,$pass,$name,$date, $address,$phone,$cccd,$role, $email,$phuongct,$mataikhoan);
                 }
                 include "./View/update.php";
                 break;

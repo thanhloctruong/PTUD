@@ -45,9 +45,10 @@
          VALUES ('$user','$pass','$name','$date', '$phone','$email','$cccd','$address','$role', '$phuongct')";
         addsql($sql_pation);
     }
-    function update($address, $tinhtrang, $phone, $name, $email,$idbenhnhan)
+    function update($user,$pass,$name,$date, $address,$phone,$cccd,$role, $email,$phuongct,$mataikhoan)
     {
-        $sql = "UPDATE taikhoan SET name = '$name',address = '$address', phone = '$phone', email = '$email',tinhtrang='$tinhtrang' WHERE idbenhnhan = $idbenhnhan";
+        $sql = "UPDATE taikhoan SET TenDangNhap='$user',MatKhau='$pass',Hoten = '$name',NgaySinh='$date',
+         SDT = '$phone', Email = '$email',CCCD='$cccd',DiaChi = '$address',Role='$role',Phuong_BVCongTac='$phuongct' WHERE MaTaiKhoan = $mataikhoan";
         updatesql($sql);
     }
 ?>

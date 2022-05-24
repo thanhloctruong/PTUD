@@ -20,7 +20,7 @@ use LDAP\Result;
             case 'thongke':
                 include "StatisticsCase.php";
                 break;
-            case 'list':
+            case 'getlist':
                 $list = hospitallist();
                 include './View/list.php';
                 break;
