@@ -14,18 +14,24 @@
         $sql="SELECT * FROM taikhoan where MaTaiKhoan=$matk";
         return getone($sql);
     }
-    // function add_yeucau( $date, $tinhtrang, $matk, $mahoso, $mabenhvien)
-    // {
-    //     $sql="INSERT INTO phieuyeucauchuyenvien( NgayYeuCau, MoTa, MaTaiKhoan, MaHoSo, MaBenhVien)
-    //      VALUES ('$date', '$tinhtrang', '$matk','$mahoso', '$mabenhvien')";
-    //     addsql($sql);
-    // }
+    function add_yeucau($date, $mucdo,$mtk, $mahoso,$mabenhvien)
+    {
+        // $sql="INSERT INTO phieuyeucauchuyenvien( NgayYeuCau, MoTa, MaHoSo)
+        //  VALUES ($date, $mucdo, $mahoso)";
+        $sql = "INSERT INTO `phieuyeucauchuyenvien` (`NgayYeuCau`,`MoTa`,`MaTaiKhoan`,`MaHoSo`,`MaBenhVien`) VALUES ('$date', '$mucdo','$mtk','$mahoso','$mabenhvien')";
+        return addsql($sql);
+        
+    }
     function join_bang($mahoso)
     {
         $sql = "SELECT *
-        FROM hosobenhnhan JOIN taikhoan 
-        WHERE hosobenhnhan.MaTaiKhoan = taikhoan.MaTaiKhoan AND hosobenhnhan.MaHoSo = $mahoso";
+        FROM hosobenhnhan JOIN taikhoan on hosobenhnhan.MaTaiKhoan = taikhoan.MaTaiKhoan
+        WHERE hosobenhnhan.MaHoSo = $mahoso";
         return getone($sql);
     }
-    
+    function requestbenhvien(){
+        $sql = "SELECT * FROM benhvien";
+        return getlist($sql);
+    }
+
 ?>

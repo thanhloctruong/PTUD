@@ -20,20 +20,30 @@
         </div> -->
         <div class="tokhai row">
             <label for="txtcoso" class="col-md-4 text-center">Cơ sở y tế</label>
-            <select name="txtcoso" class="form-control col-md-4 ">
+            <select name="txtcoso" class="form-control col-md-7" id="mySelect" onchange="myFunction()">
+            <option value="">---</option>
             <?php
-                foreach($RegisterForTreatment as $bcd)
+                foreach($RegisterForTreatment as $tencsyt)
                 {
-                echo "<option value=''>".$bcd["TenCSYT"]."</option>";
+                echo "<option value='".$tencsyt["ThongTin"]."'>".$tencsyt["TenCSYT"]."</option>";
                 }
             ?>
             </select>
         </div>
         <div class="tokhai row">
             <label for="txttt" class="col-md-4 text-center">Thông tin:</label>
-            <input type="text" class="form-control col-md-7" name="txttt" value="<?php echo $bcd['ThongTin'] ?>">
+            <p id="demo" class="form-control col-md-7"></p>
+            <script>
+                function myFunction() {
+                var x = document.getElementById("mySelect").value;
+                document.getElementById("demo").innerHTML = "" + x;
+                }
+            </script>
         </div>
-                
+        <!-- <div class="tokhai row">
+           <label for="txtdangnhap" class="col-md-4 text-center">Tên đăng nhập:</label>
+           <input type="text" name="txtdangnhap" class="form-control col-md-7" >
+        </div>        -->
         <div class="tokhai row">
             <label for="txttinhtrang" class="col-md-4 text-center">Tình trạng bệnh:</label>
             <!-- <input type="text" class="form-control col-md-7" name="txttinhtrang" > -->
@@ -118,25 +128,13 @@
                                                         class="radio-trieuchung" value="" checked="">
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td>Triệu chứng/dấu hiệu khác <span class="text-danger">(*)</span></td>
-                                                <td class="text-center td-center">
-                                                    <input type="radio" id="khac" name="trieuchung_khac"
-                                                        class="radio-trieuchung" value="Triệu chứng khác">
-                                                </td>
-                                                <td class="text-center td-center">
-                                                    <input type="radio" id="khac" name="trieuchung_khac"
-                                                        class="radio-trieuchung" value="" checked="">
-                                                </td>
-                                            </tr>
                                         </table>
                                     </div>
                                 </div>
         </div>
         <div class="tokhai row">
             <label for="txtdate" class="col-md-4 text-center">Ngày yêu cầu:</label>
-            <input type="Date" class="form-control col-md-7" name="txtdate" >
+            <input type="text" class="form-control col-md-7" name="txtdate" value="<?php $time=getdate(); echo $time['year']."-".$time['mon']."-".$time['mday'];?>" readonly>
         </div>
         <!-- <div class="tokhai row">
             <label for="txttang" class="col-md-4 text-center">Tầng yêu cầu:</label>
@@ -147,30 +145,3 @@
         </div>
     </form>
 </div>
-<!-- <div class="container-fluid">
-    <div class="pag-login d-flex align-items-center justify-content-center h-100">
-        <div class="col-lg-12 left">
-            <h4 class="b123 text-center"><b>Yêu cầu chuyển viện</b></h4>
-            <table class="table table-bordered table-light table-hover">
-                <thead class="bg-primary text-white">
-                    <tr class="text-align-center">
-                        <th scope="col">STT</th>
-                        <th scope="col">Mã hồ sơ</th>
-                        <th scope="col">Họ tên bệnh nhân</th>
-                        <th scope="col">Tình trạng bệnh</th>
-                        <th scope="col">Ngày yêu cầu</th>
-                        <th scope="col">Tầng yêu cầu</th>
-                        <th scope="col">Bệnh viện yêu cầu</th>
-                        <th scope="col">Xác nhận</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-            <div class="d-flex justify-content-center pr-2">
-                <button type="submit" class="btn btn-primary rounded-circle">Lưu cập nhật </button>
-            </div>
-        </div>
-    </div>
-</div> -->

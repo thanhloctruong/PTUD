@@ -15,31 +15,51 @@
                 include "./View/Registerfortreatment.php";
                 break;
             case 'yeucau':
-                // $ten = join_bang($_GET['mhs']);
-                // $tang= check_mabv($_POST['txttang']);
+                $Requestahospitaltransfer=requestbenhvien();
                 if (isset($_POST['search']) && ($_POST['search'])) 
                 {
-                    $search = join_bang($_POST['txttimkiem']);         
-                include "./View/Requestahospitaltransfer.php";
-                break;
-                }else
-                {
-                    include './View/Requestahospitaltransfer.php';
+                    $search = join_bang($_POST['txttimkiem']);
+                    include "./View/Requestahospitaltransfer.php";
                     break;
+                    
+                    // break;
                 }
+                case 'btnguiyeucau':
+                    if(isset($_POST['btnguiyeucau']) && $_POST['btnguiyeucau'])
+                    {
+                        $mahoso=$_POST['txtmahoso'];
+                        $date=$_POST['txtdate'];
+                        $mucdo=$_POST['txtmucdo'];
+                        $mtk=$_POST['txtmatk'];
+                        $mabenhvien=$_POST['txttang'];
+                        $result=add_yeucau($date,$mucdo,$mtk,$mahoso,$mabenhvien);
+                        include './View/patientrecordsearch.php';
+                        break;
+                    }
+                case 'timkiem':
+                    if (isset($_POST['search']) && ($_POST['search']))
+                     {
+                        $search = Search($_POST['txttimkiem']);
+                        include './View/patientrecordsearch.php';
+                        break;
+                    } else{
+                        include './View/patientrecordsearch.php';
+                        break;
+                    }   
             case 'tiepnhan':
-                include "./View/Receivingpatients.php";
+                
+                include './View/Receivingpatients.php';
                 break;
-            case 'timkiem':
-                if (isset($_POST['search']) && ($_POST['search']))
-                 {
-                    $search = Search($_POST['txttimkiem']);
-                    include './View/patientrecordsearch.php';
-                    break;
-                } else{
-                    include './View/patientrecordsearch.php';
-                    break;
-                }
+
+                
+            // case 'add':
+            //     if(isset($_POST['btnguiyeucau']))
+            //     {
+            //         $mahoso=$_POST['txtmahoso'];
+            //         $date=$_POST['txtdate'];
+            //         $mucdo=$_POST['txtmucdo'];
+            //         $result=add_yeucau($mahoso,$date,$mucdo);
+            //     }
             case 'tracuu':
                 if (isset($_POST['search']) && ($_POST['search']))
                  {

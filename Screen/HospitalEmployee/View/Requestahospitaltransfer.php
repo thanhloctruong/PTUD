@@ -22,6 +22,7 @@
     </div> <!-- .banner-section -->
 </div>
 <div>
+    <form action="" method="POST">
         <div class="row justify-content-center">
             <h4 class="b123 text-center"><b>Phiếu yêu cầu chuyển viện</b></h4>
         </div>
@@ -30,8 +31,12 @@
             <input type="text" class="form-control col-md-7" name="txtmash" >
         </div> -->
         <div class="tokhai row">
-            <label for="txthoso" class="col-md-4 text-center">Mã hồ sơ:</label>
-            <input type="text" class="form-control col-md-7" name="txthoso" value="<?php  echo $search['MaHoSo']?>" readonly>
+            <label for="txtmahoso" class="col-md-4 text-center">Mã hồ sơ:</label>
+            <input type="text" class="form-control col-md-7" name="txtmahoso" value="<?php  echo $search['MaHoSo']?>" readonly>
+        </div>
+        <div class="tokhai row">
+            <label for="txtmatk" class="col-md-4 text-center">Mã tài khoản:</label>
+            <input type="text" class="form-control col-md-7" name="txtmatk" value="<?php  echo $search['MaTaiKhoan']?>" readonly>
         </div>
         <div class="tokhai row">
             <label for="txtname" class="col-md-4 text-center">Họ tên bệnh nhân:</label>
@@ -42,32 +47,47 @@
             <input type="text" class="form-control col-md-7" name="txttk" >
         </div> -->
         <div class="tokhai row">
-            <label for="txttinhtrang" class="col-md-4 text-center">Mức độ bệnh:</label>
-            <select name="txttingtrang" class="form-control col-md-7">
-                <option value="    "></option>
-                <option value="muc1">Mức độ 1</option>
-                <option value="muc2">Mức độ 2</option>
-                <option value="muc3">Mức độ 3</option>
-                <option value="muc4">Mức độ 4</option>
-                <option value="muc5">Mức độ 5</option>
+            <label for="txtmucdo" class="col-md-4 text-center">Mức độ bệnh:</label>
+            <select name="txtmucdo" class="form-control col-md-7">
+                <option value="Mức độ 1">Mức độ 1</option>
+                <option value="Mức độ 2">Mức độ 2</option>
+                <option value="Mức độ 3">Mức độ 3</option>
+                <option value="Mức độ 4">Mức độ 4</option>
+                <option value="Mức độ 5">Mức độ 5</option>
             </select>
         </div>
         <div class="tokhai row">
             <label for="txtdate" class="col-md-4 text-center">Ngày yêu cầu:</label>
-            <input type="text" class="form-control col-md-7" name="txtdate" value="<?php $time=getdate(); echo $time['mday']."/".$time['mon']."/".$time['year'];?>" readonly>
+            <input type="text" class="form-control col-md-7" name="txtdate" value="<?php $time=getdate(); echo $time['year']."-".$time['mon']."-".$time['mday'];?>" readonly>
         </div>
         <div class="tokhai row">
             <label for="txttang" class="col-md-4 text-center">Tầng yêu cầu:</label>
-            <select name="txttang" class="form-control col-md-7">
-                 <option value=""></option> 
+            <select name="txttang" class="form-control col-md-7" id="mySelect" onchange="myFunction()">
+            <option value="">---</option>
+            <?php
+                foreach($Requestahospitaltransfer as $thongtin)
+                {
+                    echo "<option value='".$thongtin["MaBenhVien"]."'>".$thongtin["TangSo"]."</option>";
+                }
+            ?>
             </select>
         </div>
         <div class="tokhai row">
-            <label for="txtbenhvien" class="col-md-4 text-center">Tên bệnh viện:</label>
-            <input type="text" class="form-control col-md-7" name="txtbenhvien">
+            <label for="txttenbv" class="col-md-4 text-center">Tên bệnh viện:</label>
+            <p id="demo" class="form-control col-md-7"></p>
+            <script>
+                function myFunction() {
+                var x = document.getElementById("mySelect").value;
+                document.getElementById("demo").innerHTML = "" + x;
+                }
+            </script>
         </div>
+        <!-- <div class="tokhai row">
+            <label for="txtmabv" class="col-md-4 text-center">Mã bệnh viện:</label>
+            <input type="text" class="form-control col-md-7" name="txtmabv">
+        </div> -->
         <div class="tokhai row d-flex justify-content-center pr-2 border-bottom">
-            <input type="submit" class="btn btn-primary" name="btnsubmit" value="Gửi yêu cầu">
+            <input type="submit" class="btn btn-primary" name="btnguiyeucau" value="Gửi yêu cầu">
         </div>
     </form>
 </div> 

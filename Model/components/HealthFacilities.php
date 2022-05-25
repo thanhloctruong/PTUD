@@ -10,4 +10,10 @@
         $query= "SELECT * FROM csytp WHERE TenCSYT=$tencsyt";
         return getone($query);
     }
+    function add_dangky($date, $mucdo)
+    {
+        $sql = "INSERT INTO `hosobenhnhan` (`NgayYeuCau`,`MoTa`) VALUES ('$date', '$mucdo')";
+        return addsql($sql);
+        
+    }
 ?>
