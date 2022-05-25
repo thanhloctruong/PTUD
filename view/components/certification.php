@@ -1,10 +1,13 @@
 <?php
      include "components/cCetification.php";
      $thongtin =  ControlSelectCertification(1) ;
-    //  if($thongtin["txtghichu"]== "Dương tính"){
-    //     echo "<script>alert('Bệnh nhân chưa khỏi bệnh, không thể kết xuất giấy xác nhận')</script>";
-    //     echo "<meta http-equiv='refresh' content='0;url=index.php'>";
-    //  }
+    //  echo "<pre>";
+    //     print_r($thongtin);
+    //  echo "</pre>";
+     if($thongtin["GhiChu"]== "Dương tính"){
+        echo "<script>alert('Bệnh nhân chưa khỏi bệnh, không thể kết xuất giấy xác nhận')</script>";
+        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+     }
 
 ?>
     <div class="GXN">

@@ -30,10 +30,6 @@
         </div>
         <input class="btn btn-primary wow zoomIn" type="submit" name="register" value="Đăng Ký">
       </form>
-      <?php
-          // if(isset($txt_err_user)&&($txt_err_user!="")){
-          //     echo "<h3 style='color:red;'>".$txt_err_user."</h3>";
-          // }
-      ?>
+      Bạn đã có tài khoản? <a href="index.php?act=login">Đăng nhập</a>
     </div>
   </div>

@@ -4,22 +4,27 @@
     include "../../Model/index.php";
     include "../HospitalWardEmployee/View/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) {
+    if (isset($_GET['act']))
+     {
         # code...
         $act = $_GET['act'];
-        switch($act){
+        switch($act)
+        {
             case 'tuvan':
-                $result = get_all_request();
+                $get = get_user_by_id($_SESSION['id']);
+                $ward = $get["Phuong_BVCongTac"];
+                $aa = get_all_request($ward);
                 include './View/Counseling.php';
                 break;
             case 'reply':
                 $idRequest = $_GET['id'];
                 $result = request($idRequest);
-                if(isset($_POST['submit']) && $_POST['submit']){
+                if(isset($_POST['send']) && $_POST['send']){
                     $mess = $_POST['mess'];
                     $kq =  update_request($mess,$idRequest);
                     if($kq){
-                    include './View/Counseling.php';
+                        header('location: index.php?act=tuvan');
+                        break;
                     }
                 }
                 include "./View/ReplyCounseling.php";
@@ -34,10 +39,22 @@
             case 'quanly':
                 include "./View/ManagePatientInformation.php";
                 break;
+
+            case 'kiemtrattb':
+                include "./View/CheckHealth.php";
+                break;
+
+
+
             default:
                 include "./View/Home.php";
+                break;
         }
+        
     } 
+    else{
+        include "./View/Home.php";
+    }
     // elseif (isset($_GET['reply'])){
     //     $reply = $_GET['reply'];
     //     $idRequest = 2;
@@ -53,9 +70,6 @@
     //             $result = request($idRequest);
     //             include "./View/ReplyCounseling.php";
     //         }
-    // }
-    //  else{
-    //     include "./View/Home.php";
     // }
 
     include "../HospitalWardEmployee/View/Footer.php";

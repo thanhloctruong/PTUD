@@ -25,7 +25,7 @@
     }
 
     function get_user_by_id($user_id) {
-        $sql = "SELECT * FROM taikhoan WHERE id = $user_id";
+        $sql = "SELECT * FROM taikhoan WHERE MaTaiKhoan = $user_id";
         return getone($sql);
     }
     
