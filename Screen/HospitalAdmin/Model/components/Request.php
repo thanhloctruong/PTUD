@@ -22,11 +22,11 @@
     }
     function updatehospital($name,$address,$tang,$socamac,$socakhoi,$id)
 {
-    $sql="UPDATE taikhoan  set TenBenhVien='$name' where MaBenhVien='$id';
-    UPDATE taikhoan set DiaChi='$address' where MaBenhVien='$id';
-    UPDATE taikhoan  set TangSo='$tang' where MaBenhVien='$id';
-    UPDATE taikhoan  set SoCaMac='$socamac' where MaBenhVien='$id';
-    UPDATE taikhoan  set SoCaKhoi='$socakhoi' where MaBenhVien='$id';";
+    $sql="UPDATE benhvien  set TenBenhVien='$name' where MaBenhVien='$id';
+    UPDATE benhvien set DiaChi='$address' where MaBenhVien='$id';
+    UPDATE benhvien  set TangSo='$tang' where MaBenhVien='$id';
+    UPDATE benhvien  set SoCaMac='$socamac' where MaBenhVien='$id';
+    UPDATE benhvien  set SoCaKhoi='$socakhoi' where MaBenhVien='$id';";
 
 
     return $sql;

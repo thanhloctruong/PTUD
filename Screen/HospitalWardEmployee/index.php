@@ -25,17 +25,17 @@
                 $role=$row['Role'];
                 $phuongct=$row['Phuong_BVCongTac'];
                 if(isset($_POST['btnupdate'])){
-                    $Id=$row['MaTaiKhoan'];
-                    $User=$row['TenDangNhap'];
-                    $Pass=$row['MatKhau'];
-                    $Name=$row['HoTen'];
-                    $Date=$row['NgaySinh'];
-                    $Phone=$row['SDT'];
-                    $Email=$row['Email'];
-                    $Cccd= $row['CCCD'];
-                    $Diachi=$row['DiaChi'];
-                    $Role=$row['Role'];
-                    $Phuongct=$row['Phuong_BVCongTac'];
+                    $id=$_POST['id'];
+                    $user=$_POST['user'];
+                    $pass=$_POST['pass'];
+                    $name=$_POST['name'];
+                    $date=$_POST['date'];
+                    $phone=$_POST['phone'];
+                    $email=$_POST['email'];
+                    $cccd= $_POST['cccd'];
+                    $diachi=$_POST['diachi'];
+                    $role=$_POST['role'];
+                    $phuongct=$_POST['phuong'];
                     try{
                         $conn=connect();
                         $sql=updatePatient($user,$pass,$name,$date,$phone,$email,$cccd,$diachi,$phuongct,$role,$id);

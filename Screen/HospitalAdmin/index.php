@@ -23,12 +23,12 @@ use LDAP\Result;
                 $socamac=$row['SoCaMac'];
                 $socakhoi=$row['SoCaKhoi'];
                 if(isset($_POST['btnupdate'])){
-                    $Id=$row['MBV'];
-                    $Name=$row['TenBenhVien'];
-                    $Diachi=$row['DiaChi'];
-                    $Tang=$row['TangSo'];
-                    $Socamac=$row['SoCaMac'];
-                    $Socakhoi=$row['SoCaKhoi'];
+                    $id=$_POST['id'];
+                    $name=$_POST['name'];
+                    $address=$_POST['diachi'];
+                    $tang=$_POST['tang'];
+                    $socamac=$_POST['socamac'];
+                    $socakhoi=$_POST['socakhoi'];
 
                     try{
                         $conn=connect();
