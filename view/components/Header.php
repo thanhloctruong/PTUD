@@ -73,7 +73,7 @@
             <a class="nav-link" href="index.php?act=khaibaoyte">Khai báo y tế</a> <!--Health Declaration--> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
+            <a class="nav-link" href="index.php?act=giayxacnhan">In giấy xác nhận</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>

@@ -1,3 +1,10 @@
+<?php
+
+     include "components/cCetification.php";
+     $thongtin =  ControlSelectCertification(1) ;
+     
+    
+?>
 <form action="#" enctype="multipart/form-data" method="POST">
     <div class="KBYT">
         <div block-bind="content" id="content">
@@ -11,40 +18,39 @@
                         </div>
                         <div class="col-12 d-flex ">
                             <div class="custom-control custom-radio mt-2 mr-2">
-                                <input name="loaiKhaiBao" type="radio" value="Bệnh nhân/Người nhà" />Bệnh nhân/Người nhà
-                                <input name="loaiKhaiBao" type="radio" value="Theo dõi sức khỏe tại nhà" />Theo dõi sức
+                                <input name="loaiKhaiBao" type="radio" value="Bệnh nhân/Người nhà" />Bệnh nhân 
+                                <input name="loaiKhaiBao" type="radio" value="Theo dõi sức khỏe tại nhà" />Bệnh nhân theo dõi sức khỏe tại nhà
                                 khỏe tại nhà
                             </div>
                             
                         </div>
                     </div>
+
                     <div class="row mt-1">
                         <div class="col-12 donvi_khaibao">
                             <div class="form-group">
-                                <span class="text_donvi">Nơi khai báo</span><span class="text-danger">(*) </span>:
+                                <span class="text_donvi" id="ErNoiKhaiBao">Nơi khai báo</span><span class="text-danger" >(*)</span>:
                                 <input type="text" name="NoiKhaiBao" class="form-control"
-                                    placeholder="Nhập và chọn nơi khai báo" require>
+                                    placeholder="Nhập và chọn nơi khai báo"  require>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <!-- <div class="col-12">
                             <div class="form-group">
                                 <span class="text_phone">Số điện thoại</span><span class="text-danger"> (*)</span>:
-                                <input type="text" name="sdt" class="form-control" placeholder="Nhập số điện thoại">
+                                <input readonly type="text" name="sdt" class="form-control" >
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
                                 <span class="text_fullname">Họ và tên</span> <span class="text-danger">(*)</span>:
-                                <input type="text" name="hoten" class="form-control text-uppercase"
-                                    placeholder="Họ và tên">
+                                <input readonly type="text" name="hoten" class="form-control text-uppercase">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-12">
                             <div class="form-group">
-                                <span class="text_fullname">Tiền sử bệnh nền</span> <span
-                                    class="text-danger">(*)</span>:
+                                <span class="text_fullname" id="BenhnenErr">Tiền sử bệnh nền</span> 
                                 <input type="text" name="tiensubenh" class="form-control"
-                                    placeholder="nhập lịch sử bệnh nền(viêm phổi, viêm phế quản....)">
+                                    placeholder="nhập lịch sử bệnh nền(viêm phổi, viêm phế quản....)" require>
                             </div>
                         </div>
                         <div class="col-12 wrap_trieuchung">
@@ -261,92 +267,22 @@
             <div class="row">
                 <div class="col-12 my-3 text-center">
                     <div class="btn-group w-50"><button type="submit" name="btnsave"
-                            class="btn btn-primary width-sm ml-1">Gửi</button></div>
+                        class="btn btn-primary width-sm ml-1">Gửi</button></div>
                 </div>
             </div>
         </div>
     </div>
 </form>
 <?php
-// function input_data($data) {
-//     $data = trim($data);
-//     $data = stripslashes($data);
-//     $data = htmlspecialchars($data);
-//     return $data;
-// }
-// $LoaiKhaiBaoErr=$NoiKhaiBaoErr = $SdtErr = $NameErr= $BenhnenErr="";
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST")
-// {
-//     if (empty($_POST["NoiKhaiBao"])) {
-//         $NoiKhaiBaoErr = "Nơi Khai Báo là bắt buộc";
-//     } else {
-//         $NoiKhaiBao = input_data($_POST["NoiKhaiBao"]);
-//         // Kiểm tra và chỉ cho phép nhập chữ và khoảng trắng 
-//         if (!preg_match("/^[a-zA-Z ]*$/",$NoiKhaiBao)) {
-//             $NoiKhaiBaoErr = "Bạn chỉ được nhập chữ cái và khoảng trắng.";
-//         }
-//     }
 
-//     if (empty($_POST["hoten"])) {
-//         $NameErr = "Họ tên là bắt buộc";
-//     } else {
-//         $name = input_data($_POST["name"]);
-//         // Kiểm tra và chỉ cho phép nhập chữ và khoảng trắng 
-//         if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-//             $NameErr = "Bạn chỉ được nhập chữ cái và khoảng trắng.";
-//         }
-//     }
-
-//     if (empty($_POST["sdt"])) {
-//         $SdtErr = "Số điện thoại là bắt buộc.";
-//     } else {
-//         $sdt = input_data($_POST["sdt"]);
-//         // Kiểm tra xem số điện thoại đã đúng định dạng hay chưa 
-//         if (!preg_match ("/^[0-9]*$/", $sdt) ) {
-//             $SdtErr = "Bạn chỉ được nhập giá trị số.";
-//         }
-//         //Kiểm tra độ dài của số điện thoại 
-//         if (strlen ($sdt) != 10) {
-//             $SdtErr = "Số điện thoại phải là 10 ký tự.";
-//         }
-//     }
-//     if (empty ($_POST["loaiKhaiBao"])) {
-//         $LoaiKhaiBaoErr = "Loại khai báo là trường bắt buộc.";
-//     } else {
-//         $LoaiKhaiBao = input_data($_POST["loaiKhaiBao"]);
-//     }
-//     if (empty($_POST["tiensubenh"])) {
-//         $BenhnenErr = "Họ tên là bắt buộc";
-//     } else {
-//         $Benhnen = input_data($_POST["tiensubenh"]);
-//         // Kiểm tra và chỉ cho phép nhập chữ và khoảng trắng 
-//         if (!preg_match("/^[a-zA-Z ]*$/",$Benhnen)) {
-//             $BenhnenErr = "Bạn chỉ được nhập chữ cái và khoảng trắng.";
-//         }
-//     }
-
-// }
-// if(isset($_POST['save'])) {
-//     if($NoiKhaiBaoErr== "" && $SdtErr == "" && $NameErr == "" && $LoaiKhaiBaoErr == "" && $websiteErr == "" && $agreeErr == "") {
-//         echo "<h3 color = #FF0001> <b>You have sucessfully registered.</b> </h3>";
-//         echo "<h2>Your Input:</h2>";
-//         echo "Name: " .$name;
-//         echo "<br>";
-//         echo "Email: " .$email;
-//         echo "<br>";
-//         echo "Mobile No: " .$mobileno;
-//         echo "<br>";
-//         echo "Website: " .$website;
-//         echo "<br>";
-//         echo "Gender: " .$gender;
-//     } else {
-//         echo "<h3> <b>Bạn chưa nhập đầy đủ thông tin hoặc chưa hợp lệ.</b> </h3>";
-//     }
-// }
+?>
+<?php
 
 if (isset($_REQUEST['btnsave'])) {
+
     $trieuChung = $dichte = array();
+
     if (!empty($_REQUEST['trieuchung_sot'])) {
         array_push($trieuChung, $_REQUEST['trieuchung_sot']);
     }
@@ -384,18 +320,28 @@ if (isset($_REQUEST['btnsave'])) {
     if (!empty($_REQUEST['dichte_dieuTri'])) {
         array_push($dichte, $_REQUEST['dichte_dieuTri']);
     }
+
+    $thongBaoLoi = array();
+    if (!preg_match('/^[0-9\/]{1,}+,+[A-Za-zÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s,]{2,}/', $_REQUEST['NoiKhaiBao'])) {
+    $thongBaoLoi['NoiKhaiBao']['sai'] = 'Địa chỉ có số nhà, xã, huyện, tỉnh';
+    echo "<script>alert('" . $thongBaoLoi['NoiKhaiBao']['sai'] . "')</script>";}
+
+    if (!preg_match('/^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổ,ỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]{0,}/', $_REQUEST['tiensubenh'])) {
+    $thongBaoLoi['tiensubenh']['sai'] = 'Vui Lòng Nhập Địa Chỉ';
+    echo "<script>alert('" . $thongBaoLoi['tiensubenh']['sai'] . "')</script>";}
     include "components/cHeathDeclaration.php";
 
-    $checkthanhcong = insertKhaiBaoYTe($_REQUEST['loaiKhaiBao'], $_REQUEST['NoiKhaiBao'], $_REQUEST['sdt'], $_REQUEST['hoten'], $_REQUEST['tiensubenh'], implode(",", $trieuChung), implode(",", $dichte), '1');
-    var_dump($checkthanhcong);
-    if ($checkthanhcong == null) {
-        echo "<script>alert('Khai Báo Thành Công')</script>";
-        header('location: Controller/index.php');
-    } else {
-        echo "<script>alert('Khai Báo Thất Bại')</script>";
-        header('location: Controller/index.php');
+    if(empty($thongBaoLoi)){
+        $checkthanhcong = insertKhaiBaoYTe($_REQUEST['loaiKhaiBao'], $_REQUEST['NoiKhaiBao'],  $_REQUEST['tiensubenh'], implode(",", $trieuChung), implode(",", $dichte), '1');
+        
+        if ($checkthanhcong == null) {
+            echo "<script>alert('Khai Báo Thành Công')</script>";
+            echo "<meta http-equiv='refresh' content='0;url=index.php?act=khaibaoyte'>";
+        } else {
+            echo "<script>alert('Khai Báo Thất Bại')</script>";
+            echo "<meta http-equiv='refresh' content='0;url=index.php?act=khaibaoyte'>";
+        }
     }
+    
 }
-
-
 ?>

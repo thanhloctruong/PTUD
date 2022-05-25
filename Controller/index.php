@@ -21,6 +21,9 @@
             case 'khaibaoyte':
                 include "../view/components/HealthDeclaration.php";
                 break;
+            case 'giayxacnhan':
+                include "../view/components/certification.php";
+                break;
             // case 'doctors':
             //     include '../view/components/Doctors.php';
             //     break;
