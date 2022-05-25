@@ -17,4 +17,12 @@
      return $sql;
     }
 
+    function grant($id,$role)
+    {
+        $sql="UPDATE taikhoan  set Role='$role' where MaTaiKhoan='$id'";
+        return $sql;
+       
+    }
+    
+
 ?>

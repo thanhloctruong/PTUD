@@ -26,7 +26,7 @@
         
                             <td>
                                 <form action="" method="POST">
-                                    <a class="btn btn-primary" href="index.php?update=<?php echo $row['MaTaiKhoan']?>">Phân Quyền</a>
+                                    <a class="btn btn-primary" href="index.php?phanquyen=<?php echo $row['MaTaiKhoan']?>">Phân Quyền</a>
                                 </form>
                             </td>
                     </tr>
