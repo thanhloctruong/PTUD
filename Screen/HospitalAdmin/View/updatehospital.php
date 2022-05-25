@@ -16,12 +16,7 @@
 <link rel="stylesheet" href="../../view/Assets/css/theme.css">
 <link rel="stylesheet" href="../../view/Assets/css/index.css">
 
-<style>
-   .form
-    {
-        padding: 50px 300px;
-    }
-</style>
+
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -45,54 +40,44 @@
   </div> <!-- .page-banner -->
 
 <div class="container1">
-  
-    <form class="form">
-  <div class="form-group row">
-    <label for="inputname" class="col-sm-2 col-form-label">Tên Bệnh Viện </label>
-    <div class="col-sm-10">
-      <input type="text"  class="form-control" name="name" value="" >
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputname" class="col-sm-2 col-form-label">Mã Bệnh Viện </label>
-    <div class="col-sm-10">
-      <input type="text"  class="form-control" name="id" value="" >
-    </div>
-  </div>
+  <center>
 
-  <div class="form-group row">
-    <label for="inputadd" class="col-sm-2 col-form-label">Địa chỉ</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" name="address">
-    </div>
-  </div>
 
-  <div class="form-group row">
-    <label for="inputphone" class="col-sm-2 col-form-label">Tầng số</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" name="tang" >
-    </div>
-  </div>
+    <form action="" method="POST" style="padding: 50px 0px ;" >
+        <table>
+            <tr>
+                <td>Mã Bệnh Viện:</td>
+                <td><input type="text" class="form-control" name="id" style="width:300px" value="<?php echo $id?>" readonly></td>
+            </tr>
+            <tr>
+                <td>Tên Bệnh Viện:</td>
+                <td><input type="text" class="form-control" name="name" style="width:300px" value="<?php echo $name?>"></td>
+            </tr>
+            
+            <tr>
+                <td>Địa chỉ:</td>
+                <td><input type="text" class="form-control" name="diachi" style="width:300px" value="<?php echo $address?>"></td>
+            </tr>
 
-  <div class="form-group row">
-    <label for="inputemail" class="col-sm-2 col-form-label">Số Ca Mắc</label>
-    <div class="col-sm-10">
-      <input type="text"  class="form-control" name="socamac" >
-    </div>
-  </div>
+            <tr>
+                <td>Tầng:</td>
+                <td><input type="text" class="form-control" name="tang" style="width:300px" value="<?php echo $tang?>"></td>
+            </tr>
 
-  <div class="form-group row">
-    <label for="inputtinhtrang" class="col-sm-2 col-form-label">Số Ca Khỏi </label>
-    <div class="col-sm-10">
-      <input type="text"  class="form-control" name="socakhoi" >
-    </div>
+            <tr>
+                <td>Số Ca Mắc:</td>
+                <td><input type="text" class="form-control" name="socamac" style="width:300px" value="<?php echo $socamac?>"></td>
+            </tr>
+            <tr>
+                <td>Số Ca Khỏi:</td>
+                <td><input type="text" class="form-control" name="socakhoi" style="width:300px" value="<?php echo $socakhoi?>"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Cập nhật"  name="btnupdate" class="btn btn-primary" style="margin:20px 0px ;">
+    </form>
     
-    <div class="col-lg-10" style="padding:10px 0px 0px 500px;">
-        <input name = 'submitbtn' type="submit" value="Cập nhật">
-    </div>
-</form>
         
-   
+    </center>
 </div>
 
 <!-- ---------------------------------------------------Footer---------------------------------------------------------- -->

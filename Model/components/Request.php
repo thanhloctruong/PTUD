@@ -15,5 +15,10 @@
         execsql($sql, 1);
         return true;
     }
+    function thongke_full(){
+        $sql="SELECT * FROM benhvien bv join hosobenhnhan hs on bv.MaBenhVien=hs.MaBenhVien join taikhoan tk on hs.MaTaiKhoan=tk.MaTaiKhoan 
+        where tk.Role=0 order by tk.MaTaiKhoan asc";
+        return $sql;
+    }
 
 ?>

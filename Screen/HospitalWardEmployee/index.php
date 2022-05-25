@@ -3,8 +3,66 @@
     session_start();
     include "./Model/index.php";
     include "../HospitalWardEmployee/View/Header.php";
-    // include "../../Controller/index.php";
-    if (isset($_GET['act']))
+    // include "../../Controller/index.php"
+            
+    if(isset($_GET['update'])){
+        $update= $_GET['update'];
+        $sql= list_full();
+        $result=getlist($sql);
+        $i=0;
+        foreach($result as $row){
+            $i++;
+            if($update==$row['MaTaiKhoan']){
+                $id=$row['MaTaiKhoan'];
+                $user=$row['TenDangNhap'];
+                $pass=$row['MatKhau'];
+                $name=$row['HoTen'];
+                $date=$row['NgaySinh'];
+                $phone=$row['SDT'];
+                $email=$row['Email'];
+                $cccd= $row['CCCD'];
+                $diachi=$row['DiaChi'];
+                $role=$row['Role'];
+                $phuongct=$row['Phuong_BVCongTac'];
+                if(isset($_POST['btnupdate'])){
+                    $Id=$row['MaTaiKhoan'];
+                    $User=$row['TenDangNhap'];
+                    $Pass=$row['MatKhau'];
+                    $Name=$row['HoTen'];
+                    $Date=$row['NgaySinh'];
+                    $Phone=$row['SDT'];
+                    $Email=$row['Email'];
+                    $Cccd= $row['CCCD'];
+                    $Diachi=$row['DiaChi'];
+                    $Role=$row['Role'];
+                    $Phuongct=$row['Phuong_BVCongTac'];
+                    try{
+                        $conn=connect();
+                        $sql=updatePatient($user,$pass,$name,$date,$phone,$email,$cccd,$diachi,$phuongct,$role,$id);
+                        $stmt= $conn->prepare($sql);
+                        $stmt->execute();
+                        echo "<script>alert('Cập Nhật Thành Công')</script>";
+                        echo header("refresh:0");
+                        }
+                        catch(PDOException $e){
+                            echo $sql . "</br>" . $e->getMessage();
+                        }
+                        $conn=null;
+                }
+                
+                
+                    
+            }
+        }
+    
+
+        include './View/update1.php';
+         
+   
+
+       
+    
+}elseif (isset($_GET['act']))
      {
         # code...
         $act = $_GET['act'];
@@ -39,9 +97,11 @@
             case 'quanly':
                 include "./View/ManagePatientInformation.php";
                 break;
-             case 'list':
+             case 'getlist':
+                $sql=list_full();
                 include "./View/listpation.php";
                 break;
+                
             case 'add':
                 if (isset($_POST['submitbtn']))
                 {
@@ -110,14 +170,15 @@
                             echo '<script>alert("Thêm Thành Công");</script>';
                             echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
                         }
-                    
-
                         
                 }
                     include './View/add1.php';
                     break;
 
-            case 'update':
+                    /* case 'update': */
+                        
+/* 
+      case 'update':
                 if (isset($_POST['submitbtn']))
                 {   
                   $user=$_POST['user'];
@@ -135,6 +196,9 @@
                 }
                 include "./View/update.php";
                 break;
+ */
+            
+
                 
                 
             default:

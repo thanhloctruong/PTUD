@@ -7,7 +7,55 @@ use LDAP\Result;
     include "./Model/index.php";
     include "../HospitalAdmin/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) {
+
+    if(isset($_GET['update'])){
+        $update= $_GET['update'];
+        $sql= thongke_full();
+        $result=getlist($sql);
+        $i=0;
+        foreach($result as $row){
+            $i++;
+            if($update==$row['MaBenhVien']){
+                $id=$row['MaBenhVien'];
+                $name=$row['TenBenhVien'];
+                $address=$row['DiaChi'];
+                $tang=$row['TangSo'];
+                $socamac=$row['SoCaMac'];
+                $socakhoi=$row['SoCaKhoi'];
+                if(isset($_POST['btnupdate'])){
+                    $Id=$row['MBV'];
+                    $Name=$row['TenBenhVien'];
+                    $Diachi=$row['DiaChi'];
+                    $Tang=$row['TangSo'];
+                    $Socamac=$row['SoCaMac'];
+                    $Socakhoi=$row['SoCaKhoi'];
+
+                    try{
+                        $conn=connect();
+                        $sql=updatehospital($name,$address,$tang,$socamac,$socakhoi,$id);
+                        $stmt= $conn->prepare($sql);
+                        $stmt->execute();
+                        echo "<script>alert('Cập Nhật Thành Công')</script>";
+                        echo header("refresh:0");
+                        }
+                        catch(PDOException $e){
+                            echo $sql . "</br>" . $e->getMessage();
+                        }
+                        $conn=null;
+                }
+                
+                
+                    
+            }
+        }
+    
+
+       include './View/updatehospital.php';
+    }
+   
+ 
+
+    elseif (isset($_GET['act'])) {
         # code...
         $act = $_GET['act'];
         switch($act){
@@ -21,6 +69,7 @@ use LDAP\Result;
                 include "StatisticsCase.php";
                 break;
             case 'getlist':
+                $sql=thongke_full();
                 include './View/list.php';
                 break;
             case 'add':
@@ -85,8 +134,8 @@ use LDAP\Result;
                 }
                  include './View/addhospital.php';
                         break;
-
-          case 'update':
+               
+          /* case 'update':
                  if (isset($_POST['submitbtn']))
                     {
                         $name=$_POST['name'];
@@ -151,7 +200,7 @@ use LDAP\Result;
                
                     
                     include "./View/updatehospital.php";
-                    break;
+                    break;  */
             default:
                 include "./View/Home.php";
                 break;
