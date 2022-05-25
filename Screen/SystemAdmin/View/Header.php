@@ -8,13 +8,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-  <title>One Health - Medical Center</title>
-<link rel="stylesheet" href="../view/Assets/css/maicons.css">
-<link rel="stylesheet" href="../view/Assets/css/bootstrap.css">
-<link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
-<link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
-<link rel="stylesheet" href="../view/Assets/css/theme.css">
-<!-- <link rel="stylesheet" href="../view/Assets/css/index.css"> -->
+  <title>Page for System Admin</title>
+<link rel="stylesheet" href="../../view/Assets/css/maicons.css">
+<link rel="stylesheet" href="../../view/Assets/css/bootstrap.css">
+<link rel="stylesheet" href="../../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
+<link rel="stylesheet" href="../../view/Assets/vendor/animate/animate.css">
+<link rel="stylesheet" href="../../view/Assets/css/theme.css">
+<link rel="stylesheet" href="../../view/Assets/css/index.css">
+<style>
+    *{
+        padding: 0;
+        margin: auto;
+
+    }
+    .home{
+        width: 100%;
+        height: 1500px;
+    }
+   
+    .tren,.duoi{
+        text-align: center;
+        padding: 50px 300px 50px 300px;
+        text-align: center;   
+    }
+    .duoi
+    {
+        background-color: #f7f7f7;
+    }
+
+    .title{
+        color:#0d92dd;
+        font-size:30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }                                       
+    .content{
+        font-size: 16px;
+       
+    }
+    .chucnang{
+        height: auto;
+        text-align: center;
+        background-color: #f7f7f7;
+    }
+    .content-item{
+       
+        margin: 30px 0px 30px 0px ;
+        font-size: 16px;
+    }
+    .title1
+    {
+        color:#0d92dd;
+        font-size:30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 50px 300px ;
+    }
+    .row
+    {
+        margin: auto;
+      
+    }
+    .content-sub{
+        text-align: justify;
+        font-size: 20px;
+       display: flex;
+       width: 360px;
+       height: 70px;
+       margin-top: 20px;
+    }   
+    .content-sub-des{
+        text-align: justify;
+        font-size: 14px;
+       display: flex;
+       width: 360px;
+       height: 20px;
+      
+    }
+    .news
+    {
+        margin-bottom: 20px;
+    }  
+</style>
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -57,22 +132,21 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupport">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">Trang chủ</a>
+            <a class="nav-link" href="index.php?act=trangchu">Trang chủ</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=dangkydieutri">Đăng ký điều trị</a> <!--Register for treatment-->
+            <a class="nav-link" href="index.php?act=xemthongke">Xem thống kê</a> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=khaibaoyte">Khai báo y tế</a> <!--Health Declaration--> 
+            <a class="nav-link" href="index.php?act=phanquyen">Phân quyền</a> 
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
           </li>
           <li class="nav-item">
@@ -80,9 +154,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login / Register</a>
+            <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->

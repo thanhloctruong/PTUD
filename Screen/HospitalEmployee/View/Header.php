@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
   <title>One Health - Medical Center</title>
-<link rel="stylesheet" href="../view/Assets/css/maicons.css">
-<link rel="stylesheet" href="../view/Assets/css/bootstrap.css">
-<link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
-<link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
-<link rel="stylesheet" href="../view/Assets/css/theme.css">
-<!-- <link rel="stylesheet" href="../view/Assets/css/index.css"> -->
+<link rel="stylesheet" href="../../view/Assets/css/maicons.css">
+<link rel="stylesheet" href="../../view/Assets/css/bootstrap.css">
+<link rel="stylesheet" href="../../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
+<link rel="stylesheet" href="../../view/Assets/vendor/animate/animate.css">
+<link rel="stylesheet" href="../../view/Assets/css/theme.css">
+<link rel="stylesheet" href="../../view/Assets/css/index.css">
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -67,22 +67,22 @@
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=dangkydieutri">Đăng ký điều trị</a> <!--Register for treatment-->
+            <a class="nav-link" href="index.php?act=">Cập nhật tình trạng</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=khaibaoyte">Khai báo y tế</a> <!--Health Declaration--> 
+            <a class="nav-link" href="index.php?act=tracuu">Tìm kiếm bệnh nhân</a> <!--ManagePatientInformation--> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
+            <a class="nav-link" href="index.php?act=quanly">Quản lý thông tin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
+            <a class="nav-link" href="index.php?act=">Yêu cầu chuyển viện</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login / Register</a>
+            <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->
