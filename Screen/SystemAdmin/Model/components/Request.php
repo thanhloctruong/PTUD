@@ -11,5 +11,10 @@
         $sql = "UPDATE yeucau SET CauTraLoi = '$reply' WHERE yeucau.MaYeuCau = $idRequest;";
         return getlist($sql);
     }
+    function thongkenhanvien()
+    {
+     $sql="SELECT * FROM taikhoan Where Role != 0 "; 
+     return $sql;
+    }
 
 ?>

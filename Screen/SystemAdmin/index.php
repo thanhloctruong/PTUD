@@ -1,7 +1,7 @@
 <!-- <div> nhân viên y tế bệnh viện</div> -->
 <?php
     session_start();
-    include "../../Model/index.php";
+    include "./Model/index.php";
     include "../SystemAdmin/View/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act'])) {
@@ -9,6 +9,7 @@
         $act = $_GET['act'];
         switch($act){
             case 'phanquyen':
+                $sql=thongkenhanvien();
                 include 'Decentralization.php';
                 break;
             case 'xemthongke':

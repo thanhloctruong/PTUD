@@ -24,5 +24,4 @@ function updatePatient($user,$pass,$name,$date,$phone,$email,$cccd,$diachi,$role
     UPDATE taikhoan  set PhuongBV_CongTac='$phuongct' where MaTaiKhoan='$id';";
     return $sql;
 }
-
 ?>
