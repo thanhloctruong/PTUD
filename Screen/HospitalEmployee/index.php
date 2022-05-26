@@ -36,7 +36,7 @@
                     $sql=updatePatient($ten,$ngaysinh,$sdt,$mail,$cccd,$diachi,$tinhtrang,$ketluan,$mhs);
                     $stmt= $conn->prepare($sql);
                     $stmt->execute();
-                    
+                    echo "<script>alert('Cập nhật thành công')</script>";
                     header("refresh:0");
                     }
                     catch(PDOException $e){
