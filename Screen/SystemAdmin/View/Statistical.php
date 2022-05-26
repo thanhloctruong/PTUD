@@ -19,8 +19,8 @@ h2{
 <div class="viewTK">
     <form class="contact-form mt-5" method="POST" >
         Thời gian:
-        Từ <input type="date" name="fday" value="">
-        đến <input type="date" name="tday" value="">
+        Từ <input type="date" name="fday">
+        đến <input type="date" name="tday">
     </br>
         Tình trạng:
         <input type="radio" name="thongke" value="Dương tính"> Dương tính

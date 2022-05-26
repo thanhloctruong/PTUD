@@ -1,5 +1,9 @@
 <!-- <div>Tư vấn</div> -->
+<<<<<<< HEAD
 <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+=======
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../../view/Assets/img/bg_image_1.jpg);">
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
     <div class="banner-section">
         <div class="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
@@ -25,8 +29,13 @@
   </thead>
   
 <?php
+<<<<<<< HEAD
   if(isset($result)){
         foreach($result as $abc){
+=======
+  if(isset($aa)){
+        foreach($aa as $abc){
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
             echo "<tbody style='text-align: center;'>
             <tr>
               <td scope='row'>".$abc['MaYeuCau']."</td>
@@ -53,4 +62,13 @@
         }
       }
 ?>
+<<<<<<< HEAD
 </table>
+=======
+
+</table>
+
+<?php
+echo $ward;
+?>
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50

@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-lg-3"style="font-size: 20px;">Hoàn Toàn Chủ Động
                 <div class="content-item">
-Đội ngũ y bác sỹ luôn luôn chủ động trong mọi tình huống
+                        Đội ngũ y bác sỹ luôn luôn chủ động trong mọi tình huống
                     </div>
                 </div>
                 <div class="col-lg-3" style="font-size: 20px;">Phục Hồi Hiệu Quả 
@@ -80,9 +80,16 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquam eaque ex eum expedita obcaecati omnis quibusdam, tempore a fugit vel quidem consequuntur ab amet? Minima, pariatur. Similique, libero veniam.
                     </div>
                 </div>
-            </div>
+              </div>
         </div>
+
      </div>
 <!-- -------------------------------------end body--------------------------------------- -->
+    
+
+
+
+
+
 
 </div>

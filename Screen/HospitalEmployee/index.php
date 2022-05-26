@@ -37,16 +37,15 @@
                     $stmt= $conn->prepare($sql);
                     $stmt->execute();
                     echo "<script>alert('Cập nhật thành công')</script>";
-                    header("refresh:0");
                     }
                     catch(PDOException $e){
                         echo $sql . "</br>" . $e->getMessage();
                     }
-                    $conn=null;
+                    $conn=NULL;
                 }
             }
         }
-        include './View/UpdatePatient.php';
+        include './View/UpdatePatient.php';exit;
     }else if (isset($_GET['act'])) {
         
         # code...

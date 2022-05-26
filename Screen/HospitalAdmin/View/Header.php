@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-  <title>Page for Hospital Admim</title>
+  <title>One Health - Medical Center</title>
 <link rel="stylesheet" href="../../view/Assets/css/maicons.css">
 <link rel="stylesheet" href="../../view/Assets/css/bootstrap.css">
 <link rel="stylesheet" href="../../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
@@ -16,80 +16,9 @@
 <link rel="stylesheet" href="../../view/Assets/css/theme.css">
 <link rel="stylesheet" href="../../view/Assets/css/index.css">
 <style>
-    *{
-        padding: 0;
-        margin: auto;
-
-    }
-    .home{
-        width: 100%;
-        height: 1500px;
-    }
-   
-    .tren,.duoi{
-        text-align: center;
-        padding: 50px 300px 50px 300px;
-        text-align: center;   
-    }
-    .duoi
-    {
-        background-color: #f7f7f7;
-    }
-
-    .title{
-        color:#0d92dd;
-        font-size:30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
-    }                                       
-    .content{
-        font-size: 16px;
-       
-    }
-    .chucnang{
-        height: auto;
-        text-align: center;
-        background-color: #f7f7f7;
-    }
-    .content-item{
-       
-        margin: 30px 0px 30px 0px ;
-        font-size: 16px;
-    }
-    .title1
-    {
-        color:#0d92dd;
-        font-size:30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: center;
-        padding: 50px 300px ;
-    }
-    .row
-    {
-        margin: auto;
-      
-    }
-    .content-sub{
-        text-align: justify;
-        font-size: 20px;
-       display: flex;
-       width: 360px;
-       height: 70px;
-       margin-top: 20px;
-    }   
-    .content-sub-des{
-        text-align: justify;
-        font-size: 14px;
-       display: flex;
-       width: 360px;
-       height: 20px;
-      
-    }
-    .news
-    {
-        margin-bottom: 20px;
-    }  
+ 
 </style>
+
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -101,7 +30,7 @@
           <div class="site-info">
             <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
             <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>thanhloctruong102@@2gmail.com</a>
+            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>manhc3dth@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">
@@ -120,6 +49,15 @@
     <div class="container">
       <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Screen/HospitalWardEmployee/View/Header.php
+========
+<<<<<<< HEAD:Screen/HospitalWardEmployee/Header.php
+
+=======
+>>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50:Screen/HospitalAdmin/View/Header.php
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
       <!-- <form action="index.php?act=search" method="post">
         <div class="input-group input-navbar">
           <div class="input-group-prepend">
@@ -128,19 +66,35 @@
           <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
         </div>
       </form> -->
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Screen/HospitalWardEmployee/View/Header.php
+========
+>>>>>>> 9059631fd0b0b4b26bf01b0395d0c6bc16517252:Screen/HospitalWardEmployee/View/Header.php
+>>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50:Screen/HospitalAdmin/View/Header.php
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+<<<<<<< HEAD
       <div class="collapse navbar-collapse" id="navbarSupport">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="index.php?act=trangchu">Trang chủ</a>
+=======
+
+      <div class="collapse navbar-collapse" id="navbarSupport">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">Trang chủ</a>
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="index.php?act=">Quản lý bệnh viện</a> 
           </li>
           <li class="nav-item">
@@ -154,6 +108,23 @@
           </li>
           <!--
           <li class="nav-item">
+=======
+            <a class="nav-link" href="index.php?act=tuvan">Tư vấn cho bệnh nhân</a> <!--Counseling-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=quanly">Quản lý thông tin bệnh nhân
+              
+
+            </a> <!--ManagePatientInformation--> 
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
+          </li>
+          <li class="nav-item">
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li> -->
           <li class="nav-item">

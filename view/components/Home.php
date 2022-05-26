@@ -6,6 +6,7 @@
     }
     .home{
         width: 100%;
+        height: 1400px;
         height: 1500px;
     }
    
@@ -67,11 +68,28 @@
        width: 360px;
        height: 20px;
       
+    }   
+    .contact{
+        background-image: url("https://nhakhoa2.muatheme.com/wp-content/cache/breeze-minification/js/breeze_bff0f65ac460dde2fe76248ebd60a833.js");
+        height: 100px;
+        width: 100%;
     }
+ 
+    
     .news
     {
         margin-bottom: 20px;
     }  
+  /*   .banner
+    {
+       
+        background-image: url("../view/Assets/img/bg_image_1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        width: 100%;
+    
+    } */
 </style>
 
 <div class="home">

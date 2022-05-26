@@ -1,5 +1,9 @@
 <!-- <div>Tư vấn</div> -->
+<<<<<<< HEAD
 <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_image_1.jpg);">
+=======
+<div class="page-banner overlay-dark bg-image" style="background-image: url(../../view/Assets/img/bg_image_1.jpg);">
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
     <div class="banner-section">
         <div class="container text-center wow fadeInUp">
             <nav aria-label="Breadcrumb">
@@ -13,10 +17,17 @@
     </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->
 
+<<<<<<< HEAD
 <form class="contact-form mt-5" action="index.php?act=send" method="POST">
 <div class="row mb-3">
         <div class="col-12 py-2 wow fadeInUp">
             <label for="message">Câu hỏi:</label>
+=======
+<form class="contact-form mt-5" action="" method="POST">
+<div class="row mb-3">
+        <div class="col-12 py-2 wow fadeInUp">
+            <b for="message">Câu hỏi:</b>
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
             <?php
             // echo $idRequest;
             if(isset($result) && $result !=0){
@@ -26,7 +37,11 @@
             ?>
         </div>
         <div class="col-12 py-2 wow fadeInUp">
+<<<<<<< HEAD
             <label for="message">Nhập câu trả lời</label>
+=======
+            <b for="message">Nhập câu trả lời</b>
+>>>>>>> 3e74ed573d593cbb006684d1599280737fe4be50
             <input id="mess" class="form-control" rows="8" name="mess" placeholder="Enter Message.."></input>
         </div>
     </div>

@@ -1,3 +1,82 @@
+
+<style>
+    *{
+        padding: 0;
+        margin: auto;
+
+    }
+    .home{
+        width: 100%;
+        height: 1400px;
+    }
+   
+    .tren,.duoi{
+        text-align: center;
+        padding: 50px 300px 50px 300px;
+        text-align: center;   
+    }
+    .duoi
+    {
+        background-color: #f7f7f7;
+    }
+
+    .title{
+        color:#0d92dd;
+        font-size:30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }                                       
+    .content{
+        font-size: 16px;
+       
+    }
+    .chucnang{
+        height: auto;
+        text-align: center;
+        background-color: #f7f7f7;
+    }
+    .content-item{
+       
+        margin: 30px 0px 30px 0px ;
+        font-size: 16px;
+    }
+    .title1
+    {
+        color:#0d92dd;
+        font-size:30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 50px 300px ;
+    }
+    .row
+    {
+        margin: auto;
+      
+    }
+    .content-sub{
+        text-align: justify;
+        font-size: 20px;
+       display: flex;
+       width: 360px;
+       height: 70px;
+       margin-top: 20px;
+    }   
+    .content-sub-des{
+        text-align: justify;
+        font-size: 14px;
+       display: flex;
+       width: 360px;
+       height: 20px;
+      
+    }   
+    .contact{
+        background-image: url("https://nhakhoa2.muatheme.com/wp-content/cache/breeze-minification/js/breeze_bff0f65ac460dde2fe76248ebd60a833.js");
+        height: 100px;
+        width: 100%;
+    }
+ 
+</style>
+
 <div class="home">
     <div class="banner">
         <img src="http://t5g.org.vn/uploads/images/bannercovid19.png" width="100%" height="200px" alt="">
@@ -30,7 +109,7 @@
                 </div>
                 <div class="col-lg-3"style="font-size: 20px;">Hoàn Toàn Chủ Động
                 <div class="content-item">
-Đội ngũ y bác sỹ luôn luôn chủ động trong mọi tình huống
+                        Đội ngũ y bác sỹ luôn luôn chủ động trong mọi tình huống
                     </div>
                 </div>
                 <div class="col-lg-3" style="font-size: 20px;">Phục Hồi Hiệu Quả 
@@ -80,9 +159,8 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquam eaque ex eum expedita obcaecati omnis quibusdam, tempore a fugit vel quidem consequuntur ab amet? Minima, pariatur. Similique, libero veniam.
                     </div>
                 </div>
-            </div>
+              </div>
         </div>
      </div>
 <!-- -------------------------------------end body--------------------------------------- -->
-
 </div>

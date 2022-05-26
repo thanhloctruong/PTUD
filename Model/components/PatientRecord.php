@@ -1,6 +1,6 @@
 <?php
     function Search($timkiem){ 
-        $query = "SELECT * FROM `hosobenhnhan` WHERE MaHoSo LIKE '$timkiem'";
+        $query = "SELECT * from hosobenhnhan JOIN taikhoan WHERE hosobenhnhan.MaTaiKhoan = taikhoan.MaTaiKhoan AND hosobenhnhan.MaHoSo LIKE $timkiem";
         return getone($query);
     }
 ?>

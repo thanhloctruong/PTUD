@@ -1,5 +1,6 @@
 <?php
-    function connect(){
+    function connect()
+    {
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -38,4 +39,7 @@
         $last_id = $conn->lastInsertId();
         return $last_id;
     }
+
+    
+   
 ?>

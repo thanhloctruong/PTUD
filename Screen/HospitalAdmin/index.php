@@ -1,8 +1,8 @@
-<!-- <div> nhân viên y tế phường</div> -->
+<!-- <div> nhân viên y tế bệnh viện</div> -->
 <?php
     session_start();
     include "../../Model/index.php";
-    include "../HospitalAdmin/View/Header.php";
+    include "../HospitalAdmin/Header.php";
     // include "../../Controller/index.php";
     if (isset($_GET['act'])) {
         # code...

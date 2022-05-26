@@ -28,10 +28,11 @@
                 include '../SystemAdmin/View/Statistical.php';
                 break;
             case 'phanquyen':
-                include "../SystemAdmin/View/Grant.php";
-                break;
+                include '../SystemAdmin/View/Decentralization.php';
+                break;           
             default:
                 include "../SystemAdmin/View/Home.php";
+                break;
         }
     }else include "../SystemAdmin/View/Home.php";
     // elseif (isset($_GET['reply'])){
