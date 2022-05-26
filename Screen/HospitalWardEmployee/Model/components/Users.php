@@ -19,7 +19,7 @@
         return getone($sql);
     }
 
-    function getPassHash($user){
+    function getPassHash($user){;
         $sql="select MatKhau from taikhoan where TenDangNhap='".$user."'";
         return getone($sql);
     }
@@ -39,24 +39,16 @@
         $sql = "UPDATE taikhoan SET address = '$address', phone = '$phone', name = '$name', date = '$dob', email = '$email' WHERE id = $user_id";
         execsql($sql, 1);
         return true;
-        
     }
-    function add( $name,$address,$tang, $socamac,$socakhoi){
-        $sql="INSERT INTO benhvien(TenBenhVien,DiaChi,TangSo,SoCaMac,SoCaKhoi)
-         VALUES('$name','$address','$tang','$socamac','$socakhoi');";
-         addsql($sql);
+    function add($user,$pass,$name,$date, $address,$phone,$cccd,$role, $email,$phuongct){
+        $sql_pation="INSERT INTO taikhoan(TenDangNhap,MatKhau,HoTen,NgaySinh,SDT,Email,CCCD,DiaChi,Role,Phuong_BVCongTac)
+         VALUES ('$user','$pass','$name','$date', '$phone','$email','$cccd','$address','$role', '$phuongct')";
+        addsql($sql_pation);
     }
-    function update($address, $socamac, $name,$socakhoi,$tang,$id)
+   /*  function update($user,$pass,$name,$date, $address,$phone,$cccd,$role, $email,$phuongct,$mataikhoan)
     {
-        $sql="UPDATE benhvien 
-        Set TenBenhVien ='$name',DiaChi='$address',TangSo='$tang',SoCaMac='$socamac',SoCaKhoi='$socakhoi', MaBenhVien=$id";
+        $sql = "UPDATE taikhoan SET TenDangNhap='$user',MatKhau='$pass',Hoten = '$name',NgaySinh='$date',
+         SDT = '$phone', Email = '$email',CCCD='$cccd',DiaChi = '$address',Role='$role',Phuong_BVCongTac='$phuongct' WHERE MaTaiKhoan = $mataikhoan";
         updatesql($sql);
-    }
-   /*  function hospitallist()
-    {
-        $sql="SELECT * from benhvien";
-        getlist($sql);
     } */
-
-    
 ?>

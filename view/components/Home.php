@@ -5,9 +5,8 @@
         margin: auto;
 
     }
-    .home{
-        width: 100%;
-        height: 1400px;
+    .container1{
+        padding: 10px 0px;
         height: 1500px;
     }
    
@@ -93,7 +92,7 @@
     } */
 </style>
 
-<div class="home">
+<div class="container1">
     <div class="banner">
         <img src="http://t5g.org.vn/uploads/images/bannercovid19.png" width="100%" height="200px" alt="">
     </div>

@@ -6,7 +6,8 @@ if (isset($_SESSION['HospitalEmployee'])) {
     include "../../Model/index.php";
     include "../../Screen/HospitalEmployee/View/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) {
+    if (isset($_GET['act'])) 
+    {
         # code...
         $act = $_GET['act'];
         switch ($act) {
