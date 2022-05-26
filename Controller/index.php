@@ -28,6 +28,34 @@
                 break;
             case 'giayxacnhan':
                 include "../view/components/certification.php";
+            case 'dangkydieutri':
+                $RegisterForTreatment=get_csyt();
+                if(isset($_POST['txtcoso']))
+                {
+                $print=thongtin($_POST['txtcoso']);
+                // $ten=get_ten($_POST['txtcoso']);
+                // $trieuChung = $dichte = array();
+
+                //     if (!empty($_REQUEST['trieuchung_sot'])) {
+                //         array_push($trieuChung, $_POST['trieuchung_sot']);
+                //     }
+                //     if (!empty($_REQUEST['trieuchung_ho'])) {
+                //         array_push($trieuChung, $_REQUEST['trieuchung_ho']);
+                //     }
+                //     if (!empty($_REQUEST['trieuchung_dauhong'])) {
+                //         array_push($trieuChung, $_POST['trieuchung_dauhong']);
+                //     }
+                //     if (!empty($_REQUEST['trieuchung_met'])) {
+                //         array_push($trieuChung, $_POST['trieuchung_met']);
+                //     }
+                //     if (!empty($_REQUEST['trieuchung_khotho'])) {
+                //         array_push($trieuChung, $_POST['trieuchung_khotho']);
+                //     }
+                
+
+                }
+
+                include "../view/components/RegisterForTreatment.php";
                 break;
             // case 'doctors':
             //     include '../view/components/Doctors.php';

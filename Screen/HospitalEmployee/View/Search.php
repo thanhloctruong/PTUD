@@ -38,6 +38,7 @@
       <th scope="col">Email</th>
       <th scope="col">Tình trạng sức khỏe</th>
       <th scope="col">Ngày nhập viện</th>
+      <th scope="col">Yêu cầu</th>
     </tr>
   </thead>
   <tbody>
@@ -53,10 +54,17 @@
               <td scope='row'>".$search['DiaChi']."</td>
               <td scope='row'>".$search['Email']."</td>
               <td scope='row'>".$search['TinhTrangSucKhoe']."</td>
-              <td scope='row'>".$search['NgayNhapvien']."</td>
-            </tr>
-            
-          </tbody>";
+              <td scope='row'>".$search['NgayNhapvien']."</td>";
+              echo "<td scope='row'>
+              <div class='nav-item'>
+              <a class='btn btn-primary wow zoomIn ml-lg-3' href='index.php?act=yeucau&mhs=".$search['MaHoSo']."'>yêu cầu</a>
+              </div>
+            </td>";
+            echo "
+        </tr>
+        
+      </tbody>";
+
         } 
         // else{
         //     echo "<h3 style='color:red;'>" . $txt_err_lg . "</h3>";

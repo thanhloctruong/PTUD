@@ -15,5 +15,4 @@
         execsql($sql, 1);
         return true;
     }
-
 ?>
