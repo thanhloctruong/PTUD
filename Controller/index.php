@@ -26,6 +26,12 @@
             case 'new':
                 include '../view/components/News.php';
                 break;
+            case 'giayxacnhan':
+                include "../view/components/certification.php";
+                break;
+            // case 'doctors':
+            //     include '../view/components/Doctors.php';
+            //     break;
             // case 'search':
             //     if(isset($_POST['keyword']) && ($_POST['keyword']!='')){
             //         $listsearch = showsearch($_POST['keyword']);

@@ -41,6 +41,9 @@
                 case 'quanly':
                     include "./View/ManagePatientInformation.php";
                     break;
+                case 'kiemtrattb':
+                    include "./View/CheckHealth.php";
+                    break;
                 case 'logout':
                     if(isset($_SESSION['HospitalWardEmployee'])) unset($_SESSION['HospitalWardEmployee']);
                     // if(isset($_SESSION['user'])) unset($_SESSION['user']);

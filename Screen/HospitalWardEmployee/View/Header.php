@@ -66,6 +66,9 @@
             <a class="nav-link" href="index.php?act=tuvan">Tư vấn cho bệnh nhân</a> <!--Counseling-->
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="index.php?act=kiemtrattb">Kiểm tra tình trạng bệnh</a> <!--Counseling-->
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.php?act=quanly">Quản lý thông tin bệnh nhân
               
 

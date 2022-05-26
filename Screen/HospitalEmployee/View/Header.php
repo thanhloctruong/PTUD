@@ -66,11 +66,12 @@
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">Cập nhật tình trạng</a> <!--Counseling-->
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=tracuu">Tìm kiếm bệnh nhân</a> <!--ManagePatientInformation--> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=capnhatttb">Cập nhật tình trạng bệnh</a> <!--Counseling-->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=">Quản lý thông tin</a>

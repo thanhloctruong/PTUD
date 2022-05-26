@@ -103,7 +103,12 @@
 
           <li class="nav-item active">
             <?php
-            if(isset($_SESSION['id'])): 
+            if(isset($_SESSION['id'])):
+              // {
+              //  $id=$_SESSION['id'];
+              //  echo $id;
+              // }
+             
             ?>
             <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
             <?php 
