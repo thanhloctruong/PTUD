@@ -1,4 +1,4 @@
-<!-- <div> nhân viên y tế bệnh viện</div> -->
+<!-- <div> nhân viên y tế phường</div> -->
 <?php
 session_start();
 if (isset($_SESSION['systemAdmin'])) {
@@ -46,15 +46,31 @@ if (isset($_SESSION['systemAdmin'])) {
                 $sql = thongkenhanvien();
                 include './View/Decentralization.php';
                 break;
-            case 'xemthongke':
-                include "./View/SeenStatistics.php";
-                break;
             case 'logout':
                 if (isset($_SESSION['systemAdmin'])) unset($_SESSION['systemAdmin']);
                 header('location: ../../Controller/index.php?act=logout');
                 break;
+            case 'xemthongke':
+                $sql=thongke_full();
+                if(isset($_POST['btntk'])){
+                    if($_POST["fday"]&&$_POST["tday"]){
+                        $fday=$_POST["fday"];
+                        $tday=$_POST["tday"];
+                        $sql=thongke_time($fday,$tday);
+                    }else if($_POST["thongke"]){
+                    $thongke=$_POST["thongke"];
+                    $sql=thongke_status($thongke);
+                    }else if($_POST["fday"]&&$_POST["tday"]&&$_POST["thongke"]){
+                        $fday=$_POST["fday"];
+                        $tday=$_POST["tday"];
+                        $thongke=$_POST["thongke"];
+                        $sql=thongke_time_status($fday,$tday,$thongke);
+                    }
+                }
+                include '../SystemAdmin/View/Statistical.php';
+                break;          
             default:
-                include "../../view/components/Home.php";
+                include "../SystemAdmin/View/Home.php";
                 break;
         }
     } else {

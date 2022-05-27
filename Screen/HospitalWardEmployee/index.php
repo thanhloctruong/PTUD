@@ -1,5 +1,6 @@
 <!-- <div> nhân viên y tế phường</div> -->
 <?php
+ob_start();
 session_start();
 if (isset($_SESSION['HospitalWardEmployee'])) {
     # code...
@@ -39,7 +40,7 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                     $phuongct = $_POST['phuong'];
                     try {
                         $conn = connect();
-                        $sql = updatePatient($user, $pass, $name, $date, $phone, $email, $cccd, $diachi, $phuongct, $role, $id);
+                        $sql = update_Patient($user, $pass, $name, $date, $phone, $email, $cccd, $diachi, $phuongct, $role, $id);
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
                         echo "<script>alert('Cập Nhật Thành Công')</script>";
@@ -65,10 +66,10 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
             case 'reply':
                 $idRequest = $_GET['id'];
                 $result = request($idRequest);
-                if (isset($_POST['send']) && $_POST['send']) {
+                if(isset($_POST['send']) && $_POST['send']){
                     $mess = $_POST['mess'];
-                    $kq =  update_request($mess, $idRequest);
-                    if ($kq) {
+                    $kq =  update_request($mess,$idRequest);
+                    if($kq){
                         header('location: index.php?act=tuvan');
                         break;
                     }
@@ -186,5 +187,4 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
     # code...
     header('location: ../../Controller/index.php?act=login');
 }
-
 ?>

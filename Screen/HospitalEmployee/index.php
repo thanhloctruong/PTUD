@@ -5,10 +5,51 @@ session_start();
 if (isset($_SESSION['HospitalEmployee'])) {
     # code...
     include "../../Model/index.php";
-    include "../../Screen/HospitalEmployee/View/Header.php";
+    include "../HospitalEmployee/View/Header.php";
     // include "../../Controller/index.php";
-    if (isset($_GET['act'])) 
-    {
+    if (isset($_GET['update'])) {
+        $update = $_GET['update'];
+        $sql = thongke_full();
+        $result = getlist($sql);
+        $i = 0;
+        foreach ($result as $row) {
+            $i++;
+            if ($update == $row['MaHoSo']) {
+                $MHS = $row['MaHoSo'];
+                $HoTen = $row['HoTen'];
+                $NgaySinh = $row['NgaySinh'];
+                $SDT = $row['SDT'];
+                $Mail = $row['Email'];
+                $CCCD = $row['CCCD'];
+                $DiaChi = $row['DiaChi'];
+                $TinhTrang = $row['TinhTrangSucKhoe'];
+                $KetLuan = $row['GhiChu'];
+                if (isset($_POST['btnupdate'])) {
+                    $mhs = $_POST['mhs'];
+                    $ten = $_POST['ten'];
+                    $ngaysinh = $_POST['ngaysinh'];
+                    $sdt = $_POST['sdt'];
+                    $mail = $_POST['mail'];
+                    $cccd = $_POST['cccd'];
+                    $diachi = $_POST['diachi'];
+                    $tinhtrang = $_POST['tinhtrang'];
+                    $ketluan = $_POST['ketluan'];
+                    try {
+                        $conn = connect();
+                        $sql = updatePatient($ten, $ngaysinh, $sdt, $mail, $cccd, $diachi, $tinhtrang, $ketluan, $mhs);
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        echo "<script>alert('Cập nhật thành công')</script>";
+                    } catch (PDOException $e) {
+                        echo $sql . "</br>" . $e->getMessage();
+                    }
+                    $conn = NULL;
+                }
+            }
+        }
+        include './View/UpdatePatient.php';
+        exit;
+    } elseif (isset($_GET['act'])) {
         # code...
         $act = $_GET['act'];
         switch ($act) {
@@ -96,6 +137,9 @@ if (isset($_SESSION['HospitalEmployee'])) {
                 break;
             default:
                 include "./View/Home.php";
+            case 'quanly':
+                $sql = thongke_full();
+                include './View/PatientManagement.php';
                 break;
         }
     } else {

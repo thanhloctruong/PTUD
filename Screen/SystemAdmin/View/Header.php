@@ -30,7 +30,7 @@
           <div class="site-info">
             <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
             <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>manhc3dth@gmail.com</a>
+            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>nhom6868@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">
@@ -66,7 +66,10 @@
             <a class="nav-link" href="index.php?act=phanquyen">Phân Quyền</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống Kê</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống Kê
+              
+
+            </a> <!--ManagePatientInformation--> 
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>

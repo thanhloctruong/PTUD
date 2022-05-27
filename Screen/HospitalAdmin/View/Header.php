@@ -48,7 +48,14 @@
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
-      
+      <!-- <form action="index.php?act=search" method="post">
+        <div class="input-group input-navbar">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+          </div>
+          <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+        </div>
+      </form> -->
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -64,12 +71,18 @@
           </li> -->
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=tiepnhan">Tiếp nhận bệnh nhân</a> <!--Counseling-->
+
+            <!-- <a class="nav-link" href="index.php?act=">Quản lý bệnh viện</a> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=thongke">Thống kê số liệu</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=">Quản lý tầng</a>  -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=quanlyttbv">Quản lý thông tin bệnh viện</a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=thongkengay">Thống kê trong ngày</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?act=quanlyttbv">Quản lý thông tin bệnh viện</a> 
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>

@@ -74,7 +74,7 @@
             <a class="nav-link" href="index.php?act=capnhatttb">Cập nhật tình trạng bệnh</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">Quản lý thông tin</a>
+            <a class="nav-link" href="index.php?act=quanly">Quản lý thông tin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php?act=timkiem">Yêu cầu chuyển viện</a>

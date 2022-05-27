@@ -41,7 +41,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
@@ -66,7 +65,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
@@ -212,7 +210,6 @@
                 </div>
               </div>
             </div>
-
             <div class="col-12 my-5">
               <nav aria-label="Page Navigation">
                 <ul class="pagination justify-content-center">
@@ -255,7 +252,6 @@
                 <li><a href="#">Ocassion <span>14</span></a></li>
               </ul>
             </div>
-
             <div class="sidebar-block">
               <h3 class="sidebar-title">Recent Blog</h3>
               <div class="blog-item">
@@ -298,7 +294,6 @@
                 </div>
               </div>
             </div>
-
             <div class="sidebar-block">
               <h3 class="sidebar-title">Tag Cloud</h3>
               <div class="tagcloud">
@@ -312,7 +307,6 @@
                 <a href="#" class="tag-cloud-link">drinks</a>
               </div>
             </div>
-
             <div class="sidebar-block">
               <h3 class="sidebar-title">Paragraph</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
@@ -322,7 +316,6 @@
       </div> <!-- .row -->
     </div> <!-- .container -->
   </div> <!-- .page-section -->
-
   <div class="page-section banner-home bg-image" style="background-image: url(../view/Assets/img/banner-pattern.svg);">
     <div class="container py-5 py-lg-0">
       <div class="row align-items-center">

@@ -109,9 +109,33 @@ if (isset($_SESSION['hospitalAdmin'])) {
                 if (isset($_SESSION['hospitalAdmin'])) unset($_SESSION['hospitalAdmin']);
                 header('location: ../../Controller/index.php?act=logout');
                 break;
-            default:
-                include "./View/Home.php";
+            case 'thongkengay':
+                $date = getdate();
+                $day = $date['mday'];
+                $month = $date['mon'];
+                $year = $date['year'];
+                if (!isset($_POST['btnthongke'])) {
+                    $time = "$year-$month-$day";
+                    $duong = count_duong("Dương tính", $time);
+                    $am = count_am("Âm tính", $time);
+                    $sum_status = $duong + $am;
+                    $duong_hcm = count_duong_kv("Dương tính", $time, "TP.HCM");
+                    $am_hcm = count_am_kv("Âm tính", $time, "TP.HCM");
+                    $sum_status_hcm = $duong_hcm + $am_hcm;
+                }
+                if (isset($_POST['btnthongke'])) {
+                    $time = $_POST['timeday'];
+                    $duong = count_duong("Dương tính", $time);
+                    $am = count_am("Âm tính", $time);
+                    $sum_status = $duong + $am;
+                    $duong_hcm = count_duong_kv("Dương tính", $time, "TP.HCM");
+                    $am_hcm = count_am_kv("Âm tính", $time, "TP.HCM");
+                    $sum_status_hcm = $duong_hcm + $am_hcm;
+                }
+                include '../HospitalAdmin/View/Statistical_day.php';
                 break;
+            default:
+                include "../HospitalAdmin/View/Home.php";
         }
     } else {
         include "./View/Home.php";
