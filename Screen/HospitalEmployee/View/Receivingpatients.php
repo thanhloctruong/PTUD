@@ -14,7 +14,7 @@
 </div>
     <form  action="" method="POST">
         <div class="container">
-            <h1 class="text-center wow fadeInUp">Nhập mã hồ sơ bệnh nhân</h1>
+            <h1 class="text-center wow fadeInUp">Thời gian thống kê</h1>
             <!-- <div class="row mb-3">
                 <div class="col-sm-3 input-group mb-3 wow fadeInLeft">
                 </div>
@@ -46,14 +46,14 @@
             </thead>
             <tbody>
                 <?php
-                    $query=thongke_full();
+                    $query=thongke_all();
                     if(isset($_POST['btnds']))
                     {
                     if($_POST["fday"]&&$_POST["tday"])
                         {
                             $fday=$_POST["fday"];
                             $tday=$_POST["tday"];
-                            $query=thongke_time($fday,$tday);
+                            $query=thongke_thoigian($fday,$tday);
                         }
                     }
                         $result=getlist($query);

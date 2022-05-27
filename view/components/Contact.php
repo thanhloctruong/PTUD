@@ -99,7 +99,7 @@ if(isset($_POST['nut'])){
         <div class="row mb-3"> ';
         echo'    <div class="col-6 py-2 wow fadeInUp">';
         echo'   <label for="message">Câu hỏi của bạn</label>';
-        echo'   <textarea id="message" class="form-control" rows="2" placeholder="">';
+        echo'   <textarea id="message" class="form-control bg-primary text-white" rows="2" placeholder="" readonly>';
                 //<?php  
                 //  if($show==0) 
                 //   {echo'Chưa có câu hỏi';  }                                        
@@ -114,7 +114,7 @@ if(isset($_POST['nut'])){
           echo'
           <div class="col-6 py-2 wow fadeInUp">';
           echo'    <label for="message">One Health - Medical Center</label>';
-          echo'  <textarea id="message" class="form-control" rows="2" placeholder="">';
+          echo'   <textarea id="message" class="form-control bg-primary text-white" rows="2" placeholder="" readonly>';
               //if($show==1)
              // {
                  echo $text['CauTraLoi'];

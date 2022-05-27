@@ -1,5 +1,6 @@
 <!-- <div> nhân viên y tế bệnh viện</div> -->
 <?php
+ob_start();
 session_start();
 if (isset($_SESSION['HospitalEmployee'])) {
     # code...

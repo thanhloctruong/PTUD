@@ -66,10 +66,7 @@
             <a class="nav-link" href="index.php?act=phanquyen">Phân Quyền</a> <!--Counseling-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống Kê
-              
-
-            </a> <!--ManagePatientInformation--> 
+            <a class="nav-link" href="index.php?act=xemthongke">Xem Thống Kê</a> <!--ManagePatientInformation--> 
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>

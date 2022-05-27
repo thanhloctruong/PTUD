@@ -37,17 +37,17 @@ if (isset($_SESSION['systemAdmin'])) {
         }
 
 
-        include 'Grant.php';
+        include './View/Grant.php';
     } elseif (isset($_GET['act'])) {
         # code...
         $act = $_GET['act'];
         switch ($act) {
             case 'phanquyen':
                 $sql = thongkenhanvien();
-                include 'Decentralization.php';
+                include './View/Decentralization.php';
                 break;
             case 'xemthongke':
-                include "SeenStatistics.php";
+                include "./View/SeenStatistics.php";
                 break;
             case 'logout':
                 if (isset($_SESSION['systemAdmin'])) unset($_SESSION['systemAdmin']);

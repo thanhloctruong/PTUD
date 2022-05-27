@@ -40,4 +40,15 @@
         execsql($sql, 1);
         return true;
     }
+    function add( $name,$address,$tang, $socamac,$socakhoi){
+        $sql="INSERT INTO benhvien(TenBenhVien,DiaChi,TangSo,SoCaMac,SoCaKhoi)
+         VALUES('$name','$address','$tang','$socamac','$socakhoi');";
+         addsql($sql);
+    }
+    function update($address, $socamac, $name,$socakhoi,$tang,$id)
+    {
+        $sql="UPDATE benhvien 
+        Set TenBenhVien ='$name',DiaChi='$address',TangSo='$tang',SoCaMac='$socamac',SoCaKhoi='$socakhoi', MaBenhVien=$id";
+        updatesql($sql);
+    }
 ?>
