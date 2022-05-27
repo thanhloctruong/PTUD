@@ -30,14 +30,12 @@
             <label for="txtmahs" class="col-md-4 text-center">Mã hồ sơ:</label>
             <input type="text" class="form-control col-md-7" name="txtmash" >
         </div> -->
+        <input type="text" class="form-control col-md-7" name="txtmatk" value="<?php  echo $search['MaTaiKhoan']?>" hidden>
         <div class="tokhai row">
             <label for="txtmahoso" class="col-md-4 text-center">Mã hồ sơ:</label>
             <input type="text" class="form-control col-md-7" name="txtmahoso" value="<?php  echo $search['MaHoSo']?>" readonly>
         </div>
-        <div class="tokhai row">
-            <label for="txtmatk" class="col-md-4 text-center">Mã tài khoản:</label>
-            <input type="text" class="form-control col-md-7" name="txtmatk" value="<?php  echo $search['MaTaiKhoan']?>" readonly>
-        </div>
+           
         <div class="tokhai row">
             <label for="txtname" class="col-md-4 text-center">Họ tên bệnh nhân:</label>
             <input type="text" class="form-control col-md-7" name="txtname" value="<?php echo $search['HoTen'] ?>" readonly> 
@@ -91,30 +89,4 @@
         </div>
     </form>
 </div> 
-<!-- <div class="container-fluid">
-    <div class="pag-login d-flex align-items-center justify-content-center h-100">
-        <div class="col-lg-12 left">
-            <h4 class="b123 text-center"><b>Yêu cầu chuyển viện</b></h4>
-            <table class="table table-bordered table-light table-hover">
-                <thead class="bg-primary text-white">
-                    <tr class="text-align-center">
-                        <th scope="col">STT</th>
-                        <th scope="col">Mã hồ sơ</th>
-                        <th scope="col">Họ tên bệnh nhân</th>
-                        <th scope="col">Tình trạng bệnh</th>
-                        <th scope="col">Ngày yêu cầu</th>
-                        <th scope="col">Tầng yêu cầu</th>
-                        <th scope="col">Bệnh viện yêu cầu</th>
-                        <th scope="col">Xác nhận</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-            <div class="d-flex justify-content-center pr-2">
-                <button type="submit" class="btn btn-primary rounded-circle">Lưu cập nhật </button>
-            </div>
-        </div>
-    </div>
-</div> -->
+

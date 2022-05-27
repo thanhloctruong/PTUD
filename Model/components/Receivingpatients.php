@@ -14,14 +14,14 @@
         FROM   phieuyeucauchuyenvien ph join taikhoan tk on ph.MaTaiKhoan=tk.MaTaiKhoan ";
         return getlist($sql);
     }
-    function thongke_full()
+    function thongke_all()
     {
         $sql="SELECT * 
         FROM   phieuyeucauchuyenvien join taikhoan 
         where  phieuyeucauchuyenvien.MaTaiKhoan = taikhoan.MaTaiKhoan"; 
         return $sql;
     }
-    function thongke_time($a,$b)
+    function thongke_thoigian($a,$b)
     {
         $sql="SELECT * 
         FROM   phieuyeucauchuyenvien join taikhoan 
@@ -47,4 +47,5 @@
         $sql="DELETE from phieuyeucauchuyenvien where MaHoSo='$mhs'";
         return $sql;
     }
+
 ?>

@@ -26,28 +26,34 @@
                 if(isset($_POST['txtcoso']))
                 {
                 $print=thongtin($_POST['txtcoso']);
-                // $ten=get_ten($_POST['txtcoso']);
-                // $trieuChung = $dichte = array();
-
-                //     if (!empty($_REQUEST['trieuchung_sot'])) {
-                //         array_push($trieuChung, $_POST['trieuchung_sot']);
-                //     }
-                //     if (!empty($_REQUEST['trieuchung_ho'])) {
-                //         array_push($trieuChung, $_REQUEST['trieuchung_ho']);
-                //     }
-                //     if (!empty($_REQUEST['trieuchung_dauhong'])) {
-                //         array_push($trieuChung, $_POST['trieuchung_dauhong']);
-                //     }
-                //     if (!empty($_REQUEST['trieuchung_met'])) {
-                //         array_push($trieuChung, $_POST['trieuchung_met']);
-                //     }
-                //     if (!empty($_REQUEST['trieuchung_khotho'])) {
-                //         array_push($trieuChung, $_POST['trieuchung_khotho']);
-                //     }
-                
 
                 }
-
+                // if(isset($_POST['guiyeucau']) && $_POST['guiyeucau'])
+                // {
+                //         $mhs=$_POST['hosobn'];
+                //         $ngayyeucau=$_POST['txtdate'];
+                //         $tinhtrangsuckhoe=$_POST['txttinhtrang'];
+                //         $mcsyt=$_POST['txtcoso'];
+                //         $mataikhoan=$_POST['txttaikhoan'];
+                //         try{
+                //             $sql= add_dangkydieutri($mhs,$ngayyeucau,$tinhtrangsuckhoe,$mcsyt,$mataikhoan);
+                //             $conn= connect();
+                //             $stmt= $conn->prepare($sql);
+                //             $stmt->execute();
+                //             }
+                //             catch(PDOException $e){
+                //                 echo $sql . "</br>" . $e->getMessage();
+                //             }
+                //             $conn=null;
+                //         include '../view/components/RegisterForTreatment.php';
+                //         break;
+                // }
+                // $select=select_thongtin();
+                // if(isset($_POST['txtcoso']))
+                // {
+                // $print_select=select_thongtin1($_POST['txttinhtrang']);
+                // // $select=select_thongtin($_POST['txtcoso']);
+                // }
                 include "../view/components/RegisterForTreatment.php";
                 break;
             // case 'doctors':

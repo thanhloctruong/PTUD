@@ -38,11 +38,16 @@
                     }
                 case 'timkiem':
                     if (isset($_POST['search']) && ($_POST['search']))
-                     {
+                    {
                         $search = Search($_POST['txttimkiem']);
+                        // if($search==null)
+                        // {
+                        //     echo  "khong ton tai";
+                        // }
                         include './View/patientrecordsearch.php';
                         break;
-                    } else{
+                    } 
+                    else{
                         include './View/patientrecordsearch.php';
                         break;
                     }   

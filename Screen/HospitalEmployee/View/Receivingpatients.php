@@ -46,14 +46,14 @@
             </thead>
             <tbody>
                 <?php
-                    $query=thongke_full();
+                    $query=thongke_all();
                     if(isset($_POST['btnds']))
                     {
                     if($_POST["fday"]&&$_POST["tday"])
                         {
                             $fday=$_POST["fday"];
                             $tday=$_POST["tday"];
-                            $query=thongke_time($fday,$tday);
+                            $query=thongke_thoigian($fday,$tday);
                         }
                     }
                         $result=getlist($query);
@@ -102,7 +102,6 @@
                             $conn= connect();
                             $stmt= $conn->prepare($sql);
                             $stmt->execute();
-                            header("refresh:0");
                             }
                             catch(PDOException $e){
                                 echo $sql . "</br>" . $e->getMessage();

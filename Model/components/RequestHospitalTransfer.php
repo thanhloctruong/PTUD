@@ -33,5 +33,15 @@
         $sql = "SELECT * FROM benhvien";
         return getlist($sql);
     }
-
+    function modelSelecthsbn($mahsbn)
+    {
+        $sql = "SELECT * 
+        FROM `hosobenhnhan` JOIN `taikhoan` ON `hosobenhnhan`.`MaTaiKhoan`=`taikhoan`.`MaTaiKhoan` ";
+        return getone($sql);
+    }
+    // function add_dangkydieutri($mhs, $tinhtrangsuckhoe,$ngayyeucau, $mcsyt,$mataikhoan)
+    // {
+    //     $sql = "INSERT INTO `hosobenhnhan` (`MaHoSo`,`TinhTrangSucKhoe`,`NgayNhapvien`,`MaCSYT`,`MaTaiKhoan`) VALUES ('$mhs', '$tinhtrangsuckhoe','$ngayyeucau','$mcsyt','$mataikhoan')";
+    //     return $sql;
+    // }
 ?>
