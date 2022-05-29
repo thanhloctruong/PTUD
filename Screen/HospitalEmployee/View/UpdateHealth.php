@@ -74,6 +74,7 @@
                         <option>".$search['GhiChu']."</option>
                         <option value='Dương tính'>Dương tính</option>
                         <option value='Âm tính'>Âm tính</option>
+                        <option value='Tử vong'>Tử vong</option>
                      </select>         
                 </td>
                 <td scope='row'>".$search['NgayNhapvien']."</td>

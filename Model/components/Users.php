@@ -29,6 +29,17 @@
         return getone($sql);
     }
     
+    // function update_user_by_id($update_info, $user_id) {
+    //     // được phép chỉnh sửa địa chỉ, sdt, họ tên, ngày sinh
+    //     $address = $update_info['address'];
+    //     $phone = $update_info['phone'];
+    //     $email = $update_info['email'];
+    //     $name = $update_info['name'];
+    //     $dob = $update_info['dob'];
+    //     $sql = "UPDATE taikhoan SET address = '$address', phone = '$phone', name = '$name', date = '$dob', email = '$email' WHERE id = $user_id";
+    //     execsql($sql, 1);
+    //     return true;
+    // }
     function update_user_by_id($update_info, $user_id) {
         // được phép chỉnh sửa địa chỉ, sdt, họ tên, ngày sinh
         $address = $update_info['address'];
@@ -36,7 +47,8 @@
         $email = $update_info['email'];
         $name = $update_info['name'];
         $dob = $update_info['dob'];
-        $sql = "UPDATE taikhoan SET address = '$address', phone = '$phone', name = '$name', date = '$dob', email = '$email' WHERE id = $user_id";
+        $cccd = $update_info['cccd'];
+        $sql = "UPDATE taikhoan SET DiaChi = '$address', SDT = '$phone', HoTen = '$name', NgaySinh = '$dob', Email = '$email', CCCD = '$cccd' WHERE MaTaiKhoan = $user_id";
         execsql($sql, 1);
         return true;
     }
@@ -45,10 +57,10 @@
          VALUES('$name','$address','$tang','$socamac','$socakhoi');";
          addsql($sql);
     }
-    function update($address, $socamac, $name,$socakhoi,$tang,$id)
-    {
-        $sql="UPDATE benhvien 
-        Set TenBenhVien ='$name',DiaChi='$address',TangSo='$tang',SoCaMac='$socamac',SoCaKhoi='$socakhoi', MaBenhVien=$id";
-        updatesql($sql);
-    }
+    // function update($address, $socamac, $name,$socakhoi,$tang,$id)
+    // {
+    //     $sql="UPDATE benhvien 
+    //     Set TenBenhVien ='$name',DiaChi='$address',TangSo='$tang',SoCaMac='$socamac',SoCaKhoi='$socakhoi', MaBenhVien=$id";
+    //     updatesql($sql);
+    // }
 ?>

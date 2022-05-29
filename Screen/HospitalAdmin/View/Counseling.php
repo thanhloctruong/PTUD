@@ -57,5 +57,5 @@
 </table>
 
 <?php
-echo $ward;
+// echo $ward;
 ?>

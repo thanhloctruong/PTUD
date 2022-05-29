@@ -1,20 +1,49 @@
 <?php
      include "components/cCetification.php";
-     $thongtin =  ControlSelectCertification(1) ;
+     $layid=$_SESSION['id'];
+    //  echo $layid;
+    
+     $thongtin =  ControlSelectCertification($layid) ;
+   
+    //  echo "<script>alert('Bệnh nhân cần khai báo y tế trước khi xuất giấy xác nhận')</script>";
+    
     //  echo "<pre>";
     //     print_r($thongtin);
     //  echo "</pre>";
+     
      if($thongtin["GhiChu"]== "Dương tính"){
         echo "<script>alert('Bệnh nhân chưa khỏi bệnh, không thể kết xuất giấy xác nhận')</script>";
         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
      }
 
+     
+    // if ($thongtin['MaToKhai']==null) {
+    //     $thongtin['MaToKhai']['sai'] = 'Vui lòng khai báo y tế trước khi thực hiện chức năng';
+    //     echo "<script>alert('" . $thongtin['MaToKhai']['sai'] . "')</script>";
+    //     echo "<meta http-equiv='refresh' content='0;url=index.php'>";}
+    // if ($thongtin['MaHoSo']==null) {
+    //     $thongtin['MaHoSo']['sai'] = 'Bạn chưa được cập nhật vào hồ sơ bệnh nhân, không thực hiện được chức năng này';
+    //     echo "<script>alert('" . $thongtin['MaHoSo']['sai'] . "')</script>";
+    //     echo "<meta http-equiv='refresh' content='0;url=index.php'>";}
+
+
+     if($thongtin["MaToKhai"]==null){
+     echo "<script>alert('Vui lòng khai báo y tế trước khi thực hiện chức năng ')</script>";
+     echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+    
+    }elseif($thongtin['MaHoSo']==null)
+    {
+       echo "<script>alert('Thông báo: Bạn chưa được cập nhật vào hồ sơ bệnh nhân, không thực hiện được chức năng này ')</script>";
+       echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+    }
+
+     
 ?>
     <div class="GXN">
         <div class="content-page px-0">
             <div class="container px-1">
-                <div class="card p-sm-2 mt-2">
-                    <div class="row ">
+                <div class="card p-sm-2" style="margin-bottom:50px ;">
+                    <div class="row " style="margin-top:50px ;">
 
                         <div class="col-6 text-center text-uppercase mt-1">
                             <span>Sở y tế TP Hồ CHí Minh <br> TTYT quận gò vấp <br></span>
@@ -27,9 +56,10 @@
                         </div>
                     </div>
                     <br>
-                    <div class="row col-12 mt-1 ml-5">
+                    <div class="row col-12 mt-1 ml-5" >
                         <div class="col-5 font-weight-bold mt-1 ">Họ tên:</div>
-                        <div class="col-7 hoten mt-1"> <?= $thongtin ['HoTen'] ?> </div>
+                        <!-- <div class="col-7 hoten mt-1"> </div> -->
+                        <div class="col-7 hoten mt-1"> <?php echo $thongtin ['HoTen']; ?> </div>
 
                         <div class="col-5 font-weight-bold mt-1 " >Số điện thoại: </div>
                         <div class="col-7 sdt mt-1"><?= $thongtin  ['SDT'] ?> </div>
@@ -65,7 +95,14 @@
                         <div class="col-7 ngaykhoibenh mt-1 mb-5" >Bệnh nhân theo dõi sức khỏe 7 ngày và thực hiện 5K theo quy định của Bộ Y tế </div>
                         
                     </div>
+                    <div class="col-12 text-right  mt-1" style="padding-bottom:200px ;" >
+                            <!-- <span >Ngày.....Tháng.....Năm..... </span> <br> -->
+                            <span style="padding-right:200px ;">NHÂN VIÊN Y TẾ</span>  <br>
+                            <Span style="padding-right: 190px;">(Ký và ghi rõ họ tên) </Span>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+

@@ -38,6 +38,7 @@ h2{
                 <td>Ngày nhập viện</td>
                 <td>Tình trạng</td>
                 <td>Tầng điều trị</td>
+                <td>Ghi chú</td>
             </tr>
         </thead>
         <tbody class="table table-striped">
@@ -54,6 +55,7 @@ h2{
                         <td><?php echo $row['NgayNhapvien']; ?></td>
                         <td><?php echo $row['TinhTrangSucKhoe']; ?></td>
                         <td><?php echo $row['TangSo']; ?></td>
+                        <td><?php echo $row['GhiChu']; ?></td>
                     </tr>
         <?php
             }

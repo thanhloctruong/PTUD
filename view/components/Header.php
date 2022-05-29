@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
 <link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
 <link rel="stylesheet" href="../view/Assets/css/theme.css">
-<!-- <link rel="stylesheet" href="../view/Assets/css/index.css"> -->
+<link rel="stylesheet" href="../view/Assets/css/Style.css">
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -51,13 +51,13 @@
 
       <div class="collapse navbar-collapse" id="navbarSupport">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">Trang chủ</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
-          <li class="nav-item active active">
+          <li class="nav-item">
           <?php
             if(isset($_SESSION['id'])): 
             ?>
@@ -68,7 +68,7 @@
             endif; 
             ?>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
           <?php
             if(isset($_SESSION['id'])): 
             ?>
@@ -79,19 +79,28 @@
             endif; 
             ?>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
           <?php
             if(isset($_SESSION['id'])): 
             ?>
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
+            <a class="nav-link" href="index.php?act=giayxacnhan">In giấy xác nhận</a>
             <?php 
             else:
               echo '<a class="nav-link" href="index.php?act=login">In giấy xác nhận</a>';
             endif; 
             ?>
           </li>
-
-          <li class="nav-item active">
+          <?php
+            if(isset($_SESSION['id'])): 
+            ?>
+            <a class="nav-link" href="index.php?act=edit_user">Cập nhật thông tin cá nhân</a>
+            <?php 
+            else:
+              echo '<a class="nav-link" href="index.php?act=login">Cập nhật thông tin cá nhân</a>';
+            endif; 
+            ?>
+          </li>
+          <li class="nav-item">
             <?php
             if(isset($_SESSION['id'])):
               // {
@@ -108,7 +117,7 @@
             ?>
           </li>
 
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php?act=new">Tin tức</a>
           </li>
           <li class="nav-item">

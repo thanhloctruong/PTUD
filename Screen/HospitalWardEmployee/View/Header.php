@@ -64,7 +64,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupport">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">Trang chủ</a>
           </li>
           <!-- <li class="nav-item">

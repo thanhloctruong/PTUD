@@ -1,7 +1,7 @@
 <?php
 
-     include "components/cCetification.php";
-     $thongtin =  ControlSelectCertification(1) ;
+    //  include "components/cCetification.php";
+    //  $thongtin =  ControlSelectCertification(1) ;
      
     
 ?>
@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <span class="text_donvi" id="ErNoiKhaiBao">Nơi khai báo</span><span class="text-danger" >(*)</span>:
                                 <input type="text" name="NoiKhaiBao" class="form-control"
-                                    placeholder="Nhập và chọn nơi khai báo"  require>
+                                    placeholder="VD: 4, Nguyễn Văn Bảo, Phường 7, Gò Vấp "  require>
                             </div>
                         </div>
                         <!-- <div class="col-12">
@@ -322,9 +322,15 @@ if (isset($_REQUEST['btnsave'])) {
     }
 
     $thongBaoLoi = array();
+
+   
+    if (isset($_REQUEST['loaiKhaiBao'])==null) {
+        $thongBaoLoi['loaiKhaiBao']['sai'] = 'Loại khai báo không được rỗng';
+        echo "<script>alert('" . $thongBaoLoi['loaiKhaiBao']['sai'] . "')</script>";}
     if (!preg_match('/^[0-9\/]{1,}+,+[A-Za-zÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s,]{2,}/', $_REQUEST['NoiKhaiBao'])) {
-    $thongBaoLoi['NoiKhaiBao']['sai'] = 'Địa chỉ có số nhà, xã, huyện, tỉnh';
+    $thongBaoLoi['NoiKhaiBao']['sai'] = 'Nơi khai báo có dạng SỐ nhà, đường, xã/phường, quận/huyện, tỉnh/thành phố';
     echo "<script>alert('" . $thongBaoLoi['NoiKhaiBao']['sai'] . "')</script>";}
+   
 
     if (!preg_match('/^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổ,ỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]{0,}/', $_REQUEST['tiensubenh'])) {
     $thongBaoLoi['tiensubenh']['sai'] = 'Vui Lòng Nhập Địa Chỉ';
@@ -332,7 +338,7 @@ if (isset($_REQUEST['btnsave'])) {
     include "components/cHeathDeclaration.php";
 
     if(empty($thongBaoLoi)){
-        $checkthanhcong = insertKhaiBaoYTe($_REQUEST['loaiKhaiBao'], $_REQUEST['NoiKhaiBao'],  $_REQUEST['tiensubenh'], implode(",", $trieuChung), implode(",", $dichte), '1');
+        $checkthanhcong = insertKhaiBaoYTe($_REQUEST['loaiKhaiBao'], $_REQUEST['NoiKhaiBao'],  $_REQUEST['tiensubenh'], implode(",", $trieuChung), implode(",", $dichte), $_SESSION['id']);
         
         if ($checkthanhcong == null) {
             echo "<script>alert('Khai Báo Thành Công')</script>";

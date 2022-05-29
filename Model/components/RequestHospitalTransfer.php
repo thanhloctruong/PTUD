@@ -16,9 +16,8 @@
     }
     function add_yeucau($date, $mucdo,$mtk, $mahoso,$mabenhvien)
     {
-        // $sql="INSERT INTO phieuyeucauchuyenvien( NgayYeuCau, MoTa, MaHoSo)
-        //  VALUES ($date, $mucdo, $mahoso)";
-        $sql = "INSERT INTO `phieuyeucauchuyenvien` (`NgayYeuCau`,`MoTa`,`MaTaiKhoan`,`MaHoSo`,`MaBenhVien`) VALUES ('$date', '$mucdo','$mtk','$mahoso','$mabenhvien')";
+        $sql = "INSERT INTO `phieuyeucauchuyenvien` (`NgayYeuCau`,`MoTa`,`MaTaiKhoan`,`MaHoSo`,`MaBenhVien`) 
+        VALUES ('$date', '$mucdo','$mtk','$mahoso','$mabenhvien')";
         return addsql($sql);
         
     }
@@ -30,8 +29,22 @@
         return getone($sql);
     }
     function requestbenhvien(){
-        $sql = "SELECT * FROM benhvien";
+        $sql = "SELECT * FROM benhvien group by TangSo";
         return getlist($sql);
     }
-
+    function requesttenbv($tang){
+        $sql = "SELECT * FROM benhvien WHERE TangSo=$tang";
+        return getlist($sql);
+    }
+    function add_dangkydieutri($tinhtrangsuckhoe,$ngayyeucau,$macsyt,$mahs)
+    {
+        $sql = "UPDATE `hosobenhnhan` SET  `TinhTrangSucKhoe` = '$tinhtrangsuckhoe', `NgayNhapvien` = '$ngayyeucau', `MaCSYT` = '$macsyt' WHERE `hosobenhnhan`.`MaHoSo` = $mahs;";
+        return $sql;
+    }
+    function laytk($mtk)
+    {
+        $sql = "SELECT *
+        FROM `hosobenhnhan` where `MaTaiKhoan` = '$mtk'";
+        return getone($sql);
+    }
 ?>

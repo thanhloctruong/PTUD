@@ -53,19 +53,29 @@ if (isset($_SESSION['systemAdmin'])) {
             case 'xemthongke':
                 $sql=thongke_full();
                 if(isset($_POST['btntk'])){
-                    if($_POST["fday"]&&$_POST["tday"]){
+                    if($_POST['fday'] && $_POST['tday']){
+                        $fday=$_POST["fday"];
+                        $tday=$_POST["tday"];
+                        if(strtotime($fday)>strtotime($tday)){
+                            echo "<script>alert('Khoảng thời gian sai')</script>";
+                        }
+                    }
+                    if($_POST['fday'] && $_POST['tday'] && !isset($_POST['thongke'])){
                         $fday=$_POST["fday"];
                         $tday=$_POST["tday"];
                         $sql=thongke_time($fday,$tday);
-                    }else if($_POST["thongke"]){
-                    $thongke=$_POST["thongke"];
-                    $sql=thongke_status($thongke);
-                    }else if($_POST["fday"]&&$_POST["tday"]&&$_POST["thongke"]){
+                    }
+                    if(isset($_POST['thongke'])){
+                        $thongke=$_POST["thongke"];
+                        $sql=thongke_status($thongke);
+                    }
+                    if($_POST['fday'] && $_POST['tday'] && isset($_POST['thongke'])){
                         $fday=$_POST["fday"];
                         $tday=$_POST["tday"];
                         $thongke=$_POST["thongke"];
                         $sql=thongke_time_status($fday,$tday,$thongke);
                     }
+                    
                 }
                 include '../SystemAdmin/View/Statistical.php';
                 break;          
