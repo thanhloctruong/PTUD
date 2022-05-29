@@ -51,7 +51,7 @@
             </tr>
             <tr>
                 <td>Tên:</td>
-                <td><input type="text" class="form-control" name="name" style="width:300px" value="<?php echo $name?>" readonly></td>
+                <td><input type="text" class="form-control" name="name" style="width:300px" value="<?php echo $name?>" ></td>
             </tr>
             
             <tr>

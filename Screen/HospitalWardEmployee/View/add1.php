@@ -1,4 +1,3 @@
-
 <!-- ------------------------------------------------------end header--------------------------------------------------- -->
 <div class="page-banner overlay-dark bg-image" style="background-image: url('http://benhnhietdoi.vn/Uploads/images/%E1%BA%A2nh%20t%C6%B0%20li%E1%BB%87u/Anh%20BV.jpg');
 background-position: center;background-size: cover;">
@@ -78,8 +77,7 @@ background-position: center;background-size: cover;">
               <input type="text" class="form-control"  name="name">
             </div>
           </div>
-        
-          <div class="form-group row">
+<div class="form-group row">
             <label for="inputid" class="col-sm-2 col-form-label">Ngày sinh</label>
             <div class="col-sm-10">
               <input type="date" class="form-control"  name="date" >
@@ -121,12 +119,6 @@ background-position: center;background-size: cover;">
               <input type="text" class="form-control"  name="role" >
             </div>
           </div>
-
-          <div class="form-group row">
-            <label for="inputtinhtrang" class="col-sm-2 col-form-label">Phường_BV Công Tác</label>
-            <div class="col-sm-10">
-              <input type="text"  class="form-control"  name="phuong" >
-            </div>
             
             <div class="col-lg-10" style="padding:30px 0px 30px 500px;">
                 <input type="submit" name='submitbtn' value="Thêm">
@@ -137,4 +129,3 @@ background-position: center;background-size: cover;">
         
    
 </div>
- 

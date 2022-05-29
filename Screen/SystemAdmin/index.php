@@ -18,20 +18,36 @@ if (isset($_SESSION['systemAdmin'])) {
                 $name = $row['HoTen'];
                 $role = $row['Role'];
 
-                if (isset($_POST['btngrant'])) {
+                if (isset($_POST['btngrant']))
+                 {
+                    $name= $_POST['name'];
                     $role = $_POST['role'];
-
-                    try {
-                        $conn = connect();
-                        $sql = grant($id, $role);
-                        $stmt = $conn->prepare($sql);
-                        $stmt->execute();
-                        echo "<script>alert('Phân Quyền Thành Công')</script>";
+                    if ($role ==null || $name ==null )
+                    {
+                        echo "<script>alert('Vui lòng điền đầy đủ thông tin')</script>";
                         echo header("refresh:0");
-                    } catch (PDOException $e) {
-                        echo $sql . "</br>" . $e->getMessage();
                     }
-                    $conn = null;
+                    elseif($role ==0)
+                    {
+                        echo "<script>alert('Role phải lớn hơn 0')</script>";
+                        echo header("refresh:0");
+                    }
+                    else
+                    {
+                        try {
+                            $conn = connect();
+                            $sql = grant($id,$name,$role);
+                            $stmt = $conn->prepare($sql);
+                            $stmt->execute();
+                            echo "<script>alert('Phân Quyền Thành Công')</script>";
+                            echo header("refresh:0");
+                        } catch (PDOException $e) {
+                            echo $sql . "</br>" . $e->getMessage();
+                        }
+                        $conn = null;
+                    }
+
+                    
                 }
             }
         }

@@ -55,10 +55,11 @@ function thongkenhanvien()
     return $sql;
 }
 
-function grant($id, $role)
-{
-    $sql = "UPDATE taikhoan  set Role='$role' where MaTaiKhoan='$id'";
-    return $sql;
+function grant($id,$name,$role)
+{  
+    $sql="UPDATE taikhoan  set Role='$role' where MaTaiKhoan='$id';
+    UPDATE taikhoan set HoTen ='$name' where MaTaiKhoan='$id'";
+     return $sql;
 }
 function thongke_time($a, $b)
 {
@@ -130,7 +131,7 @@ function updatePatient($hoten, $ngaysinh, $sdt, $mail, $cccd, $diachi, $tinhtran
         ";
     return $sql;
 }
-function update_Patient($user, $pass, $name, $date, $phone, $email, $cccd, $diachi, $role, $phuongct, $id)
+function update_Patient($user, $pass, $name, $date, $phone, $email, $cccd, $diachi, $id)
 {
     $sql = "UPDATE taikhoan  set TenDangNhap='$user' where MaTaiKhoan='$id';
     UPDATE taikhoan set MatKhau='$pass' where MaTaiKhoan='$id';
@@ -139,14 +140,11 @@ function update_Patient($user, $pass, $name, $date, $phone, $email, $cccd, $diac
     UPDATE taikhoan  set SDT='$phone' where MaTaiKhoan='$id';
     UPDATE taikhoan  set Email='$email' where MaTaiKhoan='$id';
     UPDATE  taikhoan set CCCD='$cccd'where MaTaiKhoan='$id';
-    UPDATE taikhoan set DiaChi='$diachi' where MaTaiKhoan='$id';
-    UPDATE taikhoan  set Role='$role' where MaTaiKhoan='$id';
-    UPDATE taikhoan  set PhuongBV_CongTac='$phuongct' where MaTaiKhoan='$id';";
+    UPDATE taikhoan set DiaChi='$diachi' where MaTaiKhoan='$id;';";
     return $sql;
 }
-function list_full()
-{
-    $sql = "SELECT * FROM taikhoan";
+function list_full(){
+    $sql="SELECT MaTaiKhoan,TenDangNhap,MatKhau,HoTen,NgaySinh,SDT,Email,CCCD,DiaChi FROM taikhoan Where Role = 0" ;
     return $sql;
 }
 function thongke_Addinfo(){

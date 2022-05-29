@@ -24,8 +24,8 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                 $email = $row['Email'];
                 $cccd = $row['CCCD'];
                 $diachi = $row['DiaChi'];
-                $role = $row['Role'];
-                $phuongct = $row['Phuong_BVCongTac'];
+                // $role = $row['Role'];
+                // $phuongct = $row['Phuong_BVCongTac'];
                 if (isset($_POST['btnupdate'])) {
                     $id = $_POST['id'];
                     $user = $_POST['user'];
@@ -36,8 +36,8 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                     $email = $_POST['email'];
                     $cccd = $_POST['cccd'];
                     $diachi = $_POST['diachi'];
-                    $role = $_POST['role'];
-                    $phuongct = $_POST['phuong'];
+                    // $role = $_POST['role'];
+                    // $phuongct = $_POST['phuong'];
 
                     if ($user == null || $pass == null || $name == null || $date == null || $phone == null || $email == null || $diachi == null) {
                         echo '<script>alert("Vui lòng nhập đầy đủ thông tin");</script>';
@@ -66,17 +66,12 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                     } /* elseif ($address == null) {
                         echo '<script>alert("Bắt buộc nhập địa chỉ ");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } */ elseif ($role == null || $role < 0) {
-                        echo '<script>alert("Vui lòng phân quyền Role. Role phải lớn hơn 0");</script>';
-                        echo header("refresh:0");
-                    } elseif ($phuongct == null || $phuongct < 0) {
-                        echo '<script>alert("Vui lòng nhập đầy đủ thông tin");</script>';
-                        echo header("refresh:0");
-                    } else {
+                    } */
+                     else {
 
                         try {
                             $conn = connect();
-                            $sql = update_Patient($user, $pass, $name, $date, $phone, $email, $cccd, $diachi, $phuongct, $role, $id);
+                            $sql = update_Patient($user, $pass, $name, $date, $phone, $email, $cccd, $diachi, $id);
                             $stmt = $conn->prepare($sql);
                             $stmt->execute();
                             echo "<script>alert('Cập Nhật Thành Công')</script>";
@@ -132,7 +127,7 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                 if (isset($_POST['submitbtn'])) {
 
                     $user = $_POST['user'];
-                    $pass = $_POST['pass'];
+                    $pass = md5($_POST['pass']);
                     $date = $_POST['date'];
                     $name = $_POST['name'];
                     $address = $_POST['address'];
@@ -140,25 +135,26 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                     $email = $_POST['email'];
                     $cccd = $_POST['cccd'];
                     $role = $_POST['role'];
-                    $phuongct = $_POST['phuong'];
 
 
 
-                    if ($user == null) {
-                        echo '<script>alert("Bắt buộc nhập Tên Đăng Nhập");</script>';
+
+                    if ($user == null || $pass == null || $name == null || $date == null) {
+                        echo '<script>alert("Vui lòng nhập đầy đủ thông tin");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif ($pass == null) {
-                        echo '<script>alert("Bắt buộc nhập mật khẩu ");</script>';
-                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif ($name == "") {
-                        echo '<script>alert("Bắt buộc nhập");</script>';
-                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif ($date == null) {
-                        echo '<script>alert("Ngày sinh không được bỏ trống");</script>';
-                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif (!preg_match("/^(0[3|5|7|8|9][0-9]{8})$/", $phone)) {
+                    } /* elseif ($pass == null) {
+                            echo '<script>alert("Bắt buộc nhập mật khẩu ");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'"); */
+                    /*  } elseif ($name == "") {
+                            echo '<script>alert("Bắt buộc nhập");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        } */
+                    /*  elseif ($date == null) {
+                            echo '<script>alert("Ngày sinh không được bỏ trống");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        } */ elseif (!preg_match("/^(0[3|5|7|8|9][0-9]{8})$/", $phone)) {
                         # code...
-                        echo '<script>alert("Số điện thoại không chính xác!!");</script>';
+                        echo '<script>alert("Số điện thoại không chính xác ");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
                     } elseif (!preg_match("/^[a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,3}$/", $email)) {
                         echo '<script>alert("Email không hợp lệ");</script>';
@@ -167,17 +163,14 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                         # code...
                         echo '<script>alert("Căn cước công dân gồm 12 số !!");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif ($address == null) {
-                        echo '<script>alert("Bắt buộc nhập địa chỉ ");</script>';
-                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif ($role == null || $role < 0) {
-                        echo '<script>alert("Vui lòng phân quyền Role");</script>';
-                        echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } elseif ($phuongct == null || $phuongct < 0) {
-                        echo '<script>alert("Bắt buộc nhập Phường công tác");</script>';
+                    } /* elseif ($address == null) {
+                            echo '<script>alert("Bắt buộc nhập địa chỉ ");</script>';
+                            echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
+                        } */ elseif ($role == null || $role < 0) {
+                        echo '<script>alert("Vui lòng phân quyền Role. Role phải lớn hơn 0");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
                     } else {
-                        $result = add($user, $pass, $name, $date, $address, $phone, $cccd, $role, $email, $phuongct);
+                        $result = add_benhnhan($user, $pass, $name, $date, $address, $phone, $cccd, $role, $email);
                         echo '<script>alert("Thêm Thành Công");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
                     }

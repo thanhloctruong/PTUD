@@ -30,11 +30,11 @@
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
             <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Quản Lý Thông Tin Bệnh Nhân</li>
-            <li class="breadcrumb-item active" aria-current="page">Cập Nhật Bệnh Nhân</li>
+            <li class="breadcrumb-item active" aria-current="page">Quản Lý Thông Tin Bệnh Viện</li>
+            <li class="breadcrumb-item active" aria-current="page">Cập Nhật Bệnh Viện</li>
           </ol>
         </nav>
-        <h1 class="font-weight-normal">Cập Nhật Bệnh Nhân</h1>
+        <h1 class="font-weight-normal">Cập Nhật Bệnh Viện</h1>
       </div> <!-- .container -->
     </div> <!-- .banner-section -->
   </div> <!-- .page-banner -->

@@ -63,4 +63,9 @@
     //     Set TenBenhVien ='$name',DiaChi='$address',TangSo='$tang',SoCaMac='$socamac',SoCaKhoi='$socakhoi', MaBenhVien=$id";
     //     updatesql($sql);
     // }
-?>
+    function  add_benhnhan($user, $pass, $name, $date, $address, $phone, $cccd, $role, $email)
+    {
+        $sql="INSERT INTO taikhoan (TenDangNhap,MatKhau,HoTen,NgaySinh,SDT,Email,CCCD,DiaChi,Role)
+         VALUES('$user','$pass','$name','$date','$phone','$email','$cccd','$address','$role');";
+         addsql($sql);
+    }
