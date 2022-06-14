@@ -9,7 +9,7 @@
           </div>
           <div class="col-12 py-2 wow fadeInUp">
             <label for="pass">Password</label>
-            <input type="pass"  name='pass' class="form-control" placeholder="Enter password." required>
+            <input type="password"  name='pass' class="form-control" placeholder="Enter password." required>
           </div>
         </div>
         <input class="btn btn-primary wow zoomIn" type="submit" name="login" value="Đăng Nhập">

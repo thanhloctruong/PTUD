@@ -66,8 +66,7 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                     } /* elseif ($address == null) {
                         echo '<script>alert("Bắt buộc nhập địa chỉ ");</script>';
                         echo header("refresh:0; url='../HospitalWardEmployee/index.php?act=add'");
-                    } */
-                     else {
+                    } */ else {
 
                         try {
                             $conn = connect();
@@ -99,11 +98,19 @@ if (isset($_SESSION['HospitalWardEmployee'])) {
                 $idRequest = $_GET['id'];
                 $result = request($idRequest);
                 if (isset($_POST['send']) && $_POST['send']) {
-                    $mess = $_POST['mess'];
-                    $kq =  update_request($mess, $idRequest);
-                    if ($kq) {
-                        header('location: index.php?act=tuvan');
-                        break;
+                    if ($_POST['mess'] != null) {
+                        # code...
+                        $mess = $_POST['mess'];
+                        $kq =  update_request($mess, $idRequest);
+                        if ($kq) {
+                            echo '<script>alert("Trả lời câu hỏi thành công");</script>';
+                            header('refresh:0; url="index.php?act=tuvan"');
+                            break;
+                        }
+                    } else {
+                        # code...
+                        echo '<script>alert("Chưa điền câu trả lời");</script>';
+                        header('refresh:0; url="index.php?act=tuvan"');
                     }
                 }
                 include "./View/ReplyCounseling.php";
