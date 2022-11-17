@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="MACode ID, https://macodeid.com/">
    
   <title>One Health - Medical Center</title>
 <link rel="stylesheet" href="../view/Assets/css/maicons.css">
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="../view/Assets/vendor/owl-carousel/css/owl.carousel.css">
 <link rel="stylesheet" href="../view/Assets/vendor/animate/animate.css">
 <link rel="stylesheet" href="../view/Assets/css/theme.css">
-<link rel="stylesheet" href="../view/Assets/css/index.css">
+<link rel="stylesheet" href="../view/Assets/css/Style.css">
 </head>
 <body>
 <div class="back-to-top"></div>
@@ -26,7 +27,7 @@
           <div class="site-info">
             <a href="tel:+"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
             <span class="divider">|</span>
-            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>thanhloctruong102@@2gmail.com</a>
+            <a href="mailto:thanhloctruong11022@gmail.com"><span class="mai-mail text-primary"></span>nhom32@gmail.com</a>
           </div>
         </div>
         <div class="col-sm-4 text-right text-sm">
@@ -43,46 +44,51 @@
 
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
-
-      <form action="index.php?act=search" method="post">
-        <div class="input-group input-navbar">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
-        </div>
-      </form>
-
+      <a class="navbar-brand" href="#"><span class="text-primary">Buy</span>& Sell</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupport">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">Trang chủ</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="index.php?act=about">Về chúng tôi</a>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=dangkydieutri">Đăng ký điều trị</a> <!--Register for treatment-->
+          
           </li>
+         
+          
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=khaibaoyte">Khai báo y tế</a> <!--Health Declaration--> 
+            <?php
+            if(isset($_SESSION['id'])):
+              // {
+              //  $id=$_SESSION['id'];
+              //  echo $id;
+              // }
+             
+            ?>
+            <a class="nav-link" href="index.php?act=contact"></a>
+            <?php 
+            else:
+              echo '<a class="nav-link" href="index.php?act=login"></a>';
+            endif; 
+            ?>
           </li>
+
+         
           <li class="nav-item">
-            <a class="nav-link" href="index.php?act=">In giấy xác nhận</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=contact">Yêu cầu tư vấn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?act=new">Tin tức</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login / Register</a>
+            <?php
+            if(isset($_SESSION['id'])): 
+            ?>
+            <a class="btn btn-primary ml-lg-3" href="index.php?act=logout">Logout</a>
+            <?php 
+            else:
+              echo '<a class="btn btn-primary ml-lg-3" href="index.php?act=login">Login</a>';
+            endif; 
+            ?>
           </li>
         </ul>
       </div> <!-- .navbar-collapse -->

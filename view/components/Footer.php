@@ -2,7 +2,16 @@
   <footer class="page-footer">
     <div class="container">
       <div class="row px-md-3">
-        <div class="col-sm-8 col-lg-4 py-4">
+      <div class="col-sm-6 col-lg-3 py-3">
+          <h5></h5>
+          <ul class="footer-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"> </a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
           <h5>Company</h5>
           <ul class="footer-menu">
             <li><a href="#">About Us</a></li>
@@ -11,31 +20,20 @@
             <li><a href="#">Protection</a></li>
           </ul>
         </div>
-        <!-- <div class="col-sm-6 col-lg-3 py-3">
-          <h5>More</h5>
+       
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5></h5>
           <ul class="footer-menu">
-            <li><a href="#">Terms & Condition</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Join as Doctors</a></li>
-          </ul>
-        </div> -->
-        <div class="col-sm-8 col-lg-4 py-4">
-          <h5>Các thành viên nhóm 6868: </h5>
-          <ul class="footer-menu">
-            <li><a href="#">Hoàng Thị Chi</a></li>
-            <li><a href="#">Trần Hữu Bằng</a></li>
-            <li><a href="#">Trần Quang Chí</a></li>
-            <li><a href="#">Bùi Hải Đăng</a></li>
-            <li><a href="#">Nguyễn Thị Hằng Ly</a></li>
-            <li><a href="#">Phạm Văn Mạnh</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
-        <div class="col-sm-8 col-lg-4 py-4">
-          <h5>Liên hệ</h5>
-          <p class="footer-link mt-2">12 Nguyễn Văn Bảo, Phường 4, quận Gò Vấp, TP.HCM</p>
-          <a href="#" class="footer-link mt-2">701-573-7582</a></br>
-          <a href="#" class="footer-link mt-2">healthcare@gmail.com</a>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Contact</h5>
+          <p class="footer-link mt-2">12 Nguyễn Văn Bảo,P.4,Gò Vấp</p>
+          <a href="#" class="footer-link">701-573-7582</a>
+          <a href="#" class="footer-link">manhc3dth@gamil.com</a>
 
           <h5 class="mt-3">Social Media</h5>
           <div class="footer-sosmed mt-3">
